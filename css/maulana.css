@@ -1,3 +1,14 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
 .intro-social-buttons {
 	text-align: center;
 }
@@ -11,7 +22,7 @@
 }
 
 .contact-details__content {
-	font-size: 25px;
+	font-size: 30px;
 }
 
 .contact-details__item {
@@ -21,4 +32,11 @@
 .contact-details__item a {
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+.contact-details__item.highlight i {
+	font-size: 50px;
+}
+.contact-details__item.highlight .contact-details__content {
+	font-size: 40px;
 }
