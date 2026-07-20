@@ -30,7 +30,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # Use `npm install`, not `npm ci`: the lockfile is generated on macOS, and
+        # `npm ci` won't fetch the Linux-specific native binaries (e.g. oxc-parser)
+        # due to the npm optional-dependencies bug (npm/cli#4828).
+        run: npm install --no-audit --no-fund
 
       - name: Generate static site
         run: npm run generate
