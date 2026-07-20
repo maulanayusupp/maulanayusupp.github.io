@@ -1,0 +1,40 @@
+@use 'abstracts' as *;
+
+// Global, reusable helpers (kept intentionally small — most styling lives in
+// component-scoped SCSS).
+
+.container {
+  @include container;
+}
+
+.section {
+  padding-block: $space-24;
+
+  @include respond-to('md') {
+    padding-block: $space-32;
+  }
+}
+
+.section--tight {
+  padding-block: $space-16;
+}
+
+.section-divider {
+  border-top: 1px solid $color-border;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.gradient-text {
+  @include gradient-text;
+}

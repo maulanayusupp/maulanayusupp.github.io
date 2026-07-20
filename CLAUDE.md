@@ -7,38 +7,79 @@ Personal portfolio website for **Maulana Yusup Abdullah** - Full Stack Web Devel
 ## Tech Stack
 
 - **Nuxt 3** (Vue 3) — static-site generation (SSG), no server runtime
-- **Tailwind CSS** via `@nuxtjs/tailwindcss` (build-time, not CDN)
-- **Vanilla composition API** — no extra state/UI libraries
-- **Google Fonts** - Inter (loaded via `<link>` in `nuxt.config.ts`)
-- **Design** - Dark theme (slate-950), indigo/violet accents, glass-morphism cards
-- Deployed as static files to GitHub Pages via GitHub Actions
+- **SCSS design system** (no Tailwind, no inline CSS) — centralized tokens/mixins in
+  `assets/scss/`, component styles in scoped `<style lang="scss">`
+- **Vue composition API** + typed data services — no extra state/UI libraries
+- **Google Fonts** — Sora (display) + Inter (body), loaded in `nuxt.config.ts`
+- **Design** — dark theme (`#0b1120`), indigo→violet→fuchsia accents, glass-morphism
+- Deployed as static files to GitHub Pages via GitHub Actions (pnpm)
 
 ## Site Structure
 
 ```
-nuxt.config.ts        - Nuxt config: github-pages preset, global head (favicons, fonts, meta)
-tailwind.config.js    - Tailwind theme (Inter font family)
+nuxt.config.ts        - Nuxt config: github-pages preset, SCSS loadPaths, head (favicons, fonts)
 app.vue               - Root: <NuxtLayout><NuxtPage/></NuxtLayout>
 layouts/default.vue   - Shared shell: AppHeader + <slot/> + AppFooter
+
 pages/
-  index.vue           - Home: hero, portfolio grid + image modal, tech stack, CTA
+  index.vue           - Home: hero, categorized ProjectShowcase, tech marquee, CTA
   about.vue           - About: bio, photo, skills, services, stats, CTA
-  contact.vue         - Contact: contact cards, location card
+  contact.vue         - Contact: contact channels, location/availability card
+
+services/
+  projects.ts         - SINGLE SOURCE OF TRUTH for the portfolio. Typed Project model,
+                        categories, and helpers. Add a project = one array entry.
+                        preview.kind: 'live' (iframe) | 'image' (screenshot) | 'placeholder'.
+
 components/
-  AppHeader.vue       - Fixed navbar with scroll effect + mobile menu (NuxtLink routing)
-  AppFooter.vue       - Bottom footer bar (copyright + socials)
-  CtaSection.vue      - "Let's work together" CTA (text prop); used by index & about
+  ProjectShowcase.vue - Category filter tabs + responsive grid + screenshot lightbox
+  ProjectCard.vue     - One project: preview + category badge + tags; links out or opens lightbox
+  ProjectPreview.vue  - Renders the preview: lazy-loaded scaled live iframe / image / placeholder
+  AppHeader.vue       - Fixed navbar, scroll state, mobile menu
+  AppFooter.vue       - Footer with brand, nav, socials
+  SectionHeading.vue  - Reusable eyebrow + title + subtitle
+  BaseButton.vue      - Polymorphic button (NuxtLink / <a> / <button>), variants
+  CtaSection.vue      - "Let's build" CTA (text prop)
   SocialLinks.vue     - GitHub/LinkedIn/Email/Phone icon row
+  TechMarquee.vue     - Infinite-scroll tech chips
+
 composables/
-  useScrollReveal.ts  - IntersectionObserver fade-in for .glass-card / .portfolio-card
+  useScrollReveal.ts  - Adds .is-visible to .reveal elements on scroll
+  useInView.ts        - Generic "entered viewport once" (used to lazy-load iframes)
+
 utils/
-  seo.ts              - SITE_URL, personSchema, useJsonLd(), breadcrumbSchema()
-assets/css/main.css   - Tailwind directives + keyframes/animations + custom classes
-public/               - Static files served at root: img/, icons/, robots.txt, sitemap.xml
-.github/workflows/deploy.yml - CI: build + deploy to GitHub Pages
+  seo.ts              - SITE_URL, personSchema, projectsSchema, usePageSeo(), useJsonLd(),
+                        breadcrumbSchema()
+
+assets/scss/          - Design system (see below)
+public/               - Served at root: favicon.svg, site.webmanifest, img/, icons/,
+                        robots.txt, sitemap.xml
+.github/workflows/deploy.yml - CI: pnpm install + generate + deploy to GitHub Pages
 ```
 
-Routes are clean URLs: `/`, `/about`, `/contact` (previously `index.html`, `about.html`, `contact.html`).
+Routes are clean URLs: `/`, `/about`, `/contact`.
+
+### SCSS design system (`assets/scss/`)
+
+```
+_tokens.scss     - Design tokens: colors, spacing, typography, radius, shadows, breakpoints
+_mixins.scss     - respond-to(), container, glass, gradient-text, focus-ring, line-clamp
+_abstracts.scss  - @forward tokens + mixins (the shared entry)
+_base.scss       - Reset, base typography, background glow, scrollbar
+_animations.scss - Keyframes + .reveal scroll-in utility (+ reduced-motion)
+_utilities.scss  - .container, .section, .gradient-text, .visually-hidden
+main.scss        - Global entry (loaded in nuxt.config.ts)
+```
+
+Components consume the system with `@use 'abstracts' as *;` — resolvable anywhere via the
+`loadPaths` set in `nuxt.config.ts`. **No inline CSS**; the only `style="..."` in output is
+Vue's own `v-show` toggle.
+
+### Adding a project
+
+Append to `projects` in `services/projects.ts`. For a hosted, embeddable site use
+`preview: { kind: 'live' }` + `url`. For a screenshot use `{ kind: 'image', src: '/img/...' }`.
+For not-yet-hosted or non-embeddable (e.g. X-Frame-Options) use `{ kind: 'placeholder', emoji }`.
 
 ## SEO
 
@@ -89,9 +130,8 @@ The `github-pages` Nitro preset auto-emits `.nojekyll` (so `_nuxt/` assets are s
 
 ## Conventions
 
-- All pages share the same navigation (AppHeader), footer (AppFooter), and color scheme via `layouts/default.vue`
-- Tailwind classes are used inline; custom animations/utilities live in `assets/css/main.css`
-- Per-page hero gradient variants use `<style scoped>` overrides in the page component
+- All pages share the same navigation (AppHeader), footer (AppFooter), and shell via `layouts/default.vue`
+- Styling is SCSS only — tokens/mixins from `@use 'abstracts'`, BEM-style class names, scoped per component. No inline CSS, no utility-class soup.
 - SVG icons are inlined (no icon library dependency)
 - Social/external links use `target="_blank" rel="noopener"`
 - Internal navigation uses `<NuxtLink>` (never hardcoded `.html` links)

@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use 'tokens' as *;
+
+// Min-width media query: `@include respond-to('md') { ... }`
+@mixin respond-to($bp) {
+  $value: map.get($breakpoints, $bp);
+  @if $value {
+    @media (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @error "Unknown breakpoint `#{$bp}`.";
+  }
+}
+
+// Centered content column with responsive gutters.
+@mixin container {
+  width: 100%;
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-inline: $space-5;
+
+  @include respond-to('md') {
+    padding-inline: $space-8;
+  }
+}
+
+// Frosted-glass card surface.
+@mixin glass {
+  background: $color-surface;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid $color-border;
+}
+
+// Clip a gradient into text.
+@mixin gradient-text($gradient: $gradient-brand) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+// Accessible focus ring.
+@mixin focus-ring {
+  outline: 2px solid $color-indigo-light;
+  outline-offset: 2px;
+}
+
+// Truncate text to N lines.
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

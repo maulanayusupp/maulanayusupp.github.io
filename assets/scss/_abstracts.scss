@@ -1,0 +1,4 @@
+// Single entry point for tokens + mixins.
+// Components use: `@use 'abstracts' as *;`
+@forward 'tokens';
+@forward 'mixins';

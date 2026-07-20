@@ -1,0 +1,14 @@
+{
+  "name": "Maulana Yusup Abdullah — Portfolio",
+  "short_name": "MYA",
+  "description": "Full Stack Web Developer — Vue.js, Laravel, Node.js. Web apps, tools, games, and interactive experiences.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icons/android-icon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/apple-icon-180x180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

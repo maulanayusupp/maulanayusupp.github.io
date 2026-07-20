@@ -1,28 +1,33 @@
-// Reveals elements matching `selector` as they scroll into view.
-// Mirrors the original IntersectionObserver behaviour; runs client-side only.
-export function useScrollReveal(selector: string) {
+// Adds `.is-visible` to every `.reveal` element as it scrolls into view.
+// Call once from a page's setup(). Client-side only.
+export function useScrollReveal() {
   onMounted(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>(selector))
+    const reveal = () =>
+      document
+        .querySelectorAll<HTMLElement>('.reveal:not(.is-visible)')
+        .forEach((el) => el.classList.add('is-visible'))
 
-    // Progressive enhancement: if IO is unavailable, leave everything visible.
-    if (!('IntersectionObserver' in window)) return
+    if (!('IntersectionObserver' in window)) {
+      reveal()
+      return
+    }
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up')
-            ;(entry.target as HTMLElement).style.opacity = '1'
+            entry.target.classList.add('is-visible')
             observer.unobserve(entry.target)
           }
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
     )
 
-    els.forEach((el) => {
-      el.style.opacity = '0'
-      observer.observe(el)
+    nextTick(() => {
+      document
+        .querySelectorAll<HTMLElement>('.reveal:not(.is-visible)')
+        .forEach((el) => observer.observe(el))
     })
   })
 }
