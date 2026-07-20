@@ -2,44 +2,22 @@
 import { getCategory, type Project } from '~/services/projects'
 
 const props = defineProps<{ project: Project }>()
-const emit = defineEmits<{ open: [project: Project] }>()
-
 const category = computed(() => getCategory(props.project.category))
-const isLink = computed(() => Boolean(props.project.url))
-
-const actionLabel = computed(() => {
-  if (!props.project.url) return 'View'
-  return props.project.category === 'game' ? 'Play now' : 'Visit live'
-})
-
-// Live/hosted projects link out; screenshot-only projects open a lightbox.
-const rootTag = computed(() => (isLink.value ? 'a' : 'button'))
-const rootAttrs = computed(() =>
-  isLink.value
-    ? { href: props.project.url, target: '_blank', rel: 'noopener' }
-    : { type: 'button' },
-)
-
-function onActivate() {
-  if (!isLink.value) emit('open', props.project)
-}
 </script>
 
 <template>
-  <component
-    :is="rootTag"
-    v-bind="rootAttrs"
+  <NuxtLink
+    :to="`/projects/${project.id}`"
     class="project-card"
     :class="`project-card--${project.category}`"
-    @click="onActivate"
   >
     <div class="project-card__media">
       <ProjectPreview :project="project" />
       <div class="project-card__overlay">
         <span class="project-card__action">
-          {{ actionLabel }}
-          <svg v-if="isLink" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M7 7h10v10" />
+          View project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" />
           </svg>
         </span>
       </div>
@@ -61,7 +39,7 @@ function onActivate() {
         <li v-for="tag in project.tags" :key="tag" class="project-card__tag">{{ tag }}</li>
       </ul>
     </div>
-  </component>
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">

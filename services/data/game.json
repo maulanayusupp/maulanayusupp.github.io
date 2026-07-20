@@ -3,6 +3,13 @@
     "id": "iron-vanguard",
     "title": "Iron Vanguard",
     "description": "An endless tower-defense game: command 16 turrets and 18 heroes, unleash skills, and hold the line against 35 monster types across 2000 levels.",
+    "longDescription": "An endless tower-defense war in the browser. Command 16 turrets and 18 unique heroes, unleash devastating skills, and hold the line against 35 monster types and giant bosses across 2000 levels.",
+    "highlights": [
+      "16 turrets & 18 unique heroes",
+      "35 monster types + giant bosses",
+      "2000 levels of endless defense",
+      "Free to play in the browser"
+    ],
     "tags": ["Tower Defense", "Browser Game", "Arcade"],
     "url": "https://iron-vanguard.vercel.app/",
     "preview": { "kind": "live" },
@@ -13,6 +20,13 @@
     "id": "bladerush",
     "title": "Blade Rush",
     "description": "A fast arcade survivor game — spin a growing ring of blades, crush endless hordes, and out-duel rival warlords.",
+    "longDescription": "A fast arcade survivor game. Spin a growing ring of blades, crush endless hordes, and out-duel rival warlords in quick, replayable runs.",
+    "highlights": [
+      "Ring-of-blades combat",
+      "Endless hordes to crush",
+      "Fast, replayable runs",
+      "Runs in the browser"
+    ],
     "tags": ["Arcade", "Survivor", "Browser Game"],
     "url": "https://bladerush.vercel.app/",
     "preview": { "kind": "live" },
@@ -22,6 +36,12 @@
     "id": "reconcile",
     "title": "Reconcile",
     "description": "A payment-ops puzzle game about reconciling transactions across Payment Gateway, Internal DB, and Bank Settlement — spot duplicates, refunds, and chargebacks.",
+    "longDescription": "A puzzle game about reconciling payment transactions across three systems — Payment Gateway, Internal DB, and Bank Settlement. Spot duplicates, partial refunds, chargebacks, and missing orders before customers riot.",
+    "highlights": [
+      "Reconcile across 3 systems",
+      "Duplicates, refunds & chargebacks",
+      "Payment-ops themed puzzles"
+    ],
     "tags": ["Puzzle Game", "Fintech", "Payments"],
     "url": "https://reconcile-game.vercel.app/",
     "preview": { "kind": "live" },
@@ -31,6 +51,13 @@
     "id": "ular-tangga",
     "title": "Snakes & Ladders",
     "description": "The classic board game online for 1–4 players — single-player vs bot or pass-and-play, with modern animations and realistic sound.",
+    "longDescription": "The classic Snakes & Ladders online for 1–4 players. Play single-player against a bot or pass-and-play with friends, with modern animations and realistic sound effects — no download required.",
+    "highlights": [
+      "1–4 players",
+      "Single-player vs bot or pass-and-play",
+      "Modern animations & sound",
+      "No download — plays in the browser"
+    ],
     "tags": ["Board Game", "Multiplayer", "Browser Game"],
     "url": "https://ular-tangga-sigma.vercel.app/",
     "preview": { "kind": "live" },
@@ -40,6 +67,13 @@
     "id": "prize-gacha",
     "title": "Prize Gacha",
     "description": "An online gacha luck game — spin the gachapon, win prizes across Common to Mythic rarities, and share your wins. Plays right in the browser.",
+    "longDescription": "An online gacha luck game. Spin the gachapon and win prizes across Common, Rare, Epic, Legendary, and Mythic rarities, then share your wins. Free, fun, and instantly playable in the browser.",
+    "highlights": [
+      "Gachapon spin mechanic",
+      "5 rarity tiers (Common → Mythic)",
+      "Shareable wins",
+      "Free & instant in browser"
+    ],
     "tags": ["Gacha", "Browser Game", "Casual"],
     "url": "https://prize-gacha.vercel.app/",
     "preview": { "kind": "placeholder", "emoji": "🎰" },

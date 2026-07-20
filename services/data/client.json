@@ -3,6 +3,12 @@
     "id": "honda",
     "title": "Honda Indonesia",
     "description": "An enterprise-grade web platform built for Honda Indonesia — full-stack development with a modern, scalable stack.",
+    "longDescription": "An enterprise-grade web platform delivered for Honda Indonesia, built full-stack with a modern, scalable architecture.",
+    "highlights": [
+      "Enterprise-scale platform",
+      "Full-stack delivery",
+      "Modern, scalable architecture"
+    ],
     "tags": ["Enterprise", "Vue.js", "Laravel"],
     "preview": { "kind": "image", "src": "/img/portfolio/honda_center.jpg" },
     "featured": true
@@ -11,6 +17,12 @@
     "id": "bpom",
     "title": "Pusat Informasi Pasar Aman",
     "description": "A market-safety information system for BPOM (Indonesian FDA) — a comprehensive data-management platform.",
+    "longDescription": "A market-safety information system built for BPOM (the Indonesian FDA) — a comprehensive platform for managing and surfacing market-safety data.",
+    "highlights": [
+      "Government data platform",
+      "Market-safety information system",
+      "Comprehensive data management"
+    ],
     "tags": ["Government", "Data Platform", "Laravel"],
     "preview": { "kind": "image", "src": "/img/portfolio/bpom_center.jpg" }
   },
@@ -18,6 +30,12 @@
     "id": "scoresheets",
     "title": "Scoresheets System",
     "description": "A dynamic scoring and evaluation system with real-time updates and comprehensive reporting.",
+    "longDescription": "A dynamic scoring and evaluation system with real-time updates and comprehensive reporting for events and competitions.",
+    "highlights": [
+      "Real-time score updates",
+      "Dynamic evaluation",
+      "Comprehensive reporting"
+    ],
     "tags": ["Real-time", "Vue.js", "Scoring"],
     "preview": { "kind": "image", "src": "/img/portfolio/scoresheets_center.jpg" }
   },
@@ -25,6 +43,12 @@
     "id": "mymeet",
     "title": "MyMeet",
     "description": "A real-time meeting and collaboration platform with video conferencing, built with PeerJS and Socket.io.",
+    "longDescription": "A real-time meeting and collaboration platform with video conferencing, built with PeerJS and Socket.io for low-latency communication.",
+    "highlights": [
+      "Video conferencing (PeerJS/WebRTC)",
+      "Real-time via Socket.io",
+      "Collaboration features"
+    ],
     "tags": ["WebRTC", "Socket.io", "Video"],
     "preview": { "kind": "image", "src": "/img/portfolio/mymeet_center.jpg" }
   },
@@ -32,6 +56,12 @@
     "id": "dapur-ilmu",
     "title": "Dapur Ilmu",
     "description": "An interactive e-learning platform with courses, progress tracking, and a full learning-management system.",
+    "longDescription": "An interactive e-learning platform with courses, progress tracking, and a full learning-management system.",
+    "highlights": [
+      "Interactive courses",
+      "Progress tracking",
+      "Full learning-management system"
+    ],
     "tags": ["E-learning", "LMS", "Vue.js"],
     "preview": { "kind": "image", "src": "/img/portfolio/dapurilmu_center.jpg" }
   }

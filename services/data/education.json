@@ -3,6 +3,13 @@
     "id": "temanisikecil",
     "title": "Temanisikecil",
     "description": "Educational worksheets for children aged 2–5 and coding worksheets for 5+. Learn while playing — motor skills, creativity, and logic.",
+    "longDescription": "Temanisikecil is an educational product offering worksheets for children aged 2–5 and coding worksheets for ages 5+. It turns screen time into skill time — helping kids build motor skills, creativity, and logic while playing.",
+    "highlights": [
+      "Worksheets for ages 2–5",
+      "Coding worksheets for ages 5+",
+      "Builds motor skills, creativity & logic",
+      "Trusted by hundreds of parents"
+    ],
     "tags": ["Kids Education", "Worksheets", "Product"],
     "url": "https://www.temanisikecil.com/",
     "preview": { "kind": "live" },
@@ -13,6 +20,13 @@
     "id": "planetarium",
     "title": "Planetarium Razan",
     "description": "An interactive 3D solar system and 28 constellations, with a cinematic tour, voice narration, and orchestral score — right in the browser.",
+    "longDescription": "An interactive 3D planetarium. Explore the solar system and 28 constellations with a cinematic guided tour, voice narration, and an orchestral score — all rendered live in the browser.",
+    "highlights": [
+      "3D solar system simulation",
+      "28 constellations",
+      "Cinematic tour + voice narration",
+      "Orchestral soundtrack"
+    ],
     "tags": ["3D Simulation", "WebGL", "Astronomy"],
     "url": "https://planetarium-razan.vercel.app/",
     "preview": { "kind": "live" },
@@ -23,6 +37,12 @@
     "id": "simulasi-sejarah",
     "title": "Simulasi Sejarah Dunia",
     "description": "An interactive 3D globe that maps world history events across time and place — explore the past spatially.",
+    "longDescription": "An interactive 3D globe that maps world-history events across time and place, letting you explore the past spatially. An educational visualization built from secondary sources.",
+    "highlights": [
+      "Interactive 3D globe",
+      "History mapped by time & place",
+      "Spatial exploration of events"
+    ],
     "tags": ["3D Globe", "History", "Interactive"],
     "url": "https://simulasi-sejarah.vercel.app/",
     "preview": { "kind": "live" },
@@ -32,6 +52,13 @@
     "id": "belajar-membaca",
     "title": "Belajar Membaca",
     "description": "A reading app for Indonesian kids across 4 stages — letters, syllables, words, sentences — with Indonesian voice-over and playful animations.",
+    "longDescription": "A reading app for Indonesian children structured in four stages — letters, syllables, words, and sentences — complete with Indonesian voice-over and playful animations.",
+    "highlights": [
+      "4 progressive learning stages",
+      "Indonesian voice-over",
+      "Playful animations",
+      "Designed for young learners"
+    ],
     "tags": ["Kids", "Reading", "Bahasa Indonesia"],
     "url": "https://belajar-membaca-nine.vercel.app/",
     "preview": { "kind": "live" },
@@ -41,6 +68,13 @@
     "id": "godzilla-types",
     "title": "Godzilla Types",
     "description": "An encyclopedia of 12 Godzilla incarnations across the Showa, Heisei, Millennium, Reiwa, and MonsterVerse eras — height, weight, abilities, and films.",
+    "longDescription": "An interactive encyclopedia of 12 Godzilla incarnations spanning the Showa, Heisei, Millennium, Reiwa, and MonsterVerse eras — with height, weight, abilities, and source films for each.",
+    "highlights": [
+      "12 Godzilla incarnations",
+      "5 eras covered",
+      "Stats: height, weight & abilities",
+      "Source films listed"
+    ],
     "tags": ["Encyclopedia", "Interactive", "Fan Project"],
     "url": "https://godzilla-types.vercel.app/",
     "preview": { "kind": "live" },

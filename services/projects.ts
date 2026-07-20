@@ -30,7 +30,12 @@ export type Preview =
 export interface Project {
   id: string
   title: string
+  /** Short one-liner used on cards. */
   description: string
+  /** Richer paragraph shown on the project detail page. */
+  longDescription?: string
+  /** Key feature bullets shown on the detail page. */
+  highlights?: string[]
   category: CategoryId
   tags: string[]
   /** Live URL, if the project is hosted. */
