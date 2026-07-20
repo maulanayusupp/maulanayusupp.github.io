@@ -1,5 +1,22 @@
 [
   {
+    "id": "neatly",
+    "title": "Neatly",
+    "description": "A fast, modern tool to beautify (unminify) and minify JavaScript, CSS, HTML, JSON, and XML — paste, drop a file, and get clean or compact code instantly.",
+    "longDescription": "Neatly is a free online developer tool to beautify (unminify) and minify JavaScript, CSS, HTML, JSON, and XML. Paste your code or drop a file, pick a mode, and get clean, readable — or compact — output in a click.",
+    "highlights": [
+      "Beautify & minify in one tool",
+      "Supports JS, CSS, HTML, JSON & XML",
+      "Paste code or drop a file",
+      "Instant, client-side output"
+    ],
+    "tags": ["Developer Tool", "Formatter", "Minifier"],
+    "url": "https://neatlyapp.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "dibiku",
     "title": "Dibiku",
     "description": "A fast database client with a built-in SSH terminal & SQL editor. Connect to MySQL, PostgreSQL, Redis, and SQLite from one blazing-fast app.",
