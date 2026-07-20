@@ -56,6 +56,7 @@ watch(() => route.path, () => (mobileOpen.value = false))
           <span>{{ t('actions.search') }}</span>
           <kbd>⌘K</kbd>
         </button>
+        <ThemeToggle />
         <LangSwitch />
         <BaseButton to="/contact" size="md">{{ t('actions.getInTouch') }}</BaseButton>
       </div>
@@ -90,6 +91,7 @@ watch(() => route.path, () => (mobileOpen.value = false))
           {{ t(link.key) }}
         </NuxtLink>
         <div class="header__mobile-row">
+          <ThemeToggle />
           <LangSwitch />
         </div>
         <BaseButton to="/contact" size="md">{{ t('actions.getInTouch') }}</BaseButton>
@@ -135,7 +137,7 @@ watch(() => route.path, () => (mobileOpen.value = false))
     width: 2rem;
     height: 2rem;
     font-size: $fs-base;
-    color: $color-white;
+    color: $color-on-accent;
     background: $gradient-brand-vivid;
     border-radius: $radius-sm;
   }
@@ -293,6 +295,12 @@ watch(() => route.path, () => (mobileOpen.value = false))
     &.is-active {
       color: $color-white;
     }
+  }
+
+  &__mobile-row {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
   }
 }
 

@@ -1,5 +1,35 @@
 @use 'abstracts' as *;
 
+// ---- Theme variables -------------------------------------------------------
+// Dark is the default (also applied when data-theme="dark").
+:root {
+  color-scheme: dark;
+  --c-bg: #0b1120;
+  --c-bg-elevated: #0f172a;
+  --c-surface: rgba(148, 163, 184, 0.06);
+  --c-surface-2: rgba(148, 163, 184, 0.1);
+  --c-border: rgba(148, 163, 184, 0.12);
+  --c-border-strong: rgba(148, 163, 184, 0.22);
+  --c-text: #e2e8f0;
+  --c-text-muted: #94a3b8;
+  --c-text-faint: #64748b;
+  --c-strong: #f8fafc;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --c-bg: #f6f8fc;
+  --c-bg-elevated: #ffffff;
+  --c-surface: rgba(15, 23, 42, 0.035);
+  --c-surface-2: rgba(15, 23, 42, 0.06);
+  --c-border: rgba(15, 23, 42, 0.1);
+  --c-border-strong: rgba(15, 23, 42, 0.18);
+  --c-text: #334155;
+  --c-text-muted: #556377;
+  --c-text-faint: #8090a3;
+  --c-strong: #0f172a;
+}
+
 // ---- Reset -----------------------------------------------------------------
 *,
 *::before,

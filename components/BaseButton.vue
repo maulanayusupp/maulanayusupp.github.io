@@ -64,7 +64,7 @@ const attrs = computed(() => {
   }
 
   &--primary {
-    color: $color-white;
+    color: $color-on-accent;
     background: $gradient-brand-vivid;
     box-shadow: 0 12px 30px -12px rgba(99, 102, 241, 0.7);
 

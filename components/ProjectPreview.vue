@@ -130,7 +130,7 @@ const emoji = computed(() =>
     font-family: $font-display;
     font-weight: 700;
     font-size: 2.5rem;
-    color: $color-white;
+    color: $color-on-accent;
     border-radius: $radius-lg;
     background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 90%, white), var(--accent));
     box-shadow: 0 12px 34px -10px color-mix(in srgb, var(--accent) 70%, transparent);

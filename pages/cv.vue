@@ -149,6 +149,19 @@ function printCv() {
 @use 'abstracts' as *;
 
 .cv-page {
+  // The résumé is always dark on screen, independent of the site theme.
+  // (Print overrides below flip it to a white document.)
+  --c-bg: #0b1120;
+  --c-bg-elevated: #0f172a;
+  --c-surface: rgba(148, 163, 184, 0.06);
+  --c-surface-2: rgba(148, 163, 184, 0.1);
+  --c-border: rgba(148, 163, 184, 0.12);
+  --c-border-strong: rgba(148, 163, 184, 0.22);
+  --c-text: #e2e8f0;
+  --c-text-muted: #94a3b8;
+  --c-text-faint: #64748b;
+  --c-strong: #f8fafc;
+
   min-height: 100vh;
   padding: $space-6 $space-4 $space-16;
   background: $color-bg;

@@ -107,7 +107,7 @@ const { t, localize } = useLocale()
     padding: $space-3 $space-5;
     font-weight: 600;
     font-size: $fs-sm;
-    color: $color-white;
+    color: $color-on-accent;
     background: rgba(2, 6, 23, 0.6);
     border: 1px solid rgba(248, 250, 252, 0.25);
     border-radius: $radius-full;

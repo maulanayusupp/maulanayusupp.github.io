@@ -3,19 +3,24 @@
 // Consumed everywhere via `@use 'abstracts' as *;`
 // =============================================================================
 
-// ---- Color: base surfaces --------------------------------------------------
-$color-bg:          #0b1120;   // page background (deep navy-slate)
-$color-bg-elevated: #0f172a;   // slightly raised
-$color-surface:     rgba(148, 163, 184, 0.06);
-$color-surface-2:   rgba(148, 163, 184, 0.1);
-$color-border:      rgba(148, 163, 184, 0.12);
-$color-border-strong: rgba(148, 163, 184, 0.22);
+// ---- Color: theme-aware neutrals (values live in _base.scss :root) ---------
+// These map to CSS custom properties so the light/dark toggle can swap them
+// at runtime. Accent colors below stay fixed across themes.
+$color-bg:            var(--c-bg);            // page background
+$color-bg-elevated:   var(--c-bg-elevated);   // slightly raised
+$color-surface:       var(--c-surface);
+$color-surface-2:     var(--c-surface-2);
+$color-border:        var(--c-border);
+$color-border-strong: var(--c-border-strong);
 
 // ---- Color: text -----------------------------------------------------------
-$color-text:        #e2e8f0;
-$color-text-muted:  #94a3b8;
-$color-text-faint:  #64748b;
-$color-white:       #f8fafc;
+$color-text:        var(--c-text);
+$color-text-muted:  var(--c-text-muted);
+$color-text-faint:  var(--c-text-faint);
+$color-white:       var(--c-strong);   // strongest foreground (dark in light theme)
+
+// Text placed on top of accent/gradient fills — always light.
+$color-on-accent:   #ffffff;
 
 // ---- Color: brand / accents ------------------------------------------------
 $color-indigo:  #6366f1;

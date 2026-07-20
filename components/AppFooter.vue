@@ -79,7 +79,7 @@ const links = [
     width: 1.75rem;
     height: 1.75rem;
     font-size: $fs-sm;
-    color: $color-white;
+    color: $color-on-accent;
     background: $gradient-brand-vivid;
     border-radius: $radius-sm;
   }

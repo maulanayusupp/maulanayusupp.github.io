@@ -169,7 +169,7 @@ const view = ref<View>('grid')
       border-color: $color-border-strong;
     }
     &.is-active {
-      color: $color-white;
+      color: $color-on-accent;
       background: $gradient-brand-vivid;
       border-color: transparent;
     }

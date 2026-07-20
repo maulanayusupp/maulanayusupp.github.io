@@ -45,10 +45,11 @@ services/
   data/skills.json    - Skill groups, shared by the About page and /cv (single source).
 
 scripts/
-  og.mjs              - Build-time Open Graph image generator (satori + resvg). Reads the
-                        JSON data, renders one 1200x630 PNG per project + default.png.
-                        Runs automatically as part of `pnpm run generate`.
+  og.mjs              - Build-time OG image generator (satori + resvg) → /og/<id>.png
+  sitemap.mjs         - Build-time sitemap generator (static routes + project ids)
+                        Both run automatically inside `pnpm run generate`.
 assets/fonts/         - Inter .woff files used by the OG generator (satori)
+public/fonts/         - Self-hosted Inter + Sora .woff2 for the site (@font-face)
 
 components/
   ProjectShowcase.vue - Search + category filters + Grid/List(compact index) toggle + empty state
@@ -71,12 +72,14 @@ composables/
   useCommandPalette.ts- Shared open/close state for the ⌘K palette
   useLocale.ts        - i18n: t(key), tl(key) for arrays, localize(obj, field) for data
   useConsent.ts       - Cookie/analytics consent state (localStorage); analyticsAllowed
+  useTheme.ts         - Light/dark theme state + toggle (localStorage, data-theme)
 
 i18n/
   en.json, id.json    - UI string dictionaries (English + Indonesian)
 plugins/
   locale.client.ts    - Restores saved locale (localStorage) + syncs <html lang>
   consent.client.ts   - Restores saved cookie-consent choice
+  theme.client.ts     - Syncs reactive theme state with <html data-theme>
 
 utils/
   seo.ts              - SITE_URL, personSchema, projectsSchema, usePageSeo(), useJsonLd(),
@@ -106,6 +109,14 @@ main.scss        - Global entry (loaded in nuxt.config.ts)
 Components consume the system with `@use 'abstracts' as *;` — resolvable anywhere via the
 `loadPaths` set in `nuxt.config.ts`. **No inline CSS**; the only `style="..."` in output is
 Vue's own `v-show` toggle.
+
+**Theming (light/dark):** neutral tokens (`$color-bg`, `$color-surface`, `$color-text`,
+`$color-white` = strongest fg, …) map to CSS custom properties (`--c-*`) defined in
+`_base.scss` under `:root` (dark) and `:root[data-theme='light']`. Accent colors and gradients
+are fixed across themes. Text placed on an accent/gradient fill must use `$color-on-accent`
+(always white), NOT `$color-white` (which flips dark in light mode). An inline head script sets
+`data-theme` pre-paint (no flash); `useTheme()` toggles it. The `/cv` screen view pins the dark
+palette regardless of theme.
 
 ### Internationalization (EN / ID)
 

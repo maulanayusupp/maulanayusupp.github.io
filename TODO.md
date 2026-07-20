@@ -8,12 +8,9 @@ Keep changes incremental — one logical change per commit/push.
 - [ ] Per-project screenshot gallery on the detail page (multiple images / carousel)
 - [ ] Add `role` and `stack` fields to projects and surface them on the detail page
 - [ ] Fill in real career history + upload CV PDF (`experience.json` → `resumeUrl`)
-- [ ] Sort projects by year or "featured first" on the Portfolio page
 
 ## Platform / tooling
-- [ ] Auto-generate `sitemap.xml` from routes at build (drop the manual list)
-- [ ] Self-host the Inter/Sora fonts (remove Google Fonts request; faster + privacy)
-- [ ] Light/dark theme toggle (currently dark-only)
+_(nothing pending)_
 
 ## Engagement
 - [ ] Contact form (via a form service, e.g. Formspree — GitHub Pages has no backend)
@@ -39,3 +36,7 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Print-friendly `/cv` résumé page (Save as PDF) from single-source data
 - [x] i18n — English / Bahasa Indonesia (UI + data, with language switcher)
 - [x] Privacy policy page + cookie consent banner (consent gates future analytics)
+- [x] Auto-generated sitemap.xml (from routes + project data)
+- [x] Self-hosted fonts (Inter + Sora; no Google Fonts requests)
+- [x] Project sorting on Portfolio (Featured / Newest / A–Z)
+- [x] Light/dark theme toggle (CSS-variable tokens, no-flash, system-aware)
