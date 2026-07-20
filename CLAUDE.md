@@ -167,7 +167,7 @@ Per-page SEO is set in each page's `<script setup>` via `useHead` / `useSeoMeta`
 
 - Name: Maulana Yusup Abdullah
 - Role: Full Stack Web Developer
-- Experience: **10+ years**
+- Experience: **computed from `CAREER_START_YEAR = 2016`** (`utils/experience.ts` → `yearsOfExperience()`); never hardcode the number. Use `{years}` in i18n/data strings and pass the value.
 - Projects: 31+
 - Clients: 13+
 - Location: Bandung, Indonesia

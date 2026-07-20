@@ -1,8 +1,8 @@
 {
   "_comment": "EDIT ME — periods are placeholders. Add `_id` fields for Indonesian (e.g. summary_id, role_id, org_id, description_id); the site falls back to English when an `_id` field is missing. Set resumeUrl to a PDF path in /public to show the Download-CV-as-file link.",
   "resumeUrl": null,
-  "summary": "Full Stack Developer & Software Engineer with 10+ years of experience building web apps, developer tools, and interactive experiences. Specialized in Vue.js, Nuxt, Laravel, and Node.js — from enterprise client platforms to independent products.",
-  "summary_id": "Full Stack Developer & Software Engineer dengan 10+ tahun pengalaman membangun aplikasi web, developer tools, dan pengalaman interaktif. Spesialis Vue.js, Nuxt, Laravel, dan Node.js — dari platform klien enterprise sampai produk independen.",
+  "summary": "Full Stack Developer & Software Engineer with {years}+ years of experience building web apps, developer tools, and interactive experiences. Specialized in Vue.js, Nuxt, Laravel, and Node.js — from enterprise client platforms to independent products.",
+  "summary_id": "Full Stack Developer & Software Engineer dengan {years}+ tahun pengalaman membangun aplikasi web, developer tools, dan pengalaman interaktif. Spesialis Vue.js, Nuxt, Laravel, dan Node.js — dari platform klien enterprise sampai produk independen.",
   "timeline": [
     {
       "period": "2024 — Present",

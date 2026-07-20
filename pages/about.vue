@@ -1,14 +1,16 @@
 <script setup lang="ts">
+import { projects } from '~/services/projects'
 import experience from '~/services/data/experience.json'
 import skills from '~/services/data/skills.json'
 
 const { t, tl } = useLocale()
 const cvHref = experience.resumeUrl || '/cv'
+const years = yearsOfExperience()
+const techCount = new Set(skills.flatMap((g) => g.items)).size
 
 usePageSeo({
   title: 'About Maulana Yusup Abdullah — Skills, Experience & Services',
-  description:
-    "Learn about Maulana Yusup Abdullah's expertise in Vue.js, Nuxt, Laravel, and Node.js. 10+ years of experience across SPA development, APIs, real-time systems, and scalable software architecture.",
+  description: `Learn about Maulana Yusup Abdullah's expertise in Vue.js, Nuxt, Laravel, and Node.js. ${years}+ years of experience across SPA development, APIs, real-time systems, and scalable software architecture.`,
   path: '/about',
   keywords:
     'Maulana Yusup Abdullah, about, skills, Vue.js, Nuxt, Laravel, AdonisJs, Node.js, MySQL, MongoDB, Redis, Socket.io, full stack developer, Bandung',
@@ -26,10 +28,10 @@ const traits = computed(() => tl<string>('about.traits'))
 const services = computed(() => tl<{ title: string; desc: string }>('about.services'))
 
 const stats = [
-  { value: '10+', key: 'about.statYears' },
-  { value: '18+', key: 'about.statProjects' },
-  { value: '13+', key: 'about.statClients' },
-  { value: '15+', key: 'about.statTech' },
+  { n: years, suffix: '+', key: 'about.statYears' },
+  { n: projects.length, suffix: '+', key: 'about.statProjects' },
+  { n: 13, suffix: '+', key: 'about.statClients' },
+  { n: techCount, suffix: '+', key: 'about.statTech' },
 ]
 </script>
 
@@ -42,7 +44,7 @@ const stats = [
           <p class="about-hero__eyebrow">{{ t('about.eyebrow') }}</p>
           <h1 class="about-hero__title">{{ t('about.titlePre') }}<br><span class="gradient-text">{{ t('about.titleHighlight') }}</span></h1>
           <p class="about-hero__lead">
-            {{ t('about.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('about.leadPost') }}
+            {{ t('about.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('about.leadPost', { years }) }}
           </p>
           <ul class="about-hero__traits">
             <li v-for="trait in traits" :key="trait" class="about-hero__trait">
@@ -119,7 +121,7 @@ const stats = [
       <div class="container">
         <div class="stats reveal">
           <div v-for="stat in stats" :key="stat.key" class="stats__item">
-            <div class="stats__value">{{ stat.value }}</div>
+            <div class="stats__value"><StatNumber :value="stat.n" :suffix="stat.suffix" /></div>
             <div class="stats__label">{{ t(stat.key) }}</div>
           </div>
         </div>

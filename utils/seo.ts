@@ -1,5 +1,6 @@
 // Shared SEO constants & JSON-LD builders. Files in `utils/` are auto-imported.
 import { projects } from '~/services/projects'
+import { yearsOfExperience } from '~/utils/experience'
 
 export const SITE_URL = 'https://maulanayusupp.github.io'
 export const OG_IMAGE = `${SITE_URL}/img/about.jpg` // photo, used for Person schema
@@ -15,8 +16,7 @@ export const personSchema = {
   url: `${SITE_URL}/`,
   image: OG_IMAGE,
   jobTitle: 'Full Stack Web Developer',
-  description:
-    'Full Stack Web Developer with 10+ years of experience specializing in Vue.js, Laravel, and Node.js',
+  description: `Full Stack Web Developer with ${yearsOfExperience()}+ years of experience specializing in Vue.js, Laravel, and Node.js`,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bandung',

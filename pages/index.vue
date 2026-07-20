@@ -5,8 +5,7 @@ const { t } = useLocale()
 
 usePageSeo({
   title: 'Maulana Yusup Abdullah — Full Stack Developer & Software Engineer',
-  description:
-    'Full Stack Web Developer & Software Engineer with 10+ years of experience. I build web apps, developer tools, and interactive experiences with Vue.js, Nuxt, Laravel, and Node.js.',
+  description: `Full Stack Web Developer & Software Engineer with ${yearsOfExperience()}+ years of experience. I build web apps, developer tools, and interactive experiences with Vue.js, Nuxt, Laravel, and Node.js.`,
   path: '/',
   keywords:
     'Maulana Yusup Abdullah, full stack developer, software engineer, Vue.js, Nuxt, Laravel, Node.js, web developer, Bandung, Indonesia, portfolio',
@@ -28,10 +27,11 @@ useJsonLd([
 useScrollReveal()
 
 const projectCount = projects.length
+const years = yearsOfExperience()
 const stats = [
-  { value: '10+', key: 'hero.statYears' },
-  { value: `${projectCount}+`, key: 'hero.statProjects' },
-  { value: '13+', key: 'hero.statClients' },
+  { n: years, suffix: '+', key: 'hero.statYears' },
+  { n: projectCount, suffix: '+', key: 'hero.statProjects' },
+  { n: 13, suffix: '+', key: 'hero.statClients' },
 ]
 </script>
 
@@ -47,7 +47,7 @@ const stats = [
           {{ t('hero.titlePost') }}
         </h1>
         <p class="hero__lead reveal reveal-delay-2">
-          {{ t('hero.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('hero.leadPost') }}
+          {{ t('hero.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('hero.leadPost', { years }) }}
         </p>
         <div class="hero__actions reveal reveal-delay-3">
           <BaseButton href="#work" variant="primary" size="lg">{{ t('actions.viewWork') }}</BaseButton>
@@ -57,7 +57,7 @@ const stats = [
 
         <dl class="hero__stats reveal reveal-delay-4">
           <div v-for="stat in stats" :key="stat.key" class="hero__stat">
-            <dt class="hero__stat-value">{{ stat.value }}</dt>
+            <dt class="hero__stat-value"><StatNumber :value="stat.n" :suffix="stat.suffix" /></dt>
             <dd class="hero__stat-label">{{ t(stat.key) }}</dd>
           </div>
         </dl>

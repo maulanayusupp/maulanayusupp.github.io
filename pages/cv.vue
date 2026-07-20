@@ -9,7 +9,7 @@ definePageMeta({ layout: false })
 usePageSeo({
   title: 'CV — Maulana Yusup Abdullah | Full Stack Developer & Software Engineer',
   description:
-    'Résumé of Maulana Yusup Abdullah — Full Stack Developer & Software Engineer with 10+ years of experience. Vue.js, Nuxt, Laravel, Node.js.',
+    `Résumé of Maulana Yusup Abdullah — Full Stack Developer & Software Engineer with ${yearsOfExperience()}+ years of experience. Vue.js, Nuxt, Laravel, Node.js.`,
   path: '/cv',
 })
 
@@ -19,8 +19,9 @@ const { t, localize } = useLocale()
 const projectCount = projects.length
 const techCount = new Set(skills.flatMap((g) => g.items)).size
 
+const years = yearsOfExperience()
 const stats = [
-  { value: '10+', key: 'cv.statYears' },
+  { value: `${years}+`, key: 'cv.statYears' },
   { value: `${projectCount}`, key: 'cv.statProjects' },
   { value: '13+', key: 'cv.statClients' },
   { value: `${techCount}+`, key: 'cv.statTech' },
@@ -65,7 +66,7 @@ function printCv() {
         <p class="cv__role">Full Stack Developer &amp; Software Engineer</p>
         <p class="cv__loc">{{ t('cv.available') }}</p>
 
-        <p class="cv__pitch">{{ localize(experience, 'summary') }}</p>
+        <p class="cv__pitch">{{ localize(experience, 'summary').replace('{years}', String(years)) }}</p>
 
         <div class="cv__links">
           <a

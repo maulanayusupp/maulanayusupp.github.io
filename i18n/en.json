@@ -31,7 +31,7 @@
     "titleHighlight": "web apps, tools & products",
     "titlePost": "that people actually use.",
     "leadPre": "I'm",
-    "leadPost": "— a Full Stack Developer & Software Engineer with 10+ years of experience. From enterprise platforms to developer tools and interactive experiences, I ship reliable software with Vue.js, Nuxt, Laravel, and Node.js.",
+    "leadPost": "— a Full Stack Developer & Software Engineer with {years}+ years of experience. From enterprise platforms to developer tools and interactive experiences, I ship reliable software with Vue.js, Nuxt, Laravel, and Node.js.",
     "statYears": "Years experience",
     "statProjects": "Projects built",
     "statClients": "Happy clients"
@@ -71,7 +71,7 @@
     "titlePre": "Full Stack Developer",
     "titleHighlight": "& product builder",
     "leadPre": "Hello! I'm",
-    "leadPost": "— based in Bandung, Indonesia. With 10+ years in software development, I've delivered projects for individuals, startups, and large enterprises — building reliable web apps, products, and developer tools.",
+    "leadPost": "— based in Bandung, Indonesia. With {years}+ years in software development, I've delivered projects for individuals, startups, and large enterprises — building reliable web apps, products, and developer tools.",
     "traits": [
       "Clear communication and reliable delivery",
       "Highly responsible and detail-oriented",

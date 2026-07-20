@@ -31,7 +31,7 @@
     "titleHighlight": "aplikasi web, tools & produk",
     "titlePost": "yang benar-benar dipakai orang.",
     "leadPre": "Saya",
-    "leadPost": "— Full Stack Developer & Software Engineer dengan 10+ tahun pengalaman. Dari platform enterprise sampai developer tools dan pengalaman interaktif, saya membangun software yang andal dengan Vue.js, Nuxt, Laravel, dan Node.js.",
+    "leadPost": "— Full Stack Developer & Software Engineer dengan {years}+ tahun pengalaman. Dari platform enterprise sampai developer tools dan pengalaman interaktif, saya membangun software yang andal dengan Vue.js, Nuxt, Laravel, dan Node.js.",
     "statYears": "Tahun pengalaman",
     "statProjects": "Proyek dibuat",
     "statClients": "Klien puas"
@@ -71,7 +71,7 @@
     "titlePre": "Full Stack Developer",
     "titleHighlight": "& pembuat produk",
     "leadPre": "Halo! Saya",
-    "leadPost": "— berbasis di Bandung, Indonesia. Dengan 10+ tahun di pengembangan software, saya telah mengerjakan proyek untuk perorangan, startup, hingga perusahaan besar — membangun aplikasi web, produk, dan developer tools yang andal.",
+    "leadPost": "— berbasis di Bandung, Indonesia. Dengan {years}+ tahun di pengembangan software, saya telah mengerjakan proyek untuk perorangan, startup, hingga perusahaan besar — membangun aplikasi web, produk, dan developer tools yang andal.",
     "traits": [
       "Komunikasi jelas dan pengerjaan yang andal",
       "Sangat bertanggung jawab dan teliti",

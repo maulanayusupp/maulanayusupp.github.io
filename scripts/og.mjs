@@ -120,7 +120,7 @@ writeFileSync(
     card({
       eyebrow: 'Portfolio',
       title: 'Web apps, tools & products that people actually use.',
-      desc: 'Full Stack Developer & Software Engineer — 10+ years.',
+      desc: `Full Stack Developer & Software Engineer — ${new Date().getFullYear() - 2016}+ years.`,
       footRight: 'maulanayusupp.github.io',
     }),
   ),
