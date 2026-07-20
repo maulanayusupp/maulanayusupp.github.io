@@ -66,16 +66,22 @@ Per-page SEO is set in each page's `<script setup>` via `useHead` / `useSeoMeta`
 
 ## Development
 
+Package manager is **pnpm** (via corepack). npm is intentionally not used —
+its optional-dependencies bug (npm/cli#4828) drops the platform-native
+`oxc-parser` binary in CI. `package-lock.json` is globally gitignored on the
+author's machine; do not reintroduce it.
+
 ```bash
-npm install        # install dependencies
-npm run dev        # local dev server (http://localhost:3000)
-npm run generate   # build static site into .output/public
-npm run preview    # preview the generated static build
+corepack enable pnpm   # one-time: make pnpm available
+pnpm install           # install dependencies
+pnpm run dev           # local dev server (http://localhost:3000)
+pnpm run generate      # build static site into .output/public
+pnpm run preview       # preview the generated static build
 ```
 
 ## Deployment
 
-Push to `master` → GitHub Actions (`.github/workflows/deploy.yml`) runs `npm run generate` and deploys `.output/public` to GitHub Pages.
+Push to `master` → GitHub Actions (`.github/workflows/deploy.yml`) installs with pnpm, runs `pnpm run generate`, and deploys `.output/public` to GitHub Pages.
 
 **One-time setup:** in the repo's GitHub settings, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions** (not "Deploy from a branch").
 

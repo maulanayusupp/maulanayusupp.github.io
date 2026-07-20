@@ -23,20 +23,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
-        # Use `npm install`, not `npm ci`: the lockfile is generated on macOS, and
-        # `npm ci` won't fetch the Linux-specific native binaries (e.g. oxc-parser)
-        # due to the npm optional-dependencies bug (npm/cli#4828).
-        run: npm install --no-audit --no-fund
+        run: pnpm install --frozen-lockfile
 
       - name: Generate static site
-        run: npm run generate
+        run: pnpm run generate
         env:
           NODE_OPTIONS: --max-old-space-size=4096
 
