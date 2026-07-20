@@ -35,6 +35,8 @@ services/
   data/categories.json- Category metadata (id, label, description, accent) — single source
   data/{webapp,game,education,client}.json - SINGLE SOURCE OF TRUTH for projects.
                         Add a project here (category implied by filename).
+  data/experience.json- About-page career timeline + `resumeUrl` (set to a /public PDF
+                        path to reveal the "Download CV" button; dates are editable seeds).
 
 scripts/
   og.mjs              - Build-time Open Graph image generator (satori + resvg). Reads the
@@ -53,6 +55,7 @@ components/
   CtaSection.vue      - "Let's build" CTA (text prop)
   SocialLinks.vue     - GitHub/LinkedIn/Email/Phone icon row
   TechMarquee.vue     - Infinite-scroll tech chips
+  ExperienceTimeline.vue - Vertical career timeline (entries prop)
   CommandPalette.vue  - Global ⌘K/Ctrl+K search over pages + projects (rendered once in layout)
 
 composables/

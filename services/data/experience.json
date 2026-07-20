@@ -1,0 +1,25 @@
+{
+  "_comment": "EDIT ME — periods below are placeholders based on the site's existing facts. Replace with your real history. Set resumeUrl to a PDF path in /public (e.g. \"/Maulana-Yusup-Abdullah-CV.pdf\") to show the Download CV button.",
+  "resumeUrl": null,
+  "timeline": [
+    {
+      "period": "2024 — Present",
+      "role": "Independent Product & Tools Developer",
+      "org": "Self-initiated",
+      "description": "Designing and shipping my own products, developer tools, and interactive web apps — including Dibiku (database client), Neatly (code formatter), and a range of educational and browser experiences.",
+      "current": true
+    },
+    {
+      "period": "2018 — Present",
+      "role": "Full Stack Web Developer",
+      "org": "Freelance & Contract",
+      "description": "Delivered enterprise and client platforms with Vue.js, Laravel, and Node.js — including Honda Indonesia, BPOM, real-time systems (MyMeet), and e-learning (Dapur Ilmu). API integration, real-time features, and VPS deployment."
+    },
+    {
+      "period": "2015 — 2018",
+      "role": "Web Developer",
+      "org": "Freelance",
+      "description": "Early full-stack work: UI-to-HTML slicing, SPA development, third-party API integration, and server setup on Digital Ocean with Nginx and Redis."
+    }
+  ]
+}

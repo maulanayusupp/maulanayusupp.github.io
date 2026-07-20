@@ -6,7 +6,8 @@ Keep changes incremental — one logical change per commit/push.
 ## Portfolio & content
 - [ ] Add remaining not-yet-hosted projects as `image` (screenshot) or `placeholder` entries
 - [ ] Per-project screenshot gallery on the detail page (multiple images / carousel)
-- [ ] Add `role`, `stack`, and `timeline` fields to projects and surface them on the detail page
+- [ ] Add `role` and `stack` fields to projects and surface them on the detail page
+- [ ] Fill in real career history + upload CV PDF (`experience.json` → `resumeUrl`)
 - [ ] Sort projects by year or "featured first" on the Portfolio page
 
 ## Platform / tooling
@@ -35,3 +36,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Project search + compact index (Grid/List toggle) on the Portfolio page
 - [x] Global command palette (⌘K / Ctrl+K) search over pages + projects
 - [x] Dynamic Open Graph image per project (generated at build with satori + resvg)
+- [x] Career timeline on About + Download-CV hook (`experience.json`)

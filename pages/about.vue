@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import experience from '~/services/data/experience.json'
+
 usePageSeo({
   title: 'About Maulana Yusup Abdullah — Skills, Experience & Services',
   description:
@@ -70,11 +72,31 @@ const stats = [
               <span>{{ trait }}</span>
             </li>
           </ul>
+
+          <div class="about-hero__actions">
+            <BaseButton v-if="experience.resumeUrl" :href="experience.resumeUrl" variant="primary" size="lg">
+              Download CV
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
+              </svg>
+            </BaseButton>
+            <BaseButton to="/contact" variant="secondary" size="lg">Get in touch</BaseButton>
+          </div>
         </div>
         <div class="about-hero__photo reveal reveal-delay-2">
           <div class="about-hero__frame">
             <img src="/img/about.jpg" alt="Maulana Yusup Abdullah" width="420" height="520" />
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section-divider">
+      <div class="container">
+        <SectionHeading eyebrow="Experience" title="Career journey" align="left" class="reveal" />
+        <div class="about-experience">
+          <ExperienceTimeline :entries="experience.timeline" />
         </div>
       </div>
     </section>
@@ -189,6 +211,13 @@ const stats = [
     }
   }
 
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-4;
+    margin-top: $space-8;
+  }
+
   &__photo {
     display: flex;
     justify-content: center;
@@ -207,6 +236,10 @@ const stats = [
       object-fit: cover;
     }
   }
+}
+
+.about-experience {
+  margin-top: $space-12;
 }
 
 .grid-cards {
