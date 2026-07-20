@@ -28,8 +28,9 @@ pages/
                         related projects. Prerendered per project via crawlLinks.
   about.vue           - About: bio, photo, career timeline, skills, services, stats, CTA
   contact.vue         - Contact: contact channels, location/availability card
-  cv.vue              - Standalone print-friendly résumé (layout:false, light theme,
-                        "Print / Save as PDF"); data from experience.json + skills.json + projects
+  cv.vue              - Standalone on-brand résumé (layout:false, dark, print/Save-as-PDF):
+                        photo hero, stat highlights, timeline, skills, ALL projects grouped
+                        by category. Data from experience.json + skills.json + projects.
 
 services/
   projects.ts         - Typed Project model, categories, and helpers (getProject,
