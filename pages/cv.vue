@@ -404,15 +404,11 @@ function printCv() {
   &__pitem-desc { margin-top: 2px; color: $color-text-muted; font-size: $fs-sm; }
 }
 
-// ---- Print: fit to A4/Letter, clean pagination -----------------------------
+// ---- Print: clean white A4/Letter document ---------------------------------
 @media print {
   @page { size: A4; margin: 12mm; }
 
-  .cv-page {
-    min-height: 0;
-    padding: 0;
-    background: #0e1729;
-  }
+  .cv-page { min-height: 0; padding: 0; background: #fff; }
   .cv-toolbar { display: none; }
   .cv {
     max-width: none;
@@ -420,10 +416,51 @@ function printCv() {
     border: none;
     border-radius: 0;
     box-shadow: none;
-    background: #0e1729;
+    background: #fff;
+    color: #1e293b;
   }
 
-  // Keep blocks from splitting across pages.
+  // Text → dark on white
+  .cv__name {
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+    background: none !important;
+  }
+  .cv__role { color: #4f46e5; }
+  .cv__loc,
+  .cv__pitch,
+  .cv__tl-desc,
+  .cv__pitem-desc,
+  .cv__stat-label,
+  .cv__tl-period,
+  .cv__pgroup-count,
+  .cv__pitem-tag { color: #475569; }
+  .cv__tl-role,
+  .cv__pitem-title,
+  .cv__skill-title { color: #0f172a; }
+  .cv__tl-org { color: #4f46e5; }
+  .cv__pgroup-title,
+  .cv__pitem-link { color: #4f46e5; }
+
+  .cv__heading { color: #4f46e5; border-color: #e2e8f0; }
+
+  // Surfaces → light
+  .cv__stats { background: #f8fafc; border-color: #e2e8f0; }
+  .cv__stat-value {
+    color: #4f46e5 !important;
+    -webkit-text-fill-color: #4f46e5 !important;
+    background: none !important;
+  }
+  .cv__chip { background: #f1f5f9; border-color: #e2e8f0; color: #1e293b; }
+  .cv__chip svg { color: #4f46e5; }
+  .cv__count,
+  .cv__skill-tags span { background: #f1f5f9; border-color: #e2e8f0; color: #475569; }
+  .cv__timeline::before { background: #e2e8f0; }
+  .cv__tl-dot { background: #fff; border-color: #cbd5e1; }
+  .cv__tl-dot.is-current { background: #4f46e5; border-color: #4f46e5; }
+  .cv__pitem { border-left-color: #e2e8f0; }
+
+  // Keep blocks from splitting across pages
   .cv__hero,
   .cv__stats,
   .cv__heading,
@@ -439,7 +476,7 @@ function printCv() {
 
 <style>
 @media print {
-  html, body { background: #0e1729 !important; }
+  html, body { background: #ffffff !important; }
   body::before { display: none !important; }
 }
 </style>
