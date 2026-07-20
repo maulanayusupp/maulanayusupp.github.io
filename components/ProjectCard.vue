@@ -69,6 +69,10 @@ const category = computed(() => getCategory(props.project.category))
     :deep(.preview__image) {
       transform: scale(1.05);
     }
+
+    :deep(.brand__tile) {
+      transform: scale(1.08) rotate(-3deg);
+    }
   }
 
   // Category accents (kept in SCSS — no inline styles).
