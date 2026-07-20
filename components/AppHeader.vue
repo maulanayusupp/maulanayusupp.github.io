@@ -111,7 +111,7 @@ watch(() => route.path, () => (mobileOpen.value = false))
   border-bottom: 1px solid transparent;
 
   &--scrolled {
-    background: rgba(11, 17, 32, 0.72);
+    background: color-mix(in srgb, $color-bg 80%, transparent);
     backdrop-filter: blur(16px);
     border-bottom-color: $color-border;
   }
@@ -278,7 +278,7 @@ watch(() => route.path, () => (mobileOpen.value = false))
     flex-direction: column;
     gap: $space-4;
     padding: $space-6 $space-5 $space-8;
-    background: rgba(11, 17, 32, 0.96);
+    background: color-mix(in srgb, $color-bg 96%, transparent);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid $color-border;
 

@@ -105,9 +105,9 @@ const emoji = computed(() =>
     padding: $space-1 $space-3;
     font-size: $fs-xs;
     font-weight: 600;
-    color: $color-text;
+    color: $color-on-accent;
     background: rgba(2, 6, 23, 0.55);
-    border: 1px solid $color-border-strong;
+    border: 1px solid rgba(248, 250, 252, 0.25);
     border-radius: $radius-full;
     backdrop-filter: blur(6px);
   }

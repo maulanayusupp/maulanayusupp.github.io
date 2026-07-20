@@ -194,7 +194,7 @@ function flatIndex(item: Item) {
     width: 100%;
     max-width: 36rem;
     overflow: hidden;
-    background: rgba(15, 23, 42, 0.98);
+    background: $color-bg-elevated;
     border: 1px solid $color-border-strong;
     border-radius: $radius-xl;
     box-shadow: $shadow-lg;

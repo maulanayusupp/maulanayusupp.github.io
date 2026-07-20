@@ -35,7 +35,7 @@ const { decided, accept, reject } = useConsent()
   max-width: 40rem;
   margin-inline: auto;
   padding: $space-5 $space-6;
-  background: rgba(15, 23, 42, 0.98);
+  background: $color-bg-elevated;
   border: 1px solid $color-border-strong;
   border-radius: $radius-lg;
   box-shadow: $shadow-lg;
