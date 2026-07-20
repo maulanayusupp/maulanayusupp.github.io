@@ -26,8 +26,8 @@ export const personSchema = {
   telephone: '+62-878-2276-6333',
   knowsAbout: [
     'Vue.js', 'Nuxt', 'Laravel', 'Node.js', 'AdonisJs', 'PHP', 'JavaScript',
-    'TypeScript', 'MySQL', 'MongoDB', 'Redis', 'Socket.io', 'WebGL',
-    'Game Development', 'REST API', 'VPS Deployment',
+    'TypeScript', 'MySQL', 'MongoDB', 'Redis', 'Socket.io', 'REST API',
+    'Software Engineering', 'VPS Deployment',
   ],
   sameAs: [
     'https://github.com/maulanayusupp',

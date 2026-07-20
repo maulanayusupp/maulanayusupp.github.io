@@ -2,7 +2,7 @@
 usePageSeo({
   title: 'About Maulana Yusup Abdullah — Skills, Experience & Services',
   description:
-    "Learn about Maulana Yusup Abdullah's expertise in Vue.js, Nuxt, Laravel, and Node.js. 10+ years of experience across SPA development, APIs, real-time systems, and game development.",
+    "Learn about Maulana Yusup Abdullah's expertise in Vue.js, Nuxt, Laravel, and Node.js. 10+ years of experience across SPA development, APIs, real-time systems, and scalable software architecture.",
   path: '/about',
   keywords:
     'Maulana Yusup Abdullah, about, skills, Vue.js, Nuxt, Laravel, AdonisJs, Node.js, MySQL, MongoDB, Redis, Socket.io, full stack developer, Bandung',
@@ -28,13 +28,13 @@ const skills = [
   { title: 'Backend', items: ['Laravel', 'Lumen', 'Node.js', 'AdonisJs', 'PHP', 'REST API'] },
   { title: 'Databases', items: ['MySQL', 'MongoDB', 'Redis'] },
   { title: 'Real-time & APIs', items: ['Socket.io', 'PeerJS', 'WebRTC', 'WhatsApp API'] },
-  { title: 'Creative & Games', items: ['WebGL', 'Three.js', 'Canvas', 'Game Loops'] },
-  { title: 'DevOps & Server', items: ['Nginx', 'Apache', 'Digital Ocean', 'SSH', 'CI/CD'] },
+  { title: 'Architecture & Practices', items: ['SPA / SSR', 'Component Design', 'Clean Code', 'Testing', 'CI/CD'] },
+  { title: 'DevOps & Server', items: ['Nginx', 'Apache', 'Digital Ocean', 'SSH', 'Git'] },
 ]
 
 const services = [
   { title: 'Product & Web App Development', desc: 'End-to-end SPAs and full-stack products with Vue.js/Nuxt and Laravel/Node.js.' },
-  { title: 'Games & Interactive', desc: 'Browser games, 3D/WebGL experiences, and interactive learning tools.' },
+  { title: 'Interactive & 3D Web', desc: 'Interactive, WebGL/3D experiences and learning tools in the browser.' },
   { title: 'API Integration', desc: 'Third-party integrations including payment, messaging, and WhatsApp APIs.' },
   { title: 'Real-time Systems', desc: 'Live features with Socket.io, video conferencing with PeerJS and TURN.' },
   { title: 'Server Setup & Deploy', desc: 'VPS provisioning on Digital Ocean with Nginx, Redis, and deploy pipelines.' },
@@ -60,7 +60,7 @@ const stats = [
           <p class="about-hero__lead">
             Hello! I'm <strong>Maulana Yusup Abdullah</strong>, based in Bandung, Indonesia. With
             10+ years in software development, I've delivered projects for individuals, startups,
-            and large enterprises — and lately I build products, tools, and games of my own.
+            and large enterprises — building reliable web apps, products, and developer tools.
           </p>
           <ul class="about-hero__traits">
             <li v-for="trait in traits" :key="trait" class="about-hero__trait">

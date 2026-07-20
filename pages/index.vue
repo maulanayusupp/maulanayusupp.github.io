@@ -2,12 +2,12 @@
 import { projects } from '~/services/projects'
 
 usePageSeo({
-  title: 'Maulana Yusup Abdullah — Full Stack Developer | Web Apps, Tools & Games',
+  title: 'Maulana Yusup Abdullah — Full Stack Developer & Software Engineer',
   description:
-    'Full Stack Web Developer with 10+ years of experience. I build web apps, developer tools, browser games, and interactive 3D experiences with Vue.js, Nuxt, Laravel, and Node.js.',
+    'Full Stack Web Developer & Software Engineer with 10+ years of experience. I build web apps, developer tools, and interactive experiences with Vue.js, Nuxt, Laravel, and Node.js.',
   path: '/',
   keywords:
-    'Maulana Yusup Abdullah, full stack developer, Vue.js, Nuxt, Laravel, Node.js, web developer, game developer, Bandung, Indonesia, portfolio, hire developer',
+    'Maulana Yusup Abdullah, full stack developer, software engineer, Vue.js, Nuxt, Laravel, Node.js, web developer, Bandung, Indonesia, portfolio, hire developer',
 })
 
 useJsonLd([
@@ -45,13 +45,13 @@ const stats = [
           Available for new projects
         </p>
         <h1 class="hero__title reveal reveal-delay-1">
-          I build <span class="gradient-text">web apps, tools &amp; games</span>
+          I build <span class="gradient-text">web apps, tools &amp; products</span>
           that people actually use.
         </h1>
         <p class="hero__lead reveal reveal-delay-2">
-          I'm <strong>Maulana Yusup Abdullah</strong> — a Full Stack Developer with 10+ years of
-          experience. From enterprise platforms to browser games and interactive 3D, I ship
-          reliable products with Vue.js, Nuxt, Laravel, and Node.js.
+          I'm <strong>Maulana Yusup Abdullah</strong> — a Full Stack Developer &amp; Software
+          Engineer with 10+ years of experience. From enterprise platforms to developer tools and
+          interactive experiences, I ship reliable software with Vue.js, Nuxt, Laravel, and Node.js.
         </p>
         <div class="hero__actions reveal reveal-delay-3">
           <BaseButton href="#work" variant="primary" size="lg">View my work</BaseButton>

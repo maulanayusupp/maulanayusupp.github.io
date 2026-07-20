@@ -2,7 +2,7 @@
 withDefaults(
   defineProps<{ text?: string }>(),
   {
-    text: "Have a project, product, or game in mind? I'd love to help you build it. Let's talk.",
+    text: "Have a project, product, or tool in mind? I'd love to help you build it. Let's talk.",
   },
 )
 </script>
