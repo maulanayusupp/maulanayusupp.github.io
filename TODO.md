@@ -1,0 +1,36 @@
+# TODO — Next Features
+
+Planned improvements for the portfolio site. Move items to "Done" as they ship.
+Keep changes incremental — one logical change per commit/push.
+
+## Portfolio & content
+- [ ] Add remaining not-yet-hosted projects as `image` (screenshot) or `placeholder` entries
+- [ ] Per-project screenshot gallery on the detail page (multiple images / carousel)
+- [ ] Add `role`, `stack`, and `timeline` fields to projects and surface them on the detail page
+- [ ] Sort/toggle projects by year or "featured first" on the Portfolio page
+- [ ] Search box on the Portfolio page
+
+## Platform / tooling
+- [ ] Auto-generate `sitemap.xml` from routes at build (drop the manual list)
+- [ ] Dynamic Open Graph image per project (branded preview card)
+- [ ] Self-host the Inter/Sora fonts (remove Google Fonts request; faster + privacy)
+- [ ] Light/dark theme toggle (currently dark-only)
+- [ ] i18n — English / Bahasa Indonesia
+
+## Engagement
+- [ ] Contact form (via a form service, e.g. Formspree — GitHub Pages has no backend)
+- [ ] Privacy-friendly analytics (e.g. Plausible / Umami)
+- [ ] Writing / blog section
+
+## Quality
+- [ ] Accessibility pass (focus order, ARIA, color contrast audit)
+- [ ] Lighthouse budget check in CI
+- [ ] Unit tests for the projects service + a smoke test for prerendered routes
+
+## Done
+- [x] Nuxt 3 SSG migration + GitHub Actions deploy
+- [x] SCSS design system (no Tailwind, no inline CSS)
+- [x] Categorized portfolio (JSON per category) + filter
+- [x] Per-project detail pages with live embed
+- [x] Dedicated `/projects` Portfolio page + nav menu
+- [x] Branded card previews

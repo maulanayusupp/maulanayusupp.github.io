@@ -22,19 +22,23 @@ app.vue               - Root: <NuxtLayout><NuxtPage/></NuxtLayout>
 layouts/default.vue   - Shared shell: AppHeader + <slot/> + AppFooter
 
 pages/
-  index.vue           - Home: hero, categorized ProjectShowcase, tech marquee, CTA
+  index.vue           - Home: hero, FEATURED teaser grid + "View all" link, tech marquee, CTA
+  projects/index.vue  - Portfolio: full filterable ProjectShowcase + hero + CTA
+  projects/[id].vue   - Project detail: title, long description, highlights, live embed / image,
+                        related projects. Prerendered per project via crawlLinks.
   about.vue           - About: bio, photo, skills, services, stats, CTA
   contact.vue         - Contact: contact channels, location/availability card
 
 services/
-  projects.ts         - SINGLE SOURCE OF TRUTH for the portfolio. Typed Project model,
-                        categories, and helpers. Add a project = one array entry.
-                        preview.kind: 'live' (iframe) | 'image' (screenshot) | 'placeholder'.
+  projects.ts         - Typed Project model, categories, and helpers (getProject,
+                        projectsByCategory, countByCategory, featuredProjects).
+  data/*.json         - SINGLE SOURCE OF TRUTH: one JSON file per category
+                        (webapp / game / education / client). Add a project here.
 
 components/
-  ProjectShowcase.vue - Category filter tabs + responsive grid + screenshot lightbox
-  ProjectCard.vue     - One project: preview + category badge + tags; links out or opens lightbox
-  ProjectPreview.vue  - Renders the preview: lazy-loaded scaled live iframe / image / placeholder
+  ProjectShowcase.vue - Category filter tabs + responsive uniform grid
+  ProjectCard.vue     - One project card (branded preview + badge + tags); links to /projects/:id
+  ProjectPreview.vue  - Card visual: branded tile (live/placeholder) or real screenshot (image)
   AppHeader.vue       - Fixed navbar, scroll state, mobile menu
   AppFooter.vue       - Footer with brand, nav, socials
   SectionHeading.vue  - Reusable eyebrow + title + subtitle
@@ -57,7 +61,8 @@ public/               - Served at root: favicon.svg, site.webmanifest, img/, ico
 .github/workflows/deploy.yml - CI: pnpm install + generate + deploy to GitHub Pages
 ```
 
-Routes are clean URLs: `/`, `/about`, `/contact`.
+Routes are clean URLs: `/`, `/projects`, `/projects/:id`, `/about`, `/contact`. Nav (header +
+footer) links Home · Portfolio · About · Contact; "Portfolio" stays active on `/projects/:id`.
 
 ### SCSS design system (`assets/scss/`)
 
@@ -77,16 +82,23 @@ Vue's own `v-show` toggle.
 
 ### Adding a project
 
-Append to `projects` in `services/projects.ts`. For a hosted, embeddable site use
-`preview: { kind: 'live' }` + `url`. For a screenshot use `{ kind: 'image', src: '/img/...' }`.
-For not-yet-hosted or non-embeddable (e.g. X-Frame-Options) use `{ kind: 'placeholder', emoji }`.
+Add an entry to the matching `services/data/<category>.json` file. Fields: `id`, `title`,
+`description` (card one-liner), `longDescription` + `highlights[]` (detail page), `tags[]`,
+optional `url`, `preview`, optional `featured`, `year`.
+
+- Hosted + embeddable → `"preview": { "kind": "live" }` + `url` (branded card, live embed on detail)
+- Screenshot → `"preview": { "kind": "image", "src": "/img/..." }`
+- Not-yet-hosted / blocks embedding (e.g. X-Frame-Options) → `"preview": { "kind": "placeholder", "emoji": "🎮" }`
+
+`featured: true` surfaces the project in the home teaser grid. The detail page and sitemap
+entry are picked up automatically on the next build. Then add the URL to `public/sitemap.xml`.
 
 ## SEO
 
 Per-page SEO is set in each page's `<script setup>` via `useHead` / `useSeoMeta`, and JSON-LD via the `useJsonLd()` helper:
 - Unique title tags and meta descriptions per page
 - Open Graph and Twitter Card meta tags
-- JSON-LD structured data (Person, WebSite, WebPage, BreadcrumbList, ContactPage, ItemList)
+- JSON-LD structured data (Person, WebSite, ItemList, BreadcrumbList, ContactPage, CreativeWork per project)
 - Canonical URLs pointing to `https://maulanayusupp.github.io/...`
 - Shared favicons, theme-color, and font links live in `nuxt.config.ts` (`app.head`)
 - `public/robots.txt` and `public/sitemap.xml`
@@ -133,5 +145,11 @@ The `github-pages` Nitro preset auto-emits `.nojekyll` (so `_nuxt/` assets are s
 - All pages share the same navigation (AppHeader), footer (AppFooter), and shell via `layouts/default.vue`
 - Styling is SCSS only — tokens/mixins from `@use 'abstracts'`, BEM-style class names, scoped per component. No inline CSS, no utility-class soup.
 - SVG icons are inlined (no icon library dependency)
-- Social/external links use `target="_blank" rel="noopener"`
+- Social/external links use `target="_blank" rel="noopener"`; in-page/mailto/tel links do NOT
 - Internal navigation uses `<NuxtLink>` (never hardcoded `.html` links)
+- **Never show tech-stack / "Built with …" credits on the site** (no "Powered by", framework
+  names, etc. in visible page content)
+- **Ship changes incrementally**: one logical change per commit, and push each stage separately
+  — do not batch multiple unrelated changes into one push
+- **Track next features in `TODO.md`** (repo root); move items here as they're planned
+- Verify every change with `pnpm run generate` before pushing
