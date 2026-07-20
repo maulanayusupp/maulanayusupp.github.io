@@ -16,7 +16,13 @@ const props = withDefaults(defineProps<Props>(), {
 const tag = computed(() => (props.to ? resolveComponent('NuxtLink') : props.href ? 'a' : 'button'))
 const attrs = computed(() => {
   if (props.to) return { to: props.to }
-  if (props.href) return { href: props.href, target: '_blank', rel: 'noopener' }
+  if (props.href) {
+    // Only open external http(s) links in a new tab; in-page/mailto/tel stay in place.
+    const external = /^https?:\/\//.test(props.href)
+    return external
+      ? { href: props.href, target: '_blank', rel: 'noopener' }
+      : { href: props.href }
+  }
   return {}
 })
 </script>
