@@ -151,5 +151,44 @@
     "statProjects": "Projects shipped",
     "statClients": "Happy clients",
     "statTech": "Technologies"
+  },
+  "nav2": {
+    "privacy": "Privacy"
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "updated": "Last updated: July 2026",
+    "intro": "This is the personal portfolio of Maulana Yusup Abdullah. This page explains, plainly, what happens with your data when you visit. Short version: this is a static site that does not track you.",
+    "sections": [
+      {
+        "heading": "What data I collect",
+        "body": "None that identifies you. The site has no accounts and no contact form, so I don't ask for or store personal information about visitors."
+      },
+      {
+        "heading": "Local storage on your device",
+        "body": "The site saves small preferences in your browser's local storage — your chosen language and your cookie-consent choice. These stay on your device, are never sent to a server, and you can clear them anytime via your browser."
+      },
+      {
+        "heading": "Cookies",
+        "body": "No tracking or advertising cookies are used. Any storage in use is strictly functional (remembering your preferences)."
+      },
+      {
+        "heading": "Third-party services",
+        "body": "The site is hosted on GitHub Pages, which may log request data such as IP addresses as part of normal hosting. Fonts are loaded from Google Fonts, so your IP may be processed by Google to deliver them. Some project pages embed live previews of external sites (e.g. Vercel apps); those sites have their own privacy policies."
+      },
+      {
+        "heading": "Analytics",
+        "body": "There is currently no analytics on this site. If privacy-friendly analytics are ever added, they will stay disabled until you allow them via the consent banner."
+      },
+      {
+        "heading": "Your choices & contact",
+        "body": "You can clear local storage or block requests via your browser at any time. For any question about this policy, email maulanayusupp@gmail.com."
+      },
+      {
+        "heading": "Changes",
+        "body": "This policy may be updated as the site evolves; the date above reflects the latest revision."
+      }
+    ]
   }
 }

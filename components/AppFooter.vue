@@ -7,6 +7,7 @@ const links = [
   { to: '/about', key: 'nav.about' },
   { to: '/contact', key: 'nav.contact' },
   { to: '/cv', key: 'nav.cv' },
+  { to: '/privacy', key: 'nav2.privacy' },
 ]
 </script>
 

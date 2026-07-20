@@ -151,5 +151,44 @@
     "statProjects": "Proyek dirilis",
     "statClients": "Klien puas",
     "statTech": "Teknologi"
+  },
+  "nav2": {
+    "privacy": "Privasi"
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Kebijakan Privasi",
+    "updated": "Terakhir diperbarui: Juli 2026",
+    "intro": "Ini adalah portofolio pribadi Maulana Yusup Abdullah. Halaman ini menjelaskan secara sederhana apa yang terjadi dengan datamu saat berkunjung. Ringkasnya: ini situs statis yang tidak melacakmu.",
+    "sections": [
+      {
+        "heading": "Data yang saya kumpulkan",
+        "body": "Tidak ada yang mengidentifikasimu. Situs ini tidak punya akun dan tidak punya formulir kontak, jadi saya tidak meminta atau menyimpan informasi pribadi pengunjung."
+      },
+      {
+        "heading": "Penyimpanan lokal di perangkatmu",
+        "body": "Situs menyimpan preferensi kecil di local storage browser — pilihan bahasa dan pilihan cookie-consent-mu. Ini tetap di perangkatmu, tidak pernah dikirim ke server, dan bisa kamu hapus kapan saja lewat browser."
+      },
+      {
+        "heading": "Cookie",
+        "body": "Tidak ada cookie pelacakan atau iklan yang digunakan. Penyimpanan yang dipakai murni fungsional (mengingat preferensimu)."
+      },
+      {
+        "heading": "Layanan pihak ketiga",
+        "body": "Situs di-host di GitHub Pages, yang mungkin mencatat data permintaan seperti alamat IP sebagai bagian dari hosting biasa. Font dimuat dari Google Fonts, jadi IP-mu mungkin diproses Google untuk mengirimkannya. Beberapa halaman proyek menampilkan preview langsung situs eksternal (mis. aplikasi Vercel); situs tersebut punya kebijakan privasinya sendiri."
+      },
+      {
+        "heading": "Analytics",
+        "body": "Saat ini tidak ada analytics di situs ini. Jika suatu saat ditambahkan analytics yang ramah privasi, itu akan tetap nonaktif sampai kamu izinkan lewat banner persetujuan."
+      },
+      {
+        "heading": "Pilihan & kontak",
+        "body": "Kamu bisa menghapus local storage atau memblokir permintaan lewat browser kapan saja. Untuk pertanyaan tentang kebijakan ini, email maulanayusupp@gmail.com."
+      },
+      {
+        "heading": "Perubahan",
+        "body": "Kebijakan ini dapat diperbarui seiring perkembangan situs; tanggal di atas menunjukkan revisi terbaru."
+      }
+    ]
   }
 }
