@@ -140,7 +140,7 @@ const stats = [
       </div>
     </section>
 
-    <CtaSection text="I provide reliable, consistent, and high-level solutions for you and your business. Let's build something great." />
+    <CtaSection />
   </div>
 </template>
 

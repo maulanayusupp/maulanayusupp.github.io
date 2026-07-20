@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { getCategory, type Project } from '~/services/projects'
+import type { Project } from '~/services/projects'
 
-const props = defineProps<{ project: Project }>()
-const category = computed(() => getCategory(props.project.category))
+defineProps<{ project: Project }>()
+const { t } = useLocale()
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const category = computed(() => getCategory(props.project.category))
       <ProjectPreview :project="project" />
       <div class="project-card__overlay">
         <span class="project-card__action">
-          View project
+          {{ t('actions.viewProject') }}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" />
           </svg>
@@ -27,7 +27,7 @@ const category = computed(() => getCategory(props.project.category))
       <div class="project-card__meta">
         <span class="project-card__category">
           <span class="project-card__dot" />
-          {{ category?.label }}
+          {{ t(`categories.${project.category}`) }}
         </span>
         <span v-if="project.year" class="project-card__year">{{ project.year }}</span>
       </div>

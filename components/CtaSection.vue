@@ -1,10 +1,5 @@
 <script setup lang="ts">
-withDefaults(
-  defineProps<{ text?: string }>(),
-  {
-    text: "Have a project, product, or tool in mind? I'd love to help you build it. Let's talk.",
-  },
-)
+const { t } = useLocale()
 </script>
 
 <template>
@@ -13,12 +8,12 @@ withDefaults(
       <div class="cta reveal">
         <div class="cta__glow" />
         <div class="cta__content">
-          <h2 class="cta__title">Let's build something<br><span class="gradient-text">worth shipping</span></h2>
-          <p class="cta__text">{{ text }}</p>
+          <h2 class="cta__title">{{ t('cta.titlePre') }}<br><span class="gradient-text">{{ t('cta.titleHighlight') }}</span></h2>
+          <p class="cta__text">{{ t('cta.text') }}</p>
           <div class="cta__actions">
-            <BaseButton to="/contact" variant="primary" size="lg">Get in Touch</BaseButton>
+            <BaseButton to="/contact" variant="primary" size="lg">{{ t('cta.primary') }}</BaseButton>
             <BaseButton href="mailto:maulanayusupp@gmail.com" variant="secondary" size="lg">
-              Email me
+              {{ t('cta.secondary') }}
             </BaseButton>
           </div>
         </div>

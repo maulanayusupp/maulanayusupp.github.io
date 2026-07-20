@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { projects, featuredProjects } from '~/services/projects'
 
+const { t } = useLocale()
+
 usePageSeo({
   title: 'Maulana Yusup Abdullah — Full Stack Developer & Software Engineer',
   description:
@@ -27,9 +29,9 @@ useScrollReveal()
 
 const projectCount = projects.length
 const stats = [
-  { value: '10+', label: 'Years experience' },
-  { value: `${projectCount}+`, label: 'Projects built' },
-  { value: '13+', label: 'Happy clients' },
+  { value: '10+', key: 'hero.statYears' },
+  { value: `${projectCount}+`, key: 'hero.statProjects' },
+  { value: '13+', key: 'hero.statClients' },
 ]
 </script>
 
@@ -42,27 +44,25 @@ const stats = [
       <div class="container hero__inner">
         <p class="hero__badge reveal">
           <span class="hero__badge-dot" />
-          Available for new projects
+          {{ t('hero.badge') }}
         </p>
         <h1 class="hero__title reveal reveal-delay-1">
-          I build <span class="gradient-text">web apps, tools &amp; products</span>
-          that people actually use.
+          {{ t('hero.titlePre') }} <span class="gradient-text">{{ t('hero.titleHighlight') }}</span>
+          {{ t('hero.titlePost') }}
         </h1>
         <p class="hero__lead reveal reveal-delay-2">
-          I'm <strong>Maulana Yusup Abdullah</strong> — a Full Stack Developer &amp; Software
-          Engineer with 10+ years of experience. From enterprise platforms to developer tools and
-          interactive experiences, I ship reliable software with Vue.js, Nuxt, Laravel, and Node.js.
+          {{ t('hero.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('hero.leadPost') }}
         </p>
         <div class="hero__actions reveal reveal-delay-3">
-          <BaseButton href="#work" variant="primary" size="lg">View my work</BaseButton>
-          <BaseButton to="/contact" variant="secondary" size="lg">Let's work together</BaseButton>
-          <BaseButton to="/cv" variant="ghost" size="lg">Download CV</BaseButton>
+          <BaseButton href="#work" variant="primary" size="lg">{{ t('actions.viewWork') }}</BaseButton>
+          <BaseButton to="/contact" variant="secondary" size="lg">{{ t('actions.letsWork') }}</BaseButton>
+          <BaseButton to="/cv" variant="ghost" size="lg">{{ t('actions.downloadCv') }}</BaseButton>
         </div>
 
         <dl class="hero__stats reveal reveal-delay-4">
-          <div v-for="stat in stats" :key="stat.label" class="hero__stat">
+          <div v-for="stat in stats" :key="stat.key" class="hero__stat">
             <dt class="hero__stat-value">{{ stat.value }}</dt>
-            <dd class="hero__stat-label">{{ stat.label }}</dd>
+            <dd class="hero__stat-label">{{ t(stat.key) }}</dd>
           </div>
         </dl>
       </div>
@@ -72,9 +72,9 @@ const stats = [
     <section id="work" class="section">
       <div class="container">
         <SectionHeading
-          eyebrow="Portfolio"
-          title="Selected work"
-          subtitle="A mix of client projects, products, developer tools, and interactive experiences. Here's a taste — see the full portfolio for everything, by category."
+          :eyebrow="t('work.eyebrow')"
+          :title="t('work.title')"
+          :subtitle="t('work.subtitle')"
           class="reveal"
         />
         <div class="work__grid reveal">
@@ -82,7 +82,7 @@ const stats = [
         </div>
         <div class="work__more reveal">
           <BaseButton to="/projects" variant="secondary" size="lg">
-            View all {{ projectCount }} projects
+            {{ t('actions.viewAll', { count: projectCount }) }}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" />
             </svg>
@@ -95,9 +95,9 @@ const stats = [
     <section class="section section-divider">
       <div class="container">
         <SectionHeading
-          eyebrow="Tech Stack"
-          title="Tools I build with"
-          subtitle="A pragmatic, battle-tested stack across frontend, backend, real-time, and infrastructure."
+          :eyebrow="t('tech.eyebrow')"
+          :title="t('tech.title')"
+          :subtitle="t('tech.subtitle')"
           class="reveal"
         />
         <div class="tech reveal">

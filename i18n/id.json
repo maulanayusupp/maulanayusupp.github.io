@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "portfolio": "Portofolio",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "cv": "CV / Résumé"
+  },
+  "actions": {
+    "getInTouch": "Hubungi saya",
+    "search": "Cari",
+    "viewProject": "Lihat proyek",
+    "viewAll": "Lihat semua {count} proyek",
+    "viewWork": "Lihat karya saya",
+    "letsWork": "Ayo bekerja sama",
+    "downloadCv": "Unduh CV",
+    "emailMe": "Email saya"
+  },
+  "categories": {
+    "webapp": "Aplikasi Web & Tools",
+    "game": "Games",
+    "education": "Edukasi",
+    "client": "Proyek Klien"
+  },
+  "hero": {
+    "badge": "Tersedia untuk proyek baru",
+    "titlePre": "Saya membangun",
+    "titleHighlight": "aplikasi web, tools & produk",
+    "titlePost": "yang benar-benar dipakai orang.",
+    "leadPre": "Saya",
+    "leadPost": "— Full Stack Developer & Software Engineer dengan 10+ tahun pengalaman. Dari platform enterprise sampai developer tools dan pengalaman interaktif, saya membangun software yang andal dengan Vue.js, Nuxt, Laravel, dan Node.js.",
+    "statYears": "Tahun pengalaman",
+    "statProjects": "Proyek dibuat",
+    "statClients": "Klien puas"
+  },
+  "work": {
+    "eyebrow": "Portofolio",
+    "title": "Karya pilihan",
+    "subtitle": "Perpaduan proyek klien, produk, developer tools, dan pengalaman interaktif. Ini sebagian — lihat portofolio lengkap untuk semuanya, per kategori."
+  },
+  "tech": {
+    "eyebrow": "Teknologi",
+    "title": "Tools yang saya pakai",
+    "subtitle": "Stack yang pragmatis dan teruji, mulai dari frontend, backend, real-time, hingga infrastruktur."
+  },
+  "cta": {
+    "titlePre": "Ayo bangun sesuatu",
+    "titleHighlight": "yang layak dirilis",
+    "text": "Punya proyek, produk, atau tool? Saya senang membantu mewujudkannya. Ayo ngobrol.",
+    "primary": "Hubungi Saya",
+    "secondary": "Email saya"
+  },
+  "footer": {
+    "tagline": "Full Stack Web Developer — membangun aplikasi web, tools, dan pengalaman interaktif.",
+    "rights": "© {year} Maulana Yusup Abdullah. Hak cipta dilindungi.",
+    "location": "Berbasis di Bandung, Indonesia"
+  },
+  "cmd": {
+    "placeholder": "Cari proyek dan halaman…",
+    "pages": "Halaman",
+    "projects": "Proyek",
+    "empty": "Tidak ada hasil untuk “{q}”.",
+    "navigate": "navigasi",
+    "open": "buka"
+  }
+}

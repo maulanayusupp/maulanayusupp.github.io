@@ -1,11 +1,12 @@
 <script setup lang="ts">
+const { t } = useLocale()
 const year = new Date().getFullYear()
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/projects', label: 'Portfolio' },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
-  { to: '/cv', label: 'CV / Résumé' },
+  { to: '/', key: 'nav.home' },
+  { to: '/projects', key: 'nav.portfolio' },
+  { to: '/about', key: 'nav.about' },
+  { to: '/contact', key: 'nav.contact' },
+  { to: '/cv', key: 'nav.cv' },
 ]
 </script>
 
@@ -17,22 +18,20 @@ const links = [
           <span class="footer__logo-mark">M</span>
           Maulana Yusup Abdullah
         </NuxtLink>
-        <p class="footer__tagline">
-          Full Stack Web Developer — building web apps, tools, and interactive experiences.
-        </p>
+        <p class="footer__tagline">{{ t('footer.tagline') }}</p>
         <SocialLinks />
       </div>
 
       <nav class="footer__nav" aria-label="Footer">
         <NuxtLink v-for="link in links" :key="link.to" :to="link.to" class="footer__link">
-          {{ link.label }}
+          {{ t(link.key) }}
         </NuxtLink>
       </nav>
     </div>
 
     <div class="footer__bar container">
-      <span>&copy; {{ year }} Maulana Yusup Abdullah. All rights reserved.</span>
-      <span>Based in Bandung, Indonesia</span>
+      <span>{{ t('footer.rights', { year }) }}</span>
+      <span>{{ t('footer.location') }}</span>
     </div>
   </footer>
 </template>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { getCategory, projects } from '~/services/projects'
+import { projects } from '~/services/projects'
 
 const { isOpen, open, close, toggle } = useCommandPalette()
+const { t } = useLocale()
 
 const query = ref('')
 const activeIndex = ref(0)
@@ -14,19 +15,22 @@ interface Item {
   to: string
 }
 
-const pages: Item[] = [
-  { type: 'page', label: 'Home', hint: 'Page', to: '/' },
-  { type: 'page', label: 'Portfolio', hint: 'Page', to: '/projects' },
-  { type: 'page', label: 'About', hint: 'Page', to: '/about' },
-  { type: 'page', label: 'Contact', hint: 'Page', to: '/contact' },
-]
+const pages = computed<Item[]>(() => [
+  { type: 'page', label: t('nav.home'), hint: t('cmd.pages'), to: '/' },
+  { type: 'page', label: t('nav.portfolio'), hint: t('cmd.pages'), to: '/projects' },
+  { type: 'page', label: t('nav.about'), hint: t('cmd.pages'), to: '/about' },
+  { type: 'page', label: t('nav.contact'), hint: t('cmd.pages'), to: '/contact' },
+  { type: 'page', label: t('nav.cv'), hint: t('cmd.pages'), to: '/cv' },
+])
 
-const projectItems: Item[] = projects.map((p) => ({
-  type: 'project',
-  label: p.title,
-  hint: getCategory(p.category)?.label ?? 'Project',
-  to: `/projects/${p.id}`,
-}))
+const projectItems = computed<Item[]>(() =>
+  projects.map((p) => ({
+    type: 'project',
+    label: p.title,
+    hint: t(`categories.${p.category}`),
+    to: `/projects/${p.id}`,
+  })),
+)
 
 const q = computed(() => query.value.trim().toLowerCase())
 
@@ -35,9 +39,9 @@ function match(item: Item, extra = '') {
   return `${item.label} ${item.hint} ${extra}`.toLowerCase().includes(q.value)
 }
 
-const filteredPages = computed(() => pages.filter((i) => match(i)))
+const filteredPages = computed(() => pages.value.filter((i) => match(i)))
 const filteredProjects = computed(() =>
-  projectItems.filter((i, idx) => match(i, projects[idx].tags.join(' '))),
+  projectItems.value.filter((i, idx) => match(i, projects[idx].tags.join(' '))),
 )
 // Flat list drives keyboard navigation (pages first, then projects).
 const flat = computed<Item[]>(() => [...filteredPages.value, ...filteredProjects.value])
@@ -118,7 +122,7 @@ function flatIndex(item: Item) {
               v-model="query"
               type="text"
               class="cmdk__input"
-              placeholder="Search projects and pages…"
+              :placeholder="t('cmd.placeholder')"
               autocomplete="off"
               spellcheck="false"
               @keydown="onInputKeydown"
@@ -129,7 +133,7 @@ function flatIndex(item: Item) {
           <div class="cmdk__results">
             <template v-if="flat.length">
               <div v-if="filteredPages.length" class="cmdk__section">
-                <p class="cmdk__label">Pages</p>
+                <p class="cmdk__label">{{ t('cmd.pages') }}</p>
                 <button
                   v-for="item in filteredPages"
                   :key="item.to"
@@ -144,7 +148,7 @@ function flatIndex(item: Item) {
               </div>
 
               <div v-if="filteredProjects.length" class="cmdk__section">
-                <p class="cmdk__label">Projects</p>
+                <p class="cmdk__label">{{ t('cmd.projects') }}</p>
                 <button
                   v-for="item in filteredProjects"
                   :key="item.to"
@@ -159,12 +163,12 @@ function flatIndex(item: Item) {
               </div>
             </template>
 
-            <p v-else class="cmdk__empty">No results for “{{ query }}”.</p>
+            <p v-else class="cmdk__empty">{{ t('cmd.empty', { q: query }) }}</p>
           </div>
 
           <div class="cmdk__footer">
-            <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
-            <span><kbd>↵</kbd> open</span>
+            <span><kbd>↑</kbd><kbd>↓</kbd> {{ t('cmd.navigate') }}</span>
+            <span><kbd>↵</kbd> {{ t('cmd.open') }}</span>
           </div>
         </div>
       </div>

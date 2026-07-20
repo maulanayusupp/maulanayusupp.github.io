@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "cv": "CV / Résumé"
+  },
+  "actions": {
+    "getInTouch": "Get in touch",
+    "search": "Search",
+    "viewProject": "View project",
+    "viewAll": "View all {count} projects",
+    "viewWork": "View my work",
+    "letsWork": "Let's work together",
+    "downloadCv": "Download CV",
+    "emailMe": "Email me"
+  },
+  "categories": {
+    "webapp": "Web Apps & Tools",
+    "game": "Games",
+    "education": "Educational",
+    "client": "Client Work"
+  },
+  "hero": {
+    "badge": "Available for new projects",
+    "titlePre": "I build",
+    "titleHighlight": "web apps, tools & products",
+    "titlePost": "that people actually use.",
+    "leadPre": "I'm",
+    "leadPost": "— a Full Stack Developer & Software Engineer with 10+ years of experience. From enterprise platforms to developer tools and interactive experiences, I ship reliable software with Vue.js, Nuxt, Laravel, and Node.js.",
+    "statYears": "Years experience",
+    "statProjects": "Projects built",
+    "statClients": "Happy clients"
+  },
+  "work": {
+    "eyebrow": "Portfolio",
+    "title": "Selected work",
+    "subtitle": "A mix of client projects, products, developer tools, and interactive experiences. Here's a taste — see the full portfolio for everything, by category."
+  },
+  "tech": {
+    "eyebrow": "Tech Stack",
+    "title": "Tools I build with",
+    "subtitle": "A pragmatic, battle-tested stack across frontend, backend, real-time, and infrastructure."
+  },
+  "cta": {
+    "titlePre": "Let's build something",
+    "titleHighlight": "worth shipping",
+    "text": "Have a project, product, or tool in mind? I'd love to help you build it. Let's talk.",
+    "primary": "Get in Touch",
+    "secondary": "Email me"
+  },
+  "footer": {
+    "tagline": "Full Stack Web Developer — building web apps, tools, and interactive experiences.",
+    "rights": "© {year} Maulana Yusup Abdullah. All rights reserved.",
+    "location": "Based in Bandung, Indonesia"
+  },
+  "cmd": {
+    "placeholder": "Search projects and pages…",
+    "pages": "Pages",
+    "projects": "Projects",
+    "empty": "No results for “{q}”.",
+    "navigate": "navigate",
+    "open": "open"
+  }
+}

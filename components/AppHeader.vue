@@ -1,15 +1,16 @@
 <script setup lang="ts">
 const route = useRoute()
 const { open: openSearch } = useCommandPalette()
+const { t } = useLocale()
 const scrolled = ref(false)
 const mobileOpen = ref(false)
 
 // `prefix` links stay active on nested routes (e.g. /projects/:id).
 const links = [
-  { to: '/', label: 'Home' },
-  { to: '/projects', label: 'Portfolio', prefix: true },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/', key: 'nav.home' },
+  { to: '/projects', key: 'nav.portfolio', prefix: true },
+  { to: '/about', key: 'nav.about' },
+  { to: '/contact', key: 'nav.contact' },
 ]
 
 function onScroll() {
@@ -42,20 +43,21 @@ watch(() => route.path, () => (mobileOpen.value = false))
           :active-class="link.prefix ? 'is-active' : ''"
           :exact-active-class="link.prefix ? '' : 'is-active'"
         >
-          {{ link.label }}
+          {{ t(link.key) }}
         </NuxtLink>
       </nav>
 
       <div class="header__actions">
-        <button class="header__search" aria-label="Search (Command+K)" @click="openSearch">
+        <button class="header__search" :aria-label="t('actions.search')" @click="openSearch">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
             <circle cx="11" cy="11" r="7" stroke-width="2" />
             <path stroke-linecap="round" stroke-width="2" d="M21 21l-4.3-4.3" />
           </svg>
-          <span>Search</span>
+          <span>{{ t('actions.search') }}</span>
           <kbd>⌘K</kbd>
         </button>
-        <BaseButton to="/contact" size="md">Get in touch</BaseButton>
+        <LangSwitch />
+        <BaseButton to="/contact" size="md">{{ t('actions.getInTouch') }}</BaseButton>
       </div>
 
       <button class="header__search-icon" aria-label="Search" @click="openSearch">
@@ -85,9 +87,12 @@ watch(() => route.path, () => (mobileOpen.value = false))
           :active-class="link.prefix ? 'is-active' : ''"
           :exact-active-class="link.prefix ? '' : 'is-active'"
         >
-          {{ link.label }}
+          {{ t(link.key) }}
         </NuxtLink>
-        <BaseButton to="/contact" size="md">Get in touch</BaseButton>
+        <div class="header__mobile-row">
+          <LangSwitch />
+        </div>
+        <BaseButton to="/contact" size="md">{{ t('actions.getInTouch') }}</BaseButton>
       </nav>
     </Transition>
   </header>
