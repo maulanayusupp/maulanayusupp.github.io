@@ -30,7 +30,7 @@ function onActivate() {
     :is="rootTag"
     v-bind="rootAttrs"
     class="project-card"
-    :class="[`project-card--${project.category}`, { 'project-card--featured': project.featured }]"
+    :class="`project-card--${project.category}`"
     @click="onActivate"
   >
     <div class="project-card__media">
@@ -72,6 +72,7 @@ function onActivate() {
 
   display: flex;
   flex-direction: column;
+  height: 100%;
   overflow: hidden;
   text-align: left;
   border-radius: $radius-xl;
@@ -97,12 +98,6 @@ function onActivate() {
   &--game { --accent: #{$cat-game}; }
   &--education { --accent: #{$cat-education}; }
   &--webapp { --accent: #{$cat-webapp}; }
-
-  &--featured {
-    @include respond-to('lg') {
-      grid-column: span 2;
-    }
-  }
 
   &__media {
     position: relative;
@@ -144,6 +139,7 @@ function onActivate() {
 
   &__body {
     display: flex;
+    flex: 1;
     flex-direction: column;
     gap: $space-3;
     padding: $space-6;
@@ -194,7 +190,8 @@ function onActivate() {
     display: flex;
     flex-wrap: wrap;
     gap: $space-2;
-    margin-top: $space-1;
+    margin-top: auto;
+    padding-top: $space-2;
   }
 
   &__tag {
