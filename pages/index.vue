@@ -56,6 +56,7 @@ const stats = [
         <div class="hero__actions reveal reveal-delay-3">
           <BaseButton href="#work" variant="primary" size="lg">View my work</BaseButton>
           <BaseButton to="/contact" variant="secondary" size="lg">Let's work together</BaseButton>
+          <BaseButton to="/cv" variant="ghost" size="lg">Download CV</BaseButton>
         </div>
 
         <dl class="hero__stats reveal reveal-delay-4">

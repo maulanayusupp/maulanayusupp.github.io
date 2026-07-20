@@ -5,6 +5,7 @@ const links = [
   { to: '/projects', label: 'Portfolio' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
+  { to: '/cv', label: 'CV / Résumé' },
 ]
 </script>
 
