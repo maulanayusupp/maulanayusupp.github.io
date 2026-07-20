@@ -26,7 +26,6 @@
     "client": "Proyek Klien"
   },
   "hero": {
-    "badge": "Tersedia untuk proyek baru",
     "titlePre": "Saya membangun",
     "titleHighlight": "aplikasi web, tools & produk",
     "titlePost": "yang benar-benar dipakai orang.",
@@ -73,8 +72,8 @@
     "leadPre": "Halo! Saya",
     "leadPost": "— berbasis di Bandung, Indonesia. Dengan 10+ tahun di pengembangan software, saya telah mengerjakan proyek untuk perorangan, startup, hingga perusahaan besar — membangun aplikasi web, produk, dan developer tools yang andal.",
     "traits": [
-      "Terbuka untuk proyek jangka panjang dan kemitraan",
-      "Sangat bertanggung jawab — siap secepatnya saat dibutuhkan",
+      "Komunikasi jelas dan pengerjaan yang andal",
+      "Sangat bertanggung jawab dan teliti",
       "Alur kerja berbasis Git & manajemen tugas untuk kolaborasi rapi",
       "Arsitektur bersih, mudah dirawat, berbasis komponen"
     ],
@@ -109,8 +108,8 @@
     "locationTitle": "Berbasis di Bandung",
     "country": "Indonesia",
     "availability": [
-      "Tersedia untuk kerja remote di seluruh dunia",
-      "Terbuka untuk kontrak jangka panjang",
+      "Bekerja lintas zona waktu",
+      "English & Bahasa Indonesia",
       "Respons cepat dalam 24 jam"
     ],
     "sendEmail": "Kirim Email"
@@ -147,7 +146,7 @@
     "back": "← Kembali ke situs",
     "download": "Unduh PDF",
     "hint": "Tip: matikan “Headers and footers” di dialog print untuk PDF yang bersih",
-    "available": "Bandung, Indonesia · Tersedia untuk bekerja",
+    "available": "Bandung, Indonesia",
     "experience": "Pengalaman",
     "skills": "Skill",
     "projects": "Proyek",

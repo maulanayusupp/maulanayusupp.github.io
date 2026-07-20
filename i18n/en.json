@@ -26,7 +26,6 @@
     "client": "Client Work"
   },
   "hero": {
-    "badge": "Available for new projects",
     "titlePre": "I build",
     "titleHighlight": "web apps, tools & products",
     "titlePost": "that people actually use.",
@@ -73,8 +72,8 @@
     "leadPre": "Hello! I'm",
     "leadPost": "— based in Bandung, Indonesia. With 10+ years in software development, I've delivered projects for individuals, startups, and large enterprises — building reliable web apps, products, and developer tools.",
     "traits": [
-      "Open for long-term projects and partnerships",
-      "Highly responsible — available ASAP when you need me",
+      "Clear communication and reliable delivery",
+      "Highly responsible and detail-oriented",
       "Git-based workflow & task management for organized collaboration",
       "Clean, maintainable, component-based architecture"
     ],
@@ -109,8 +108,8 @@
     "locationTitle": "Based in Bandung",
     "country": "Indonesia",
     "availability": [
-      "Available for remote work worldwide",
-      "Open for long-term contracts",
+      "Works across time zones",
+      "English & Bahasa Indonesia",
       "Fast response within 24 hours"
     ],
     "sendEmail": "Send an Email"
@@ -147,7 +146,7 @@
     "back": "← Back to site",
     "download": "Download PDF",
     "hint": "Tip: uncheck “Headers and footers” in the print dialog for a clean PDF",
-    "available": "Bandung, Indonesia · Available for work",
+    "available": "Bandung, Indonesia",
     "experience": "Experience",
     "skills": "Skills",
     "projects": "Projects",

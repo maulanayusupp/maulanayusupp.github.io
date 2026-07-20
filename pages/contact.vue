@@ -2,12 +2,12 @@
 const { t, tl } = useLocale()
 
 usePageSeo({
-  title: 'Contact Maulana Yusup Abdullah — Hire a Full Stack Developer',
+  title: 'Contact Maulana Yusup Abdullah — Full Stack Developer & Software Engineer',
   description:
-    'Get in touch with Maulana Yusup Abdullah for your web app, tool, or game project. Available for freelance work, long-term contracts, and consulting. Based in Bandung, Indonesia.',
+    'Get in touch with Maulana Yusup Abdullah about web apps, developer tools, and products. Based in Bandung, Indonesia.',
   path: '/contact',
   keywords:
-    'contact Maulana Yusup Abdullah, hire developer, freelance web developer, hire Vue.js developer, hire Nuxt developer, hire Laravel developer, Bandung developer',
+    'contact Maulana Yusup Abdullah, Vue.js developer, Nuxt developer, Laravel developer, Node.js, Bandung, Indonesia',
 })
 
 useJsonLd([

@@ -63,7 +63,7 @@ function printCv() {
       <header class="cv__hero">
         <h1 class="cv__name">Maulana Yusup Abdullah</h1>
         <p class="cv__role">Full Stack Developer &amp; Software Engineer</p>
-        <p class="cv__loc"><span class="cv__avail" /> {{ t('cv.available') }}</p>
+        <p class="cv__loc">{{ t('cv.available') }}</p>
 
         <p class="cv__pitch">{{ localize(experience, 'summary') }}</p>
 

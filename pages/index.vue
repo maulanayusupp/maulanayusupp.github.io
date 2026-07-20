@@ -9,7 +9,7 @@ usePageSeo({
     'Full Stack Web Developer & Software Engineer with 10+ years of experience. I build web apps, developer tools, and interactive experiences with Vue.js, Nuxt, Laravel, and Node.js.',
   path: '/',
   keywords:
-    'Maulana Yusup Abdullah, full stack developer, software engineer, Vue.js, Nuxt, Laravel, Node.js, web developer, Bandung, Indonesia, portfolio, hire developer',
+    'Maulana Yusup Abdullah, full stack developer, software engineer, Vue.js, Nuxt, Laravel, Node.js, web developer, Bandung, Indonesia, portfolio',
 })
 
 useJsonLd([
@@ -42,11 +42,7 @@ const stats = [
       <div class="hero__orb hero__orb--1" />
       <div class="hero__orb hero__orb--2" />
       <div class="container hero__inner">
-        <p class="hero__badge reveal">
-          <span class="hero__badge-dot" />
-          {{ t('hero.badge') }}
-        </p>
-        <h1 class="hero__title reveal reveal-delay-1">
+        <h1 class="hero__title reveal">
           {{ t('hero.titlePre') }} <span class="gradient-text">{{ t('hero.titleHighlight') }}</span>
           {{ t('hero.titlePost') }}
         </h1>
@@ -149,28 +145,6 @@ const stats = [
   &__inner {
     position: relative;
     max-width: 52rem;
-  }
-
-  &__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: $space-2;
-    padding: $space-2 $space-4;
-    margin-bottom: $space-6;
-    font-size: $fs-sm;
-    font-weight: 500;
-    color: $color-indigo-light;
-    border: 1px solid color-mix(in srgb, $color-indigo 30%, transparent);
-    border-radius: $radius-full;
-    background: color-mix(in srgb, $color-indigo 10%, transparent);
-  }
-
-  &__badge-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: $radius-full;
-    background: $color-emerald;
-    animation: pulse-dot 2s ease-in-out infinite;
   }
 
   &__title {
