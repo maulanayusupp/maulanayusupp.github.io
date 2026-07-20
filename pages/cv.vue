@@ -13,7 +13,7 @@ usePageSeo({
   path: '/cv',
 })
 
-const { t } = useLocale()
+const { t, localize } = useLocale()
 
 // Everything below is derived from the single-source data files.
 const projectCount = projects.length
@@ -65,7 +65,7 @@ function printCv() {
         <p class="cv__role">Full Stack Developer &amp; Software Engineer</p>
         <p class="cv__loc"><span class="cv__avail" /> {{ t('cv.available') }}</p>
 
-        <p class="cv__pitch">{{ experience.summary }}</p>
+        <p class="cv__pitch">{{ localize(experience, 'summary') }}</p>
 
         <div class="cv__links">
           <a
@@ -99,11 +99,11 @@ function printCv() {
           <li v-for="e in experience.timeline" :key="e.period + e.role" class="cv__tl-item">
             <span class="cv__tl-dot" :class="{ 'is-current': e.current }" />
             <div class="cv__tl-head">
-              <span class="cv__tl-role">{{ e.role }}</span>
+              <span class="cv__tl-role">{{ localize(e, 'role') }}</span>
               <span class="cv__tl-period">{{ e.period }}</span>
             </div>
-            <p class="cv__tl-org">{{ e.org }}</p>
-            <p class="cv__tl-desc">{{ e.description }}</p>
+            <p class="cv__tl-org">{{ localize(e, 'org') }}</p>
+            <p class="cv__tl-desc">{{ localize(e, 'description') }}</p>
           </li>
         </ol>
       </section>
@@ -136,7 +136,7 @@ function printCv() {
                 <a v-if="p.url" :href="p.url" target="_blank" rel="noopener" class="cv__pitem-link">{{ p.tags[0] }} ↗</a>
                 <span v-else class="cv__pitem-tag">{{ p.tags[0] }}</span>
               </div>
-              <p class="cv__pitem-desc">{{ p.description }}</p>
+              <p class="cv__pitem-desc">{{ localize(p, 'description') }}</p>
             </li>
           </ul>
         </div>

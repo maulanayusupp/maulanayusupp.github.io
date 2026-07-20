@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { query, activeCategory, results, grouped, filters, reset } = useProjectSearch()
-const { t } = useLocale()
+const { t, localize } = useLocale()
 
 type View = 'grid' | 'list'
 const view = ref<View>('grid')
@@ -100,7 +100,7 @@ const view = ref<View>('grid')
           <li v-for="p in group.items" :key="p.id">
             <NuxtLink :to="`/projects/${p.id}`" class="row">
               <span class="row__title">{{ p.title }}</span>
-              <span class="row__desc">{{ p.description }}</span>
+              <span class="row__desc">{{ localize(p, 'description') }}</span>
               <span class="row__tag">{{ p.tags[0] }}</span>
               <svg class="row__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 6l6 6-6 6" />

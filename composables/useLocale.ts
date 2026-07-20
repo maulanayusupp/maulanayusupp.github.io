@@ -43,5 +43,13 @@ export function useLocale() {
     return Array.isArray(value) ? (value as T[]) : []
   }
 
-  return { locale, setLocale, t, tl }
+  // Pick a localized field from a data object: `field_<locale>` if present,
+  // else the base `field`. Lets JSON carry optional `_id` translations.
+  function localize<T = unknown>(obj: Record<string, unknown> | undefined, field: string): T {
+    if (!obj) return undefined as T
+    const localized = obj[`${field}_${locale.value}`]
+    return (localized ?? obj[field]) as T
+  }
+
+  return { locale, setLocale, t, tl, localize }
 }

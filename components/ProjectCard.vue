@@ -2,7 +2,7 @@
 import type { Project } from '~/services/projects'
 
 defineProps<{ project: Project }>()
-const { t } = useLocale()
+const { t, localize } = useLocale()
 </script>
 
 <template>
@@ -33,7 +33,7 @@ const { t } = useLocale()
       </div>
 
       <h3 class="project-card__title">{{ project.title }}</h3>
-      <p class="project-card__desc">{{ project.description }}</p>
+      <p class="project-card__desc">{{ localize(project, 'description') }}</p>
 
       <ul class="project-card__tags">
         <li v-for="tag in project.tags" :key="tag" class="project-card__tag">{{ tag }}</li>

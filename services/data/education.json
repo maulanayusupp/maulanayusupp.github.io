@@ -3,12 +3,20 @@
     "id": "temanisikecil",
     "title": "Temanisikecil",
     "description": "Educational worksheets for children aged 2–5 and coding worksheets for 5+. Learn while playing — motor skills, creativity, and logic.",
+    "description_id": "Worksheet edukatif untuk anak usia 2–5 tahun dan worksheet coding untuk 5+. Belajar sambil bermain — motorik, kreativitas, dan logika.",
     "longDescription": "Temanisikecil is an educational product offering worksheets for children aged 2–5 and coding worksheets for ages 5+. It turns screen time into skill time — helping kids build motor skills, creativity, and logic while playing.",
+    "longDescription_id": "Temanisikecil adalah produk edukasi yang menyediakan worksheet untuk anak usia 2–5 tahun dan worksheet coding untuk usia 5+. Mengubah waktu layar menjadi waktu belajar — membantu anak mengasah motorik, kreativitas, dan logika sambil bermain.",
     "highlights": [
       "Worksheets for ages 2–5",
       "Coding worksheets for ages 5+",
       "Builds motor skills, creativity & logic",
       "Trusted by hundreds of parents"
+    ],
+    "highlights_id": [
+      "Worksheet untuk usia 2–5",
+      "Worksheet coding untuk usia 5+",
+      "Mengasah motorik, kreativitas & logika",
+      "Dipercaya ratusan orang tua"
     ],
     "tags": ["Kids Education", "Worksheets", "Product"],
     "url": "https://www.temanisikecil.com/",
@@ -20,12 +28,20 @@
     "id": "planetarium",
     "title": "Planetarium Razan",
     "description": "An interactive 3D solar system and 28 constellations, with a cinematic tour, voice narration, and orchestral score — right in the browser.",
+    "description_id": "Tata surya 3D interaktif dan 28 rasi bintang, dengan tur sinematik, narasi suara, dan musik orkestra — langsung di browser.",
     "longDescription": "An interactive 3D planetarium. Explore the solar system and 28 constellations with a cinematic guided tour, voice narration, and an orchestral score — all rendered live in the browser.",
+    "longDescription_id": "Planetarium 3D interaktif. Jelajahi tata surya dan 28 rasi bintang dengan tur terpandu sinematik, narasi suara, dan musik orkestra — semuanya dirender langsung di browser.",
     "highlights": [
       "3D solar system simulation",
       "28 constellations",
       "Cinematic tour + voice narration",
       "Orchestral soundtrack"
+    ],
+    "highlights_id": [
+      "Simulasi tata surya 3D",
+      "28 rasi bintang",
+      "Tur sinematik + narasi suara",
+      "Soundtrack orkestra"
     ],
     "tags": ["3D Simulation", "WebGL", "Astronomy"],
     "url": "https://planetarium-razan.vercel.app/",
@@ -37,11 +53,18 @@
     "id": "simulasi-sejarah",
     "title": "Simulasi Sejarah Dunia",
     "description": "An interactive 3D globe that maps world history events across time and place — explore the past spatially.",
+    "description_id": "Globe 3D interaktif yang memetakan peristiwa sejarah dunia menurut waktu dan tempat — jelajahi masa lalu secara spasial.",
     "longDescription": "An interactive 3D globe that maps world-history events across time and place, letting you explore the past spatially. An educational visualization built from secondary sources.",
+    "longDescription_id": "Globe 3D interaktif yang memetakan peristiwa sejarah dunia menurut waktu dan tempat, memungkinkanmu menjelajahi masa lalu secara spasial. Visualisasi edukatif yang disusun dari sumber sekunder.",
     "highlights": [
       "Interactive 3D globe",
       "History mapped by time & place",
       "Spatial exploration of events"
+    ],
+    "highlights_id": [
+      "Globe 3D interaktif",
+      "Sejarah dipetakan menurut waktu & tempat",
+      "Eksplorasi peristiwa secara spasial"
     ],
     "tags": ["3D Globe", "History", "Interactive"],
     "url": "https://simulasi-sejarah.vercel.app/",
@@ -52,12 +75,20 @@
     "id": "belajar-membaca",
     "title": "Belajar Membaca",
     "description": "A reading app for Indonesian kids across 4 stages — letters, syllables, words, sentences — with Indonesian voice-over and playful animations.",
+    "description_id": "Aplikasi belajar membaca untuk anak Indonesia dalam 4 tahap — huruf, suku kata, kata, kalimat — dengan suara bahasa Indonesia dan animasi seru.",
     "longDescription": "A reading app for Indonesian children structured in four stages — letters, syllables, words, and sentences — complete with Indonesian voice-over and playful animations.",
+    "longDescription_id": "Aplikasi belajar membaca untuk anak Indonesia yang disusun dalam empat tahap — huruf, suku kata, kata, dan kalimat — lengkap dengan suara bahasa Indonesia dan animasi yang seru.",
     "highlights": [
       "4 progressive learning stages",
       "Indonesian voice-over",
       "Playful animations",
       "Designed for young learners"
+    ],
+    "highlights_id": [
+      "4 tahap belajar bertingkat",
+      "Suara bahasa Indonesia",
+      "Animasi yang seru",
+      "Dirancang untuk pembelajar cilik"
     ],
     "tags": ["Kids", "Reading", "Bahasa Indonesia"],
     "url": "https://belajar-membaca-nine.vercel.app/",
@@ -68,12 +99,20 @@
     "id": "godzilla-types",
     "title": "Godzilla Types",
     "description": "An encyclopedia of 12 Godzilla incarnations across the Showa, Heisei, Millennium, Reiwa, and MonsterVerse eras — height, weight, abilities, and films.",
+    "description_id": "Ensiklopedia 12 inkarnasi Godzilla dari era Showa, Heisei, Millennium, Reiwa, dan MonsterVerse — tinggi, berat, kemampuan, dan filmnya.",
     "longDescription": "An interactive encyclopedia of 12 Godzilla incarnations spanning the Showa, Heisei, Millennium, Reiwa, and MonsterVerse eras — with height, weight, abilities, and source films for each.",
+    "longDescription_id": "Ensiklopedia interaktif 12 inkarnasi Godzilla yang mencakup era Showa, Heisei, Millennium, Reiwa, dan MonsterVerse — lengkap dengan tinggi, berat, kemampuan, dan film asal masing-masing.",
     "highlights": [
       "12 Godzilla incarnations",
       "5 eras covered",
       "Stats: height, weight & abilities",
       "Source films listed"
+    ],
+    "highlights_id": [
+      "12 inkarnasi Godzilla",
+      "Mencakup 5 era",
+      "Statistik: tinggi, berat & kemampuan",
+      "Daftar film asal"
     ],
     "tags": ["Encyclopedia", "Interactive", "Fan Project"],
     "url": "https://godzilla-types.vercel.app/",

@@ -3,11 +3,18 @@
     "id": "honda",
     "title": "Honda Indonesia",
     "description": "An enterprise-grade web platform built for Honda Indonesia — full-stack development with a modern, scalable stack.",
+    "description_id": "Platform web kelas enterprise untuk Honda Indonesia — pengembangan full-stack dengan stack yang modern dan scalable.",
     "longDescription": "An enterprise-grade web platform delivered for Honda Indonesia, built full-stack with a modern, scalable architecture.",
+    "longDescription_id": "Platform web kelas enterprise yang dikerjakan untuk Honda Indonesia, dibangun full-stack dengan arsitektur yang modern dan scalable.",
     "highlights": [
       "Enterprise-scale platform",
       "Full-stack delivery",
       "Modern, scalable architecture"
+    ],
+    "highlights_id": [
+      "Platform skala enterprise",
+      "Pengerjaan full-stack",
+      "Arsitektur modern & scalable"
     ],
     "tags": ["Enterprise", "Vue.js", "Laravel"],
     "preview": { "kind": "image", "src": "/img/portfolio/honda_center.jpg" },
@@ -17,11 +24,18 @@
     "id": "bpom",
     "title": "Pusat Informasi Pasar Aman",
     "description": "A market-safety information system for BPOM (Indonesian FDA) — a comprehensive data-management platform.",
+    "description_id": "Sistem informasi keamanan pasar untuk BPOM — platform manajemen data yang komprehensif.",
     "longDescription": "A market-safety information system built for BPOM (the Indonesian FDA) — a comprehensive platform for managing and surfacing market-safety data.",
+    "longDescription_id": "Sistem informasi keamanan pasar yang dibangun untuk BPOM — platform komprehensif untuk mengelola dan menampilkan data keamanan pasar.",
     "highlights": [
       "Government data platform",
       "Market-safety information system",
       "Comprehensive data management"
+    ],
+    "highlights_id": [
+      "Platform data pemerintah",
+      "Sistem informasi keamanan pasar",
+      "Manajemen data komprehensif"
     ],
     "tags": ["Government", "Data Platform", "Laravel"],
     "preview": { "kind": "image", "src": "/img/portfolio/bpom_center.jpg" }
@@ -30,11 +44,18 @@
     "id": "scoresheets",
     "title": "Scoresheets System",
     "description": "A dynamic scoring and evaluation system with real-time updates and comprehensive reporting.",
+    "description_id": "Sistem penilaian dan evaluasi dinamis dengan pembaruan real-time dan pelaporan yang komprehensif.",
     "longDescription": "A dynamic scoring and evaluation system with real-time updates and comprehensive reporting for events and competitions.",
+    "longDescription_id": "Sistem penilaian dan evaluasi dinamis dengan pembaruan real-time dan pelaporan komprehensif untuk acara dan kompetisi.",
     "highlights": [
       "Real-time score updates",
       "Dynamic evaluation",
       "Comprehensive reporting"
+    ],
+    "highlights_id": [
+      "Pembaruan skor real-time",
+      "Evaluasi dinamis",
+      "Pelaporan komprehensif"
     ],
     "tags": ["Real-time", "Vue.js", "Scoring"],
     "preview": { "kind": "image", "src": "/img/portfolio/scoresheets_center.jpg" }
@@ -43,11 +64,18 @@
     "id": "mymeet",
     "title": "MyMeet",
     "description": "A real-time meeting and collaboration platform with video conferencing, built with PeerJS and Socket.io.",
+    "description_id": "Platform rapat dan kolaborasi real-time dengan konferensi video, dibangun dengan PeerJS dan Socket.io.",
     "longDescription": "A real-time meeting and collaboration platform with video conferencing, built with PeerJS and Socket.io for low-latency communication.",
+    "longDescription_id": "Platform rapat dan kolaborasi real-time dengan konferensi video, dibangun dengan PeerJS dan Socket.io untuk komunikasi latensi rendah.",
     "highlights": [
       "Video conferencing (PeerJS/WebRTC)",
       "Real-time via Socket.io",
       "Collaboration features"
+    ],
+    "highlights_id": [
+      "Konferensi video (PeerJS/WebRTC)",
+      "Real-time via Socket.io",
+      "Fitur kolaborasi"
     ],
     "tags": ["WebRTC", "Socket.io", "Video"],
     "preview": { "kind": "image", "src": "/img/portfolio/mymeet_center.jpg" }
@@ -56,11 +84,18 @@
     "id": "dapur-ilmu",
     "title": "Dapur Ilmu",
     "description": "An interactive e-learning platform with courses, progress tracking, and a full learning-management system.",
+    "description_id": "Platform e-learning interaktif dengan kursus, pelacakan progres, dan learning-management system lengkap.",
     "longDescription": "An interactive e-learning platform with courses, progress tracking, and a full learning-management system.",
+    "longDescription_id": "Platform e-learning interaktif dengan kursus, pelacakan progres, dan learning-management system yang lengkap.",
     "highlights": [
       "Interactive courses",
       "Progress tracking",
       "Full learning-management system"
+    ],
+    "highlights_id": [
+      "Kursus interaktif",
+      "Pelacakan progres",
+      "Learning-management system lengkap"
     ],
     "tags": ["E-learning", "LMS", "Vue.js"],
     "preview": { "kind": "image", "src": "/img/portfolio/dapurilmu_center.jpg" }

@@ -3,12 +3,20 @@
     "id": "iron-vanguard",
     "title": "Iron Vanguard",
     "description": "An endless tower-defense game: command 16 turrets and 18 heroes, unleash skills, and hold the line against 35 monster types across 2000 levels.",
+    "description_id": "Game tower-defense tanpa akhir: kendalikan 16 turret dan 18 hero, lepaskan skill, dan tahan gempuran 35 jenis monster di 2000 level.",
     "longDescription": "An endless tower-defense war in the browser. Command 16 turrets and 18 unique heroes, unleash devastating skills, and hold the line against 35 monster types and giant bosses across 2000 levels.",
+    "longDescription_id": "Perang tower-defense tanpa akhir di browser. Kendalikan 16 turret dan 18 hero unik, lepaskan skill dahsyat, dan pertahankan garis depan melawan 35 jenis monster dan bos raksasa di 2000 level.",
     "highlights": [
       "16 turrets & 18 unique heroes",
       "35 monster types + giant bosses",
       "2000 levels of endless defense",
       "Free to play in the browser"
+    ],
+    "highlights_id": [
+      "16 turret & 18 hero unik",
+      "35 jenis monster + bos raksasa",
+      "2000 level pertahanan tanpa henti",
+      "Gratis dimainkan di browser"
     ],
     "tags": ["Tower Defense", "Browser Game", "Arcade"],
     "url": "https://iron-vanguard.vercel.app/",
@@ -20,12 +28,20 @@
     "id": "bladerush",
     "title": "Blade Rush",
     "description": "A fast arcade survivor game — spin a growing ring of blades, crush endless hordes, and out-duel rival warlords.",
+    "description_id": "Game arcade survivor cepat — putar cincin pisau yang terus tumbuh, hancurkan gerombolan tanpa henti, dan kalahkan panglima rival.",
     "longDescription": "A fast arcade survivor game. Spin a growing ring of blades, crush endless hordes, and out-duel rival warlords in quick, replayable runs.",
+    "longDescription_id": "Game arcade survivor yang cepat. Putar cincin pisau yang terus tumbuh, hancurkan gerombolan tanpa henti, dan kalahkan panglima rival dalam ronde singkat yang bisa diulang.",
     "highlights": [
       "Ring-of-blades combat",
       "Endless hordes to crush",
       "Fast, replayable runs",
       "Runs in the browser"
+    ],
+    "highlights_id": [
+      "Pertarungan cincin pisau",
+      "Gerombolan tanpa henti untuk dihancurkan",
+      "Ronde cepat dan bisa diulang",
+      "Berjalan di browser"
     ],
     "tags": ["Arcade", "Survivor", "Browser Game"],
     "url": "https://bladerush.vercel.app/",
@@ -36,11 +52,18 @@
     "id": "reconcile",
     "title": "Reconcile",
     "description": "A payment-ops puzzle game about reconciling transactions across Payment Gateway, Internal DB, and Bank Settlement — spot duplicates, refunds, and chargebacks.",
+    "description_id": "Game puzzle payment-ops tentang merekonsiliasi transaksi antara Payment Gateway, DB Internal, dan Bank Settlement — temukan duplikat, refund, dan chargeback.",
     "longDescription": "A puzzle game about reconciling payment transactions across three systems — Payment Gateway, Internal DB, and Bank Settlement. Spot duplicates, partial refunds, chargebacks, and missing orders before customers riot.",
+    "longDescription_id": "Game puzzle tentang merekonsiliasi transaksi pembayaran di tiga sistem — Payment Gateway, DB Internal, dan Bank Settlement. Temukan duplikat, refund sebagian, chargeback, dan order yang hilang sebelum pelanggan ribut.",
     "highlights": [
       "Reconcile across 3 systems",
       "Duplicates, refunds & chargebacks",
       "Payment-ops themed puzzles"
+    ],
+    "highlights_id": [
+      "Rekonsiliasi lintas 3 sistem",
+      "Duplikat, refund & chargeback",
+      "Puzzle bertema payment-ops"
     ],
     "tags": ["Puzzle Game", "Fintech", "Payments"],
     "url": "https://reconcile-game.vercel.app/",
@@ -51,12 +74,20 @@
     "id": "ular-tangga",
     "title": "Snakes & Ladders",
     "description": "The classic board game online for 1–4 players — single-player vs bot or pass-and-play, with modern animations and realistic sound.",
+    "description_id": "Permainan papan klasik online untuk 1–4 pemain — main sendiri lawan bot atau pass-and-play, dengan animasi modern dan suara realistis.",
     "longDescription": "The classic Snakes & Ladders online for 1–4 players. Play single-player against a bot or pass-and-play with friends, with modern animations and realistic sound effects — no download required.",
+    "longDescription_id": "Ular Tangga klasik online untuk 1–4 pemain. Main sendiri lawan bot atau pass-and-play bareng teman, dengan animasi modern dan efek suara realistis — tanpa perlu unduh.",
     "highlights": [
       "1–4 players",
       "Single-player vs bot or pass-and-play",
       "Modern animations & sound",
       "No download — plays in the browser"
+    ],
+    "highlights_id": [
+      "1–4 pemain",
+      "Main sendiri lawan bot atau pass-and-play",
+      "Animasi & suara modern",
+      "Tanpa unduh — main di browser"
     ],
     "tags": ["Board Game", "Multiplayer", "Browser Game"],
     "url": "https://ular-tangga-sigma.vercel.app/",
@@ -67,12 +98,20 @@
     "id": "prize-gacha",
     "title": "Prize Gacha",
     "description": "An online gacha luck game — spin the gachapon, win prizes across Common to Mythic rarities, and share your wins. Plays right in the browser.",
+    "description_id": "Game keberuntungan gacha online — putar gachapon, menangkan hadiah dari rarity Common sampai Mythic, dan bagikan kemenanganmu. Main langsung di browser.",
     "longDescription": "An online gacha luck game. Spin the gachapon and win prizes across Common, Rare, Epic, Legendary, and Mythic rarities, then share your wins. Free, fun, and instantly playable in the browser.",
+    "longDescription_id": "Game keberuntungan gacha online. Putar gachapon dan menangkan hadiah dari rarity Common, Rare, Epic, Legendary, hingga Mythic, lalu bagikan kemenanganmu. Gratis, seru, dan langsung bisa dimainkan di browser.",
     "highlights": [
       "Gachapon spin mechanic",
       "5 rarity tiers (Common → Mythic)",
       "Shareable wins",
       "Free & instant in browser"
+    ],
+    "highlights_id": [
+      "Mekanik putar gachapon",
+      "5 tingkat rarity (Common → Mythic)",
+      "Kemenangan bisa dibagikan",
+      "Gratis & instan di browser"
     ],
     "tags": ["Gacha", "Browser Game", "Casual"],
     "url": "https://prize-gacha.vercel.app/",

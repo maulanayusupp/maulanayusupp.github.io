@@ -4,7 +4,7 @@ import { getCategory, getProject, projects } from '~/services/projects'
 // Re-create the page when navigating between /projects/:id (param change).
 definePageMeta({ key: (route) => route.fullPath })
 
-const { t } = useLocale()
+const { t, localize } = useLocale()
 const route = useRoute()
 const id = computed(() => String(route.params.id))
 const project = computed(() => getProject(id.value))
@@ -19,6 +19,11 @@ const category = getCategory(p.category)
 const related = projects
   .filter((x) => x.category === p.category && x.id !== p.id)
   .slice(0, 3)
+
+const displayDesc = computed(
+  () => localize<string>(p, 'longDescription') || localize<string>(p, 'description'),
+)
+const displayHighlights = computed(() => localize<string[]>(p, 'highlights') || [])
 
 const hostname = computed(() => {
   if (!p.url) return ''
@@ -70,7 +75,7 @@ useJsonLd([
           <span v-if="p.year" class="detail__year">{{ p.year }}</span>
         </div>
         <h1 class="detail__title">{{ p.title }}</h1>
-        <p class="detail__desc">{{ p.longDescription ?? p.description }}</p>
+        <p class="detail__desc">{{ displayDesc }}</p>
         <div v-if="p.url" class="detail__actions">
           <BaseButton :href="p.url" variant="primary" size="lg">
             {{ t('detail.visitLive') }}
@@ -114,10 +119,10 @@ useJsonLd([
 
       <!-- Details grid -->
       <div class="detail__grid">
-        <section v-if="p.highlights?.length" class="detail__highlights">
+        <section v-if="displayHighlights.length" class="detail__highlights">
           <h2 class="detail__subtitle">{{ t('detail.highlights') }}</h2>
           <ul>
-            <li v-for="h in p.highlights" :key="h">
+            <li v-for="h in displayHighlights" :key="h">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
               </svg>

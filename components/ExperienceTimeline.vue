@@ -8,7 +8,7 @@ interface Entry {
 }
 
 defineProps<{ entries: Entry[] }>()
-const { t } = useLocale()
+const { t, localize } = useLocale()
 </script>
 
 <template>
@@ -20,9 +20,9 @@ const { t } = useLocale()
           <span class="timeline__period">{{ entry.period }}</span>
           <span v-if="entry.current" class="timeline__badge">{{ t('common.current') }}</span>
         </div>
-        <h3 class="timeline__role">{{ entry.role }}</h3>
-        <p class="timeline__org">{{ entry.org }}</p>
-        <p class="timeline__desc">{{ entry.description }}</p>
+        <h3 class="timeline__role">{{ localize(entry, 'role') }}</h3>
+        <p class="timeline__org">{{ localize(entry, 'org') }}</p>
+        <p class="timeline__desc">{{ localize(entry, 'description') }}</p>
       </div>
     </li>
   </ol>
