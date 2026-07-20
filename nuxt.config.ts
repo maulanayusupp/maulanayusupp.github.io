@@ -53,13 +53,9 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icons/favicon-16x16.png' },
         { rel: 'apple-touch-icon', sizes: '180x180', href: '/icons/apple-icon-180x180.png' },
         { rel: 'manifest', href: '/site.webmanifest' },
-        // Fonts — Sora for display headings, Inter for body.
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap',
-        },
+        // Fonts are self-hosted (see assets/scss/_fonts.scss) — no external requests.
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/inter-400.woff2', crossorigin: '' },
+        { rel: 'preload', as: 'font', type: 'font/woff2', href: '/fonts/sora-700.woff2', crossorigin: '' },
       ],
     },
   },

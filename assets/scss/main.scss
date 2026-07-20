@@ -1,5 +1,6 @@
 // Global stylesheet entry point (loaded once in nuxt.config.ts).
-// Order matters: base first, then animations, then utilities.
+// Order matters: fonts + base first, then animations, then utilities.
+@use 'fonts';
 @use 'base';
 @use 'animations';
 @use 'utilities';
