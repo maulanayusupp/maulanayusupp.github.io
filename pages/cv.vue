@@ -45,12 +45,15 @@ function printCv() {
   <div class="cv-page">
     <div class="cv-toolbar">
       <NuxtLink to="/about" class="cv-toolbar__back">← Back to site</NuxtLink>
-      <button class="cv-toolbar__print" @click="printCv">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
-        </svg>
-        Download PDF
-      </button>
+      <div class="cv-toolbar__actions">
+        <span class="cv-toolbar__hint">Tip: uncheck “Headers and footers” in the print dialog for a clean PDF</span>
+        <button class="cv-toolbar__print" @click="printCv">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
+          </svg>
+          Download PDF
+        </button>
+      </div>
     </div>
 
     <article class="cv">
@@ -161,6 +164,20 @@ function printCv() {
     font-size: $fs-sm;
     font-weight: 500;
     &:hover { color: $color-white; }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+  }
+
+  &__hint {
+    display: none;
+    font-size: $fs-xs;
+    color: $color-text-faint;
+
+    @include respond-to('md') { display: inline; }
   }
 
   &__print {
