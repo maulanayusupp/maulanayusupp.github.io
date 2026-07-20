@@ -13,15 +13,17 @@ usePageSeo({
   path: '/cv',
 })
 
+const { t } = useLocale()
+
 // Everything below is derived from the single-source data files.
 const projectCount = projects.length
 const techCount = new Set(skills.flatMap((g) => g.items)).size
 
 const stats = [
-  { value: '10+', label: 'Years experience' },
-  { value: `${projectCount}`, label: 'Projects shipped' },
-  { value: '13+', label: 'Happy clients' },
-  { value: `${techCount}+`, label: 'Technologies' },
+  { value: '10+', key: 'cv.statYears' },
+  { value: `${projectCount}`, key: 'cv.statProjects' },
+  { value: '13+', key: 'cv.statClients' },
+  { value: `${techCount}+`, key: 'cv.statTech' },
 ]
 
 const grouped = categories
@@ -44,14 +46,14 @@ function printCv() {
 <template>
   <div class="cv-page">
     <div class="cv-toolbar">
-      <NuxtLink to="/about" class="cv-toolbar__back">← Back to site</NuxtLink>
+      <NuxtLink to="/about" class="cv-toolbar__back">{{ t('cv.back') }}</NuxtLink>
       <div class="cv-toolbar__actions">
-        <span class="cv-toolbar__hint">Tip: uncheck “Headers and footers” in the print dialog for a clean PDF</span>
+        <span class="cv-toolbar__hint">{{ t('cv.hint') }}</span>
         <button class="cv-toolbar__print" @click="printCv">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
           </svg>
-          Download PDF
+          {{ t('cv.download') }}
         </button>
       </div>
     </div>
@@ -61,7 +63,7 @@ function printCv() {
       <header class="cv__hero">
         <h1 class="cv__name">Maulana Yusup Abdullah</h1>
         <p class="cv__role">Full Stack Developer &amp; Software Engineer</p>
-        <p class="cv__loc"><span class="cv__avail" /> Bandung, Indonesia · Available for work</p>
+        <p class="cv__loc"><span class="cv__avail" /> {{ t('cv.available') }}</p>
 
         <p class="cv__pitch">{{ experience.summary }}</p>
 
@@ -84,15 +86,15 @@ function printCv() {
 
       <!-- Stats -->
       <div class="cv__stats">
-        <div v-for="s in stats" :key="s.label" class="cv__stat">
+        <div v-for="s in stats" :key="s.key" class="cv__stat">
           <span class="cv__stat-value">{{ s.value }}</span>
-          <span class="cv__stat-label">{{ s.label }}</span>
+          <span class="cv__stat-label">{{ t(s.key) }}</span>
         </div>
       </div>
 
       <!-- Experience -->
       <section class="cv__section">
-        <h2 class="cv__heading">Experience</h2>
+        <h2 class="cv__heading">{{ t('cv.experience') }}</h2>
         <ol class="cv__timeline">
           <li v-for="e in experience.timeline" :key="e.period + e.role" class="cv__tl-item">
             <span class="cv__tl-dot" :class="{ 'is-current': e.current }" />
@@ -108,7 +110,7 @@ function printCv() {
 
       <!-- Skills -->
       <section class="cv__section">
-        <h2 class="cv__heading">Skills</h2>
+        <h2 class="cv__heading">{{ t('cv.skills') }}</h2>
         <div class="cv__skills">
           <div v-for="group in skills" :key="group.title" class="cv__skill">
             <span class="cv__skill-title">{{ group.title }}</span>
@@ -121,10 +123,10 @@ function printCv() {
 
       <!-- All projects -->
       <section class="cv__section">
-        <h2 class="cv__heading">Projects <span class="cv__count">{{ projectCount }}</span></h2>
+        <h2 class="cv__heading">{{ t('cv.projects') }} <span class="cv__count">{{ projectCount }}</span></h2>
         <div v-for="group in grouped" :key="group.category.id" class="cv__pgroup" :class="`cv__pgroup--${group.category.id}`">
           <h3 class="cv__pgroup-title">
-            <span class="cv__pgroup-dot" /> {{ group.category.label }}
+            <span class="cv__pgroup-dot" /> {{ t(`categories.${group.category.id}`) }}
             <span class="cv__pgroup-count">{{ group.items.length }}</span>
           </h3>
           <ul class="cv__plist">

@@ -2,6 +2,7 @@
 import experience from '~/services/data/experience.json'
 import skills from '~/services/data/skills.json'
 
+const { t, tl } = useLocale()
 const cvHref = experience.resumeUrl || '/cv'
 
 usePageSeo({
@@ -21,27 +22,14 @@ useJsonLd([
 
 useScrollReveal()
 
-const traits = [
-  'Open for long-term projects and partnerships',
-  'Highly responsible — available ASAP when you need me',
-  'Git-based workflow & task management for organized collaboration',
-  'Clean, maintainable, component-based architecture',
-]
-
-const services = [
-  { title: 'Product & Web App Development', desc: 'End-to-end SPAs and full-stack products with Vue.js/Nuxt and Laravel/Node.js.' },
-  { title: 'Interactive & 3D Web', desc: 'Interactive, WebGL/3D experiences and learning tools in the browser.' },
-  { title: 'API Integration', desc: 'Third-party integrations including payment, messaging, and WhatsApp APIs.' },
-  { title: 'Real-time Systems', desc: 'Live features with Socket.io, video conferencing with PeerJS and TURN.' },
-  { title: 'Server Setup & Deploy', desc: 'VPS provisioning on Digital Ocean with Nginx, Redis, and deploy pipelines.' },
-  { title: 'Performance Optimization', desc: 'Caching, bundle/state optimization, and scalable front-end architecture.' },
-]
+const traits = computed(() => tl<string>('about.traits'))
+const services = computed(() => tl<{ title: string; desc: string }>('about.services'))
 
 const stats = [
-  { value: '10+', label: 'Years Experience' },
-  { value: '18+', label: 'Projects' },
-  { value: '13+', label: 'Happy Clients' },
-  { value: '15+', label: 'Technologies' },
+  { value: '10+', key: 'about.statYears' },
+  { value: '18+', key: 'about.statProjects' },
+  { value: '13+', key: 'about.statClients' },
+  { value: '15+', key: 'about.statTech' },
 ]
 </script>
 
@@ -51,12 +39,10 @@ const stats = [
     <section class="about-hero section--tight">
       <div class="container about-hero__grid">
         <div class="about-hero__text reveal">
-          <p class="about-hero__eyebrow">About Me</p>
-          <h1 class="about-hero__title">Full Stack Developer<br><span class="gradient-text">& product builder</span></h1>
+          <p class="about-hero__eyebrow">{{ t('about.eyebrow') }}</p>
+          <h1 class="about-hero__title">{{ t('about.titlePre') }}<br><span class="gradient-text">{{ t('about.titleHighlight') }}</span></h1>
           <p class="about-hero__lead">
-            Hello! I'm <strong>Maulana Yusup Abdullah</strong>, based in Bandung, Indonesia. With
-            10+ years in software development, I've delivered projects for individuals, startups,
-            and large enterprises — building reliable web apps, products, and developer tools.
+            {{ t('about.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('about.leadPost') }}
           </p>
           <ul class="about-hero__traits">
             <li v-for="trait in traits" :key="trait" class="about-hero__trait">
@@ -74,12 +60,12 @@ const stats = [
               variant="primary"
               size="lg"
             >
-              Download CV
+              {{ t('actions.downloadCv') }}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />
               </svg>
             </BaseButton>
-            <BaseButton to="/contact" variant="secondary" size="lg">Get in touch</BaseButton>
+            <BaseButton to="/contact" variant="secondary" size="lg">{{ t('actions.getInTouch') }}</BaseButton>
           </div>
         </div>
         <div class="about-hero__photo reveal reveal-delay-2">
@@ -93,7 +79,7 @@ const stats = [
     <!-- Experience -->
     <section class="section section-divider">
       <div class="container">
-        <SectionHeading eyebrow="Experience" title="Career journey" align="left" class="reveal" />
+        <SectionHeading :eyebrow="t('about.expEyebrow')" :title="t('about.expTitle')" align="left" class="reveal" />
         <div class="about-experience">
           <ExperienceTimeline :entries="experience.timeline" />
         </div>
@@ -103,7 +89,7 @@ const stats = [
     <!-- Skills -->
     <section class="section section-divider">
       <div class="container">
-        <SectionHeading eyebrow="Expertise" title="Skills & technologies" class="reveal" />
+        <SectionHeading :eyebrow="t('about.skillsEyebrow')" :title="t('about.skillsTitle')" class="reveal" />
         <div class="grid-cards">
           <article v-for="group in skills" :key="group.title" class="skill-card reveal">
             <h3 class="skill-card__title">{{ group.title }}</h3>
@@ -118,7 +104,7 @@ const stats = [
     <!-- Services -->
     <section class="section section-divider">
       <div class="container">
-        <SectionHeading eyebrow="What I Do" title="Services & experience" class="reveal" />
+        <SectionHeading :eyebrow="t('about.servicesEyebrow')" :title="t('about.servicesTitle')" class="reveal" />
         <div class="grid-cards grid-cards--2">
           <article v-for="service in services" :key="service.title" class="service-card reveal">
             <h3 class="service-card__title">{{ service.title }}</h3>
@@ -132,9 +118,9 @@ const stats = [
     <section class="section--tight section-divider">
       <div class="container">
         <div class="stats reveal">
-          <div v-for="stat in stats" :key="stat.label" class="stats__item">
+          <div v-for="stat in stats" :key="stat.key" class="stats__item">
             <div class="stats__value">{{ stat.value }}</div>
-            <div class="stats__label">{{ stat.label }}</div>
+            <div class="stats__label">{{ t(stat.key) }}</div>
           </div>
         </div>
       </div>

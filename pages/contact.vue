@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const { t, tl } = useLocale()
+
 usePageSeo({
   title: 'Contact Maulana Yusup Abdullah — Hire a Full Stack Developer',
   description:
@@ -24,7 +26,7 @@ useScrollReveal()
 
 const channels = [
   {
-    label: 'Email',
+    labelKey: 'contact.email',
     value: 'maulanayusupp@gmail.com',
     href: 'mailto:maulanayusupp@gmail.com',
     accent: 'indigo',
@@ -32,7 +34,7 @@ const channels = [
     stroke: true,
   },
   {
-    label: 'Phone / WhatsApp',
+    labelKey: 'contact.phone',
     value: '+62 878-2276-6333',
     href: 'tel:6287822766333',
     accent: 'emerald',
@@ -40,14 +42,14 @@ const channels = [
     stroke: true,
   },
   {
-    label: 'LinkedIn',
+    labelKey: 'contact.linkedin',
     value: 'Maulana Yusup Abdullah',
     href: 'https://www.linkedin.com/in/maulana-yusup-abdullah-750aa47a/',
     accent: 'blue',
     path: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
   },
   {
-    label: 'GitHub',
+    labelKey: 'contact.github',
     value: 'github.com/maulanayusupp',
     href: 'https://github.com/maulanayusupp',
     accent: 'slate',
@@ -55,11 +57,7 @@ const channels = [
   },
 ]
 
-const availability = [
-  { text: 'Available for remote work worldwide' },
-  { text: 'Open for long-term contracts' },
-  { text: 'Fast response within 24 hours' },
-]
+const availability = computed(() => tl<string>('contact.availability'))
 </script>
 
 <template>
@@ -68,18 +66,17 @@ const availability = [
       <div class="contact__intro reveal">
         <p class="contact__eyebrow">
           <span class="contact__eyebrow-dot" />
-          Ready to collaborate
+          {{ t('contact.eyebrow') }}
         </p>
-        <h1 class="contact__title">So, let's <span class="gradient-text">talk</span></h1>
+        <h1 class="contact__title">{{ t('contact.titlePre') }} <span class="gradient-text">{{ t('contact.titleHighlight') }}</span></h1>
         <p class="contact__lead">
-          Whether it's a product, an internal tool, or a game — I'd love to help. Reach out and
-          let's discuss how we can build something that meets your needs.
+          {{ t('contact.lead') }}
         </p>
 
         <div class="contact__channels">
           <a
             v-for="c in channels"
-            :key="c.label"
+            :key="c.labelKey"
             :href="c.href"
             :target="c.href.startsWith('http') ? '_blank' : undefined"
             :rel="c.href.startsWith('http') ? 'noopener' : undefined"
@@ -96,7 +93,7 @@ const availability = [
               </svg>
             </span>
             <span class="channel__body">
-              <span class="channel__label">{{ c.label }}</span>
+              <span class="channel__label">{{ t(c.labelKey) }}</span>
               <span class="channel__value">{{ c.value }}</span>
             </span>
           </a>
@@ -111,21 +108,21 @@ const availability = [
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </span>
-          <h2 class="location__title">Based in Bandung</h2>
-          <p class="location__country">Indonesia</p>
+          <h2 class="location__title">{{ t('contact.locationTitle') }}</h2>
+          <p class="location__country">{{ t('contact.country') }}</p>
 
           <ul class="location__list">
-            <li v-for="item in availability" :key="item.text">
+            <li v-for="item in availability" :key="item">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                 <circle cx="12" cy="12" r="9" stroke-width="2" />
               </svg>
-              <span>{{ item.text }}</span>
+              <span>{{ item }}</span>
             </li>
           </ul>
 
           <BaseButton href="mailto:maulanayusupp@gmail.com" variant="primary" size="lg">
-            Send an Email
+            {{ t('contact.sendEmail') }}
           </BaseButton>
         </div>
       </aside>

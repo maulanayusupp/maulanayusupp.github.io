@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { query, activeCategory, results, grouped, filters, reset } = useProjectSearch()
+const { t } = useLocale()
 
 type View = 'grid' | 'list'
 const view = ref<View>('grid')
@@ -10,7 +11,7 @@ const view = ref<View>('grid')
     <!-- Toolbar: search + view toggle -->
     <div class="showcase__toolbar">
       <label class="search">
-        <span class="visually-hidden">Search projects</span>
+        <span class="visually-hidden">{{ t('actions.search') }}</span>
         <svg class="search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
           <circle cx="11" cy="11" r="7" stroke-width="2" />
           <path stroke-linecap="round" stroke-width="2" d="M21 21l-4.3-4.3" />
@@ -19,7 +20,7 @@ const view = ref<View>('grid')
           v-model="query"
           type="search"
           class="search__input"
-          placeholder="Search projects, tools, tags…"
+          :placeholder="t('showcase.searchPlaceholder')"
           autocomplete="off"
         />
         <button v-if="query" class="search__clear" aria-label="Clear search" @click="query = ''">
@@ -67,15 +68,15 @@ const view = ref<View>('grid')
         :aria-selected="activeCategory === f.id"
         @click="activeCategory = f.id"
       >
-        {{ f.label }}
+        {{ f.id === 'all' ? t('showcase.all') : t(`categories.${f.id}`) }}
         <span class="showcase__count">{{ f.count }}</span>
       </button>
     </div>
 
     <!-- Empty state -->
     <div v-if="!results.length" class="showcase__empty">
-      <p>No projects match “{{ query }}”.</p>
-      <button class="showcase__reset" @click="reset">Clear filters</button>
+      <p>{{ t('showcase.empty', { q: query }) }}</p>
+      <button class="showcase__reset" @click="reset">{{ t('showcase.clear') }}</button>
     </div>
 
     <!-- Grid view -->
@@ -92,7 +93,7 @@ const view = ref<View>('grid')
         :class="`index__group--${group.category.id}`"
       >
         <header class="index__head">
-          <span class="index__cat"><span class="index__dot" /> {{ group.category.label }}</span>
+          <span class="index__cat"><span class="index__dot" /> {{ t(`categories.${group.category.id}`) }}</span>
           <span class="index__count">{{ group.items.length }}</span>
         </header>
         <ul class="index__list">

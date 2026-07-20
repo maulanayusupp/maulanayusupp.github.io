@@ -36,5 +36,12 @@ export function useLocale() {
     return out
   }
 
-  return { locale, setLocale, t }
+  // Returns an array value from the dictionary (e.g. lists of traits/services).
+  function tl<T = unknown>(key: string): T[] {
+    let value = lookup(dicts[locale.value], key)
+    if (!Array.isArray(value)) value = lookup(dicts.en, key)
+    return Array.isArray(value) ? (value as T[]) : []
+  }
+
+  return { locale, setLocale, t, tl }
 }

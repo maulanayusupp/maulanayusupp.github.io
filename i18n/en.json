@@ -16,6 +16,9 @@
     "downloadCv": "Download CV",
     "emailMe": "Email me"
   },
+  "common": {
+    "current": "Current"
+  },
   "categories": {
     "webapp": "Web Apps & Tools",
     "game": "Games",
@@ -62,5 +65,91 @@
     "empty": "No results for “{q}”.",
     "navigate": "navigate",
     "open": "open"
+  },
+  "about": {
+    "eyebrow": "About Me",
+    "titlePre": "Full Stack Developer",
+    "titleHighlight": "& product builder",
+    "leadPre": "Hello! I'm",
+    "leadPost": "— based in Bandung, Indonesia. With 10+ years in software development, I've delivered projects for individuals, startups, and large enterprises — building reliable web apps, products, and developer tools.",
+    "traits": [
+      "Open for long-term projects and partnerships",
+      "Highly responsible — available ASAP when you need me",
+      "Git-based workflow & task management for organized collaboration",
+      "Clean, maintainable, component-based architecture"
+    ],
+    "expEyebrow": "Experience",
+    "expTitle": "Career journey",
+    "skillsEyebrow": "Expertise",
+    "skillsTitle": "Skills & technologies",
+    "servicesEyebrow": "What I Do",
+    "servicesTitle": "Services & experience",
+    "services": [
+      { "title": "Product & Web App Development", "desc": "End-to-end SPAs and full-stack products with Vue.js/Nuxt and Laravel/Node.js." },
+      { "title": "Interactive & 3D Web", "desc": "Interactive, WebGL/3D experiences and learning tools in the browser." },
+      { "title": "API Integration", "desc": "Third-party integrations including payment, messaging, and WhatsApp APIs." },
+      { "title": "Real-time Systems", "desc": "Live features with Socket.io, video conferencing with PeerJS and TURN." },
+      { "title": "Server Setup & Deploy", "desc": "VPS provisioning on Digital Ocean with Nginx, Redis, and deploy pipelines." },
+      { "title": "Performance Optimization", "desc": "Caching, bundle/state optimization, and scalable front-end architecture." }
+    ],
+    "statYears": "Years Experience",
+    "statProjects": "Projects",
+    "statClients": "Happy Clients",
+    "statTech": "Technologies"
+  },
+  "contact": {
+    "eyebrow": "Ready to collaborate",
+    "titlePre": "So, let's",
+    "titleHighlight": "talk",
+    "lead": "Whether it's a product, an internal tool, or a game — I'd love to help. Reach out and let's discuss how we can build something that meets your needs.",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "locationTitle": "Based in Bandung",
+    "country": "Indonesia",
+    "availability": [
+      "Available for remote work worldwide",
+      "Open for long-term contracts",
+      "Fast response within 24 hours"
+    ],
+    "sendEmail": "Send an Email"
+  },
+  "showcase": {
+    "searchPlaceholder": "Search projects, tools, tags…",
+    "all": "All",
+    "empty": "No projects match “{q}”.",
+    "clear": "Clear filters"
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "titlePre": "Everything I've",
+    "titleHighlight": "built & shipped",
+    "lead": "{count} projects across web apps, developer tools, games, interactive experiences, and enterprise client work. Filter by category, then open any project for the full story and a live preview."
+  },
+  "detail": {
+    "back": "Back to work",
+    "visitLive": "Visit live site",
+    "highlights": "Highlights",
+    "details": "Details",
+    "category": "Category",
+    "year": "Year",
+    "link": "Link",
+    "more": "More {category}",
+    "placeholderNote": "This project can't be embedded here — open the live site to try it.",
+    "openLive": "Open live site"
+  },
+  "cv": {
+    "back": "← Back to site",
+    "download": "Download PDF",
+    "hint": "Tip: uncheck “Headers and footers” in the print dialog for a clean PDF",
+    "available": "Bandung, Indonesia · Available for work",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "statYears": "Years experience",
+    "statProjects": "Projects shipped",
+    "statClients": "Happy clients",
+    "statTech": "Technologies"
   }
 }

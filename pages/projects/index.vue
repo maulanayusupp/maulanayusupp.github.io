@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { projects } from '~/services/projects'
 
+const { t } = useLocale()
+
 usePageSeo({
   title: 'Portfolio — Web Apps, Tools, Games & Client Work | Maulana Yusup Abdullah',
   description:
@@ -21,14 +23,12 @@ const projectCount = projects.length
   <div>
     <section class="portfolio-hero section--tight">
       <div class="container">
-        <p class="portfolio-hero__eyebrow reveal">Portfolio</p>
+        <p class="portfolio-hero__eyebrow reveal">{{ t('portfolio.eyebrow') }}</p>
         <h1 class="portfolio-hero__title reveal reveal-delay-1">
-          Everything I've <span class="gradient-text">built &amp; shipped</span>
+          {{ t('portfolio.titlePre') }} <span class="gradient-text">{{ t('portfolio.titleHighlight') }}</span>
         </h1>
         <p class="portfolio-hero__lead reveal reveal-delay-2">
-          {{ projectCount }} projects across web apps, developer tools, games, interactive
-          experiences, and enterprise client work. Filter by category, then open any project for
-          the full story and a live preview.
+          {{ t('portfolio.lead', { count: projectCount }) }}
         </p>
       </div>
     </section>

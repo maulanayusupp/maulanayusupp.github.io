@@ -16,6 +16,9 @@
     "downloadCv": "Unduh CV",
     "emailMe": "Email saya"
   },
+  "common": {
+    "current": "Sekarang"
+  },
   "categories": {
     "webapp": "Aplikasi Web & Tools",
     "game": "Games",
@@ -62,5 +65,91 @@
     "empty": "Tidak ada hasil untuk “{q}”.",
     "navigate": "navigasi",
     "open": "buka"
+  },
+  "about": {
+    "eyebrow": "Tentang Saya",
+    "titlePre": "Full Stack Developer",
+    "titleHighlight": "& pembuat produk",
+    "leadPre": "Halo! Saya",
+    "leadPost": "— berbasis di Bandung, Indonesia. Dengan 10+ tahun di pengembangan software, saya telah mengerjakan proyek untuk perorangan, startup, hingga perusahaan besar — membangun aplikasi web, produk, dan developer tools yang andal.",
+    "traits": [
+      "Terbuka untuk proyek jangka panjang dan kemitraan",
+      "Sangat bertanggung jawab — siap secepatnya saat dibutuhkan",
+      "Alur kerja berbasis Git & manajemen tugas untuk kolaborasi rapi",
+      "Arsitektur bersih, mudah dirawat, berbasis komponen"
+    ],
+    "expEyebrow": "Pengalaman",
+    "expTitle": "Perjalanan karier",
+    "skillsEyebrow": "Keahlian",
+    "skillsTitle": "Skill & teknologi",
+    "servicesEyebrow": "Yang Saya Kerjakan",
+    "servicesTitle": "Layanan & pengalaman",
+    "services": [
+      { "title": "Pengembangan Produk & Aplikasi Web", "desc": "SPA end-to-end dan produk full-stack dengan Vue.js/Nuxt dan Laravel/Node.js." },
+      { "title": "Web Interaktif & 3D", "desc": "Pengalaman interaktif WebGL/3D dan tools belajar langsung di browser." },
+      { "title": "Integrasi API", "desc": "Integrasi pihak ketiga termasuk API pembayaran, pesan, dan WhatsApp." },
+      { "title": "Sistem Real-time", "desc": "Fitur live dengan Socket.io, konferensi video dengan PeerJS dan TURN." },
+      { "title": "Setup Server & Deploy", "desc": "Provisioning VPS di Digital Ocean dengan Nginx, Redis, dan pipeline deploy." },
+      { "title": "Optimasi Performa", "desc": "Caching, optimasi bundle/state, dan arsitektur front-end yang scalable." }
+    ],
+    "statYears": "Tahun Pengalaman",
+    "statProjects": "Proyek",
+    "statClients": "Klien Puas",
+    "statTech": "Teknologi"
+  },
+  "contact": {
+    "eyebrow": "Siap berkolaborasi",
+    "titlePre": "Jadi, ayo",
+    "titleHighlight": "ngobrol",
+    "lead": "Entah itu produk, tool internal, atau game — saya senang membantu. Hubungi saya dan mari diskusikan bagaimana kita bisa membangun sesuatu yang sesuai kebutuhanmu.",
+    "email": "Email",
+    "phone": "Telepon / WhatsApp",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "locationTitle": "Berbasis di Bandung",
+    "country": "Indonesia",
+    "availability": [
+      "Tersedia untuk kerja remote di seluruh dunia",
+      "Terbuka untuk kontrak jangka panjang",
+      "Respons cepat dalam 24 jam"
+    ],
+    "sendEmail": "Kirim Email"
+  },
+  "showcase": {
+    "searchPlaceholder": "Cari proyek, tools, tag…",
+    "all": "Semua",
+    "empty": "Tidak ada proyek yang cocok dengan “{q}”.",
+    "clear": "Hapus filter"
+  },
+  "portfolio": {
+    "eyebrow": "Portofolio",
+    "titlePre": "Semua yang telah saya",
+    "titleHighlight": "bangun & rilis",
+    "lead": "{count} proyek meliputi aplikasi web, developer tools, games, pengalaman interaktif, dan proyek klien enterprise. Filter per kategori, lalu buka proyek mana pun untuk cerita lengkap dan preview langsung."
+  },
+  "detail": {
+    "back": "Kembali ke karya",
+    "visitLive": "Kunjungi situs live",
+    "highlights": "Sorotan",
+    "details": "Detail",
+    "category": "Kategori",
+    "year": "Tahun",
+    "link": "Tautan",
+    "more": "{category} lainnya",
+    "placeholderNote": "Proyek ini tidak bisa ditampilkan di sini — buka situs live-nya untuk mencoba.",
+    "openLive": "Buka situs live"
+  },
+  "cv": {
+    "back": "← Kembali ke situs",
+    "download": "Unduh PDF",
+    "hint": "Tip: matikan “Headers and footers” di dialog print untuk PDF yang bersih",
+    "available": "Bandung, Indonesia · Tersedia untuk bekerja",
+    "experience": "Pengalaman",
+    "skills": "Skill",
+    "projects": "Proyek",
+    "statYears": "Tahun pengalaman",
+    "statProjects": "Proyek dirilis",
+    "statClients": "Klien puas",
+    "statTech": "Teknologi"
   }
 }

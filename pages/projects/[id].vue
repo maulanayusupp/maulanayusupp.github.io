@@ -4,6 +4,7 @@ import { getCategory, getProject, projects } from '~/services/projects'
 // Re-create the page when navigating between /projects/:id (param change).
 definePageMeta({ key: (route) => route.fullPath })
 
+const { t } = useLocale()
 const route = useRoute()
 const id = computed(() => String(route.params.id))
 const project = computed(() => getProject(id.value))
@@ -57,14 +58,14 @@ useJsonLd([
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M11 6l-6 6 6 6" />
         </svg>
-        Back to work
+        {{ t('detail.back') }}
       </NuxtLink>
 
       <header class="detail__header">
         <div class="detail__meta">
           <span class="detail__category">
             <span class="detail__dot" />
-            {{ category?.label }}
+            {{ t(`categories.${p.category}`) }}
           </span>
           <span v-if="p.year" class="detail__year">{{ p.year }}</span>
         </div>
@@ -72,7 +73,7 @@ useJsonLd([
         <p class="detail__desc">{{ p.longDescription ?? p.description }}</p>
         <div v-if="p.url" class="detail__actions">
           <BaseButton :href="p.url" variant="primary" size="lg">
-            Visit live site
+            {{ t('detail.visitLive') }}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M7 7h10v10" />
             </svg>
@@ -106,15 +107,15 @@ useJsonLd([
 
         <div v-else class="detail__placeholder">
           <span class="detail__emoji">{{ p.preview.emoji }}</span>
-          <p>This project can't be embedded here — open the live site to try it.</p>
-          <BaseButton v-if="p.url" :href="p.url" variant="secondary" size="md">Open live site</BaseButton>
+          <p>{{ t('detail.placeholderNote') }}</p>
+          <BaseButton v-if="p.url" :href="p.url" variant="secondary" size="md">{{ t('detail.openLive') }}</BaseButton>
         </div>
       </div>
 
       <!-- Details grid -->
       <div class="detail__grid">
         <section v-if="p.highlights?.length" class="detail__highlights">
-          <h2 class="detail__subtitle">Highlights</h2>
+          <h2 class="detail__subtitle">{{ t('detail.highlights') }}</h2>
           <ul>
             <li v-for="h in p.highlights" :key="h">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
@@ -126,18 +127,18 @@ useJsonLd([
         </section>
 
         <aside class="detail__aside">
-          <h2 class="detail__subtitle">Details</h2>
+          <h2 class="detail__subtitle">{{ t('detail.details') }}</h2>
           <dl class="detail__facts">
             <div>
-              <dt>Category</dt>
-              <dd>{{ category?.label }}</dd>
+              <dt>{{ t('detail.category') }}</dt>
+              <dd>{{ t(`categories.${p.category}`) }}</dd>
             </div>
             <div v-if="p.year">
-              <dt>Year</dt>
+              <dt>{{ t('detail.year') }}</dt>
               <dd>{{ p.year }}</dd>
             </div>
             <div v-if="p.url">
-              <dt>Link</dt>
+              <dt>{{ t('detail.link') }}</dt>
               <dd><a :href="p.url" target="_blank" rel="noopener">{{ hostname }}</a></dd>
             </div>
           </dl>
@@ -149,7 +150,7 @@ useJsonLd([
 
       <!-- Related -->
       <section v-if="related.length" class="detail__related">
-        <h2 class="detail__subtitle">More {{ category?.label }}</h2>
+        <h2 class="detail__subtitle">{{ t('detail.more', { category: t(`categories.${p.category}`) }) }}</h2>
         <div class="detail__related-grid">
           <ProjectCard v-for="rp in related" :key="rp.id" :project="rp" />
         </div>
