@@ -12,10 +12,18 @@ Keep changes incremental — one logical change per commit/push.
 ## Platform / tooling
 _(nothing pending)_
 
+## Recruiter appeal (ONLY with real data — never assume or over-claim)
+- [ ] Blog / technical writing — highest long-term signal; factual, from own work (e.g. "How I built Dibiku's SSH tunneling"). No claims needed.
+- [ ] Case studies on flagship projects — Problem → Role → Stack → Result. Needs real role/impact.
+- [ ] Impact metrics per project (users, performance, throughput) — needs real numbers.
+- [ ] Testimonials — real quotes from clients/colleagues (with permission).
+- [ ] Client logos (Honda, BPOM, …) — only with permission to display.
+- [ ] Skills with level/years per tech — only if comfortable stating it.
+- [ ] "Schedule a call" button — if a Cal.com/Calendly link is set up.
+
 ## Engagement
 - [ ] Contact form (via a form service, e.g. Formspree — GitHub Pages has no backend)
 - [ ] Privacy-friendly analytics (e.g. Plausible / Umami) — gate on `useConsent().analyticsAllowed`
-- [ ] Writing / blog section
 
 ## Quality
 - [ ] Accessibility pass (focus order, ARIA, color contrast audit)
@@ -40,3 +48,7 @@ _(nothing pending)_
 - [x] Self-hosted fonts (Inter + Sora; no Google Fonts requests)
 - [x] Project sorting on Portfolio (Featured / Newest / A–Z)
 - [x] Light/dark theme toggle (CSS-variable tokens, no-flash, system-aware)
+- [x] Split Web Apps / Tools categories
+- [x] Years of experience computed from 2016 (dynamic) + animated stat count-up
+- [x] Removed hire/availability wording
+- [x] Copy-email button on Contact
