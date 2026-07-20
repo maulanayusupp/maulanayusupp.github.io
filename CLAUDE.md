@@ -67,6 +67,12 @@ composables/
   useScrollReveal.ts  - Adds .is-visible to .reveal elements on scroll
   useProjectSearch.ts - Search + category filtering over services/ (query, results, grouped, filters)
   useCommandPalette.ts- Shared open/close state for the ⌘K palette
+  useLocale.ts        - i18n: t(key), tl(key) for arrays, localize(obj, field) for data
+
+i18n/
+  en.json, id.json    - UI string dictionaries (English + Indonesian)
+plugins/
+  locale.client.ts    - Restores saved locale (localStorage) + syncs <html lang>
 
 utils/
   seo.ts              - SITE_URL, personSchema, projectsSchema, usePageSeo(), useJsonLd(),
@@ -96,6 +102,22 @@ main.scss        - Global entry (loaded in nuxt.config.ts)
 Components consume the system with `@use 'abstracts' as *;` — resolvable anywhere via the
 `loadPaths` set in `nuxt.config.ts`. **No inline CSS**; the only `style="..."` in output is
 Vue's own `v-show` toggle.
+
+### Internationalization (EN / ID)
+
+Lightweight, dependency-free i18n. `LangSwitch` in the header toggles locale
+(persisted in localStorage; default English). SSG prerenders English; switching
+to Indonesian happens client-side.
+
+- **UI strings** live in `i18n/en.json` + `i18n/id.json`. Read them with
+  `const { t } = useLocale()` → `t('nav.home')`, arrays via `tl('about.traits')`.
+- **Data strings** (project/experience content in `services/data/*.json`) are
+  translated inline with optional `<field>_id` keys (e.g. `description_id`,
+  `highlights_id`, `summary_id`). Render with `localize(obj, 'description')` —
+  it returns the `_id` value in Indonesian, else falls back to English.
+- **RULE: every time you add or change user-facing text, update BOTH languages** —
+  add the key to `en.json` AND `id.json` (and the `_id` field for data). Missing
+  Indonesian falls back to English, so nothing breaks, but keep them in sync.
 
 ### Adding a project
 
@@ -172,4 +194,5 @@ The `github-pages` Nitro preset auto-emits `.nojekyll` (so `_nuxt/` assets are s
 - **Ship changes incrementally**: one logical change per commit, and push each stage separately
   — do not batch multiple unrelated changes into one push
 - **Track next features in `TODO.md`** (repo root); move items here as they're planned
+- **All user-facing text is bilingual**: update `i18n/en.json` + `i18n/id.json` (and data `_id` fields) together — never hardcode visible strings in components
 - Verify every change with `pnpm run generate` before pushing

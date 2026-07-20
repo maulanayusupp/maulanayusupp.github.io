@@ -14,7 +14,6 @@ Keep changes incremental — one logical change per commit/push.
 - [ ] Auto-generate `sitemap.xml` from routes at build (drop the manual list)
 - [ ] Self-host the Inter/Sora fonts (remove Google Fonts request; faster + privacy)
 - [ ] Light/dark theme toggle (currently dark-only)
-- [ ] i18n — English / Bahasa Indonesia
 
 ## Engagement
 - [ ] Contact form (via a form service, e.g. Formspree — GitHub Pages has no backend)
@@ -38,3 +37,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Dynamic Open Graph image per project (generated at build with satori + resvg)
 - [x] Career timeline on About + Download-CV hook (`experience.json`)
 - [x] Print-friendly `/cv` résumé page (Save as PDF) from single-source data
+- [x] i18n — English / Bahasa Indonesia (UI + data, with language switcher)
