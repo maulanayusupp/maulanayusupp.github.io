@@ -7,8 +7,7 @@ Keep changes incremental — one logical change per commit/push.
 - [ ] Add remaining not-yet-hosted projects as `image` (screenshot) or `placeholder` entries
 - [ ] Per-project screenshot gallery on the detail page (multiple images / carousel)
 - [ ] Add `role`, `stack`, and `timeline` fields to projects and surface them on the detail page
-- [ ] Sort/toggle projects by year or "featured first" on the Portfolio page
-- [ ] Search box on the Portfolio page
+- [ ] Sort projects by year or "featured first" on the Portfolio page
 
 ## Platform / tooling
 - [ ] Auto-generate `sitemap.xml` from routes at build (drop the manual list)
@@ -34,3 +33,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Per-project detail pages with live embed
 - [x] Dedicated `/projects` Portfolio page + nav menu
 - [x] Branded card previews
+- [x] Project search + compact index (Grid/List toggle) on the Portfolio page

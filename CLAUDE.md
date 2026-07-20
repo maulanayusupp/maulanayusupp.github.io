@@ -36,7 +36,7 @@ services/
                         (webapp / game / education / client). Add a project here.
 
 components/
-  ProjectShowcase.vue - Category filter tabs + responsive uniform grid
+  ProjectShowcase.vue - Search + category filters + Grid/List(compact index) toggle + empty state
   ProjectCard.vue     - One project card (branded preview + badge + tags); links to /projects/:id
   ProjectPreview.vue  - Card visual: branded tile (live/placeholder) or real screenshot (image)
   AppHeader.vue       - Fixed navbar, scroll state, mobile menu
@@ -49,7 +49,7 @@ components/
 
 composables/
   useScrollReveal.ts  - Adds .is-visible to .reveal elements on scroll
-  useInView.ts        - Generic "entered viewport once" (used to lazy-load iframes)
+  useProjectSearch.ts - Search + category filtering over services/ (query, results, grouped, filters)
 
 utils/
   seo.ts              - SITE_URL, personSchema, projectsSchema, usePageSeo(), useJsonLd(),
