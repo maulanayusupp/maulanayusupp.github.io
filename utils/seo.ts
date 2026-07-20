@@ -2,7 +2,8 @@
 import { projects } from '~/services/projects'
 
 export const SITE_URL = 'https://maulanayusupp.github.io'
-export const OG_IMAGE = `${SITE_URL}/img/about.jpg`
+export const OG_IMAGE = `${SITE_URL}/img/about.jpg` // photo, used for Person schema
+export const DEFAULT_OG = `${SITE_URL}/og/default.png` // generated social card
 
 /** Person schema reused across pages (Google Knowledge Panel). */
 export const personSchema = {
@@ -81,8 +82,11 @@ export function usePageSeo(opts: {
   path: string
   keywords?: string
   ogType?: string
+  /** Absolute or root-relative OG image; defaults to the generated site card. */
+  ogImage?: string
 }) {
   const url = `${SITE_URL}${opts.path}`
+  const image = opts.ogImage ?? DEFAULT_OG
   useHead({
     title: opts.title,
     meta: [
@@ -98,7 +102,7 @@ export function usePageSeo(opts: {
     ogUrl: url,
     ogTitle: opts.title,
     ogDescription: opts.description,
-    ogImage: OG_IMAGE,
+    ogImage: image,
     ogImageWidth: 1200,
     ogImageHeight: 630,
     ogSiteName: 'Maulana Yusup Abdullah',
@@ -106,6 +110,6 @@ export function usePageSeo(opts: {
     twitterCard: 'summary_large_image',
     twitterTitle: opts.title,
     twitterDescription: opts.description,
-    twitterImage: OG_IMAGE,
+    twitterImage: image,
   })
 }

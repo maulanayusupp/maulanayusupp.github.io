@@ -1,0 +1,26 @@
+[
+  {
+    "id": "webapp",
+    "label": "Web Apps & Tools",
+    "description": "Products and developer tools built for real-world use.",
+    "accent": "#818cf8"
+  },
+  {
+    "id": "game",
+    "label": "Games",
+    "description": "Browser games — arcade, puzzle, and board games.",
+    "accent": "#f472b6"
+  },
+  {
+    "id": "education",
+    "label": "Educational",
+    "description": "Interactive learning and 3D exploration experiences.",
+    "accent": "#34d399"
+  },
+  {
+    "id": "client",
+    "label": "Client Work",
+    "description": "Enterprise and client projects delivered over the years.",
+    "accent": "#22d3ee"
+  }
+]

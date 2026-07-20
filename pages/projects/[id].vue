@@ -32,6 +32,7 @@ usePageSeo({
   title: `${p.title} — ${category?.label} | Maulana Yusup Abdullah`,
   description: p.longDescription ?? p.description,
   path: `/projects/${p.id}`,
+  ogImage: `${SITE_URL}/og/${p.id}.png`,
 })
 
 useJsonLd([

@@ -11,7 +11,6 @@ Keep changes incremental — one logical change per commit/push.
 
 ## Platform / tooling
 - [ ] Auto-generate `sitemap.xml` from routes at build (drop the manual list)
-- [ ] Dynamic Open Graph image per project (branded preview card)
 - [ ] Self-host the Inter/Sora fonts (remove Google Fonts request; faster + privacy)
 - [ ] Light/dark theme toggle (currently dark-only)
 - [ ] i18n — English / Bahasa Indonesia
@@ -35,3 +34,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Branded card previews
 - [x] Project search + compact index (Grid/List toggle) on the Portfolio page
 - [x] Global command palette (⌘K / Ctrl+K) search over pages + projects
+- [x] Dynamic Open Graph image per project (generated at build with satori + resvg)

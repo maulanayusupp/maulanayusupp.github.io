@@ -5,6 +5,9 @@ node_modules
 .data
 dist
 
+# Generated OG images (rebuilt each `pnpm run generate`)
+public/og/
+
 # Logs
 *.log
 npm-debug.log*

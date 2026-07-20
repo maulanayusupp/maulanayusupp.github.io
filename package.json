@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "generate": "nuxt generate",
+    "og": "node scripts/og.mjs",
+    "generate": "node scripts/og.mjs && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "nuxt": "^3.14.0",
     "sass": "^1.83.0",
+    "satori": "^0.28.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   }

@@ -3,6 +3,7 @@
 // Project data lives in per-category JSON files under `services/data/`.
 // Add a project = add an entry to the relevant category JSON.
 // =============================================================================
+import categoriesData from './data/categories.json'
 import webappData from './data/webapp.json'
 import gameData from './data/game.json'
 import educationData from './data/education.json'
@@ -49,32 +50,7 @@ export interface Project {
 /** A project entry as stored in JSON — category is implied by the file. */
 type RawProject = Omit<Project, 'category'>
 
-export const categories: Category[] = [
-  {
-    id: 'webapp',
-    label: 'Web Apps & Tools',
-    description: 'Products and developer tools built for real-world use.',
-    accent: '#818cf8',
-  },
-  {
-    id: 'game',
-    label: 'Games',
-    description: 'Browser games — arcade, puzzle, and board games.',
-    accent: '#f472b6',
-  },
-  {
-    id: 'education',
-    label: 'Educational',
-    description: 'Interactive learning and 3D exploration experiences.',
-    accent: '#34d399',
-  },
-  {
-    id: 'client',
-    label: 'Client Work',
-    description: 'Enterprise and client projects delivered over the years.',
-    accent: '#22d3ee',
-  },
-]
+export const categories: Category[] = categoriesData as Category[]
 
 function withCategory(list: RawProject[], category: CategoryId): Project[] {
   return list.map((p) => ({ ...p, category }))
