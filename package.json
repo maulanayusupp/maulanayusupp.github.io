@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "og": "node scripts/og.mjs",
-    "generate": "node scripts/og.mjs && nuxt generate",
+    "sitemap": "node scripts/sitemap.mjs",
+    "generate": "node scripts/og.mjs && node scripts/sitemap.mjs && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
