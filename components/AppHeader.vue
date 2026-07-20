@@ -3,8 +3,10 @@ const route = useRoute()
 const scrolled = ref(false)
 const mobileOpen = ref(false)
 
+// `prefix` links stay active on nested routes (e.g. /projects/:id).
 const links = [
   { to: '/', label: 'Home' },
+  { to: '/projects', label: 'Portfolio', prefix: true },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -36,7 +38,8 @@ watch(() => route.path, () => (mobileOpen.value = false))
           :key="link.to"
           :to="link.to"
           class="header__link"
-          active-class="is-active"
+          :active-class="link.prefix ? 'is-active' : ''"
+          :exact-active-class="link.prefix ? '' : 'is-active'"
         >
           {{ link.label }}
         </NuxtLink>
@@ -63,7 +66,8 @@ watch(() => route.path, () => (mobileOpen.value = false))
           :key="link.to"
           :to="link.to"
           class="header__mobile-link"
-          active-class="is-active"
+          :active-class="link.prefix ? 'is-active' : ''"
+          :exact-active-class="link.prefix ? '' : 'is-active'"
         >
           {{ link.label }}
         </NuxtLink>

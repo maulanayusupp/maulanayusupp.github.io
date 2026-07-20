@@ -2,6 +2,7 @@
 const year = new Date().getFullYear()
 const links = [
   { to: '/', label: 'Home' },
+  { to: '/projects', label: 'Portfolio' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]

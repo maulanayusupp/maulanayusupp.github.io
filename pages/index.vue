@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { projects } from '~/services/projects'
+import { projects, featuredProjects } from '~/services/projects'
 
 usePageSeo({
   title: 'Maulana Yusup Abdullah — Full Stack Developer & Software Engineer',
@@ -72,12 +72,20 @@ const stats = [
       <div class="container">
         <SectionHeading
           eyebrow="Portfolio"
-          title="Selected work, by category"
-          subtitle="A mix of client projects, products, developer tools, games, and interactive experiences — filter to explore."
+          title="Selected work"
+          subtitle="A mix of client projects, products, developer tools, and interactive experiences. Here's a taste — see the full portfolio for everything, by category."
           class="reveal"
         />
-        <div class="work__showcase reveal">
-          <ProjectShowcase />
+        <div class="work__grid reveal">
+          <ProjectCard v-for="project in featuredProjects" :key="project.id" :project="project" />
+        </div>
+        <div class="work__more reveal">
+          <BaseButton to="/projects" variant="secondary" size="lg">
+            View all {{ projectCount }} projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </BaseButton>
         </div>
       </div>
     </section>
@@ -217,7 +225,26 @@ const stats = [
   }
 }
 
-.work__showcase,
+.work__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-6;
+  margin-top: $space-12;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond-to('lg') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.work__more {
+  display: flex;
+  justify-content: center;
+  margin-top: $space-12;
+}
+
 .tech {
   margin-top: $space-12;
 }
