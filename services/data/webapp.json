@@ -1,0 +1,21 @@
+[
+  {
+    "id": "dibiku",
+    "title": "Dibiku",
+    "description": "A fast database client with a built-in SSH terminal & SQL editor. Connect to MySQL, PostgreSQL, Redis, and SQLite from one blazing-fast app.",
+    "tags": ["Database Client", "SSH", "SQL Editor"],
+    "url": "https://dibiku-web.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2025"
+  },
+  {
+    "id": "pride",
+    "title": "PRIDE Community",
+    "description": "Official site for PRIDE — a motorcycle riders community in Cimahi built around brotherhood, safety, and respect. \"More Than A Ride.\"",
+    "tags": ["Community", "Landing Page", "Branding"],
+    "url": "https://pride-riders.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  }
+]

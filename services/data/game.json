@@ -1,0 +1,48 @@
+[
+  {
+    "id": "iron-vanguard",
+    "title": "Iron Vanguard",
+    "description": "An endless tower-defense game: command 16 turrets and 18 heroes, unleash skills, and hold the line against 35 monster types across 2000 levels.",
+    "tags": ["Tower Defense", "Browser Game", "Arcade"],
+    "url": "https://iron-vanguard.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2025"
+  },
+  {
+    "id": "bladerush",
+    "title": "Blade Rush",
+    "description": "A fast arcade survivor game — spin a growing ring of blades, crush endless hordes, and out-duel rival warlords.",
+    "tags": ["Arcade", "Survivor", "Browser Game"],
+    "url": "https://bladerush.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  },
+  {
+    "id": "reconcile",
+    "title": "Reconcile",
+    "description": "A payment-ops puzzle game about reconciling transactions across Payment Gateway, Internal DB, and Bank Settlement — spot duplicates, refunds, and chargebacks.",
+    "tags": ["Puzzle Game", "Fintech", "Payments"],
+    "url": "https://reconcile-game.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  },
+  {
+    "id": "ular-tangga",
+    "title": "Snakes & Ladders",
+    "description": "The classic board game online for 1–4 players — single-player vs bot or pass-and-play, with modern animations and realistic sound.",
+    "tags": ["Board Game", "Multiplayer", "Browser Game"],
+    "url": "https://ular-tangga-sigma.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  },
+  {
+    "id": "prize-gacha",
+    "title": "Prize Gacha",
+    "description": "An online gacha luck game — spin the gachapon, win prizes across Common to Mythic rarities, and share your wins. Plays right in the browser.",
+    "tags": ["Gacha", "Browser Game", "Casual"],
+    "url": "https://prize-gacha.vercel.app/",
+    "preview": { "kind": "placeholder", "emoji": "🎰" },
+    "year": "2025"
+  }
+]

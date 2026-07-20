@@ -1,0 +1,49 @@
+[
+  {
+    "id": "temanisikecil",
+    "title": "Temanisikecil",
+    "description": "Educational worksheets for children aged 2–5 and coding worksheets for 5+. Learn while playing — motor skills, creativity, and logic.",
+    "tags": ["Kids Education", "Worksheets", "Product"],
+    "url": "https://www.temanisikecil.com/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2025"
+  },
+  {
+    "id": "planetarium",
+    "title": "Planetarium Razan",
+    "description": "An interactive 3D solar system and 28 constellations, with a cinematic tour, voice narration, and orchestral score — right in the browser.",
+    "tags": ["3D Simulation", "WebGL", "Astronomy"],
+    "url": "https://planetarium-razan.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2025"
+  },
+  {
+    "id": "simulasi-sejarah",
+    "title": "Simulasi Sejarah Dunia",
+    "description": "An interactive 3D globe that maps world history events across time and place — explore the past spatially.",
+    "tags": ["3D Globe", "History", "Interactive"],
+    "url": "https://simulasi-sejarah.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  },
+  {
+    "id": "belajar-membaca",
+    "title": "Belajar Membaca",
+    "description": "A reading app for Indonesian kids across 4 stages — letters, syllables, words, sentences — with Indonesian voice-over and playful animations.",
+    "tags": ["Kids", "Reading", "Bahasa Indonesia"],
+    "url": "https://belajar-membaca-nine.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  },
+  {
+    "id": "godzilla-types",
+    "title": "Godzilla Types",
+    "description": "An encyclopedia of 12 Godzilla incarnations across the Showa, Heisei, Millennium, Reiwa, and MonsterVerse eras — height, weight, abilities, and films.",
+    "tags": ["Encyclopedia", "Interactive", "Fan Project"],
+    "url": "https://godzilla-types.vercel.app/",
+    "preview": { "kind": "live" },
+    "year": "2025"
+  }
+]
