@@ -155,6 +155,12 @@
   "nav2": {
     "privacy": "Privacy"
   },
+  "consent": {
+    "message": "This site stores only your language preference locally and doesn't track you. Optional analytics stay off unless you allow them.",
+    "accept": "Accept",
+    "reject": "Decline",
+    "learnMore": "Privacy policy"
+  },
   "privacy": {
     "eyebrow": "Legal",
     "title": "Privacy Policy",

@@ -17,7 +17,7 @@ Keep changes incremental — one logical change per commit/push.
 
 ## Engagement
 - [ ] Contact form (via a form service, e.g. Formspree — GitHub Pages has no backend)
-- [ ] Privacy-friendly analytics (e.g. Plausible / Umami)
+- [ ] Privacy-friendly analytics (e.g. Plausible / Umami) — gate on `useConsent().analyticsAllowed`
 - [ ] Writing / blog section
 
 ## Quality
@@ -38,3 +38,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Career timeline on About + Download-CV hook (`experience.json`)
 - [x] Print-friendly `/cv` résumé page (Save as PDF) from single-source data
 - [x] i18n — English / Bahasa Indonesia (UI + data, with language switcher)
+- [x] Privacy policy page + cookie consent banner (consent gates future analytics)

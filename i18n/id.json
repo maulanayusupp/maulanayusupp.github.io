@@ -155,6 +155,12 @@
   "nav2": {
     "privacy": "Privasi"
   },
+  "consent": {
+    "message": "Situs ini hanya menyimpan preferensi bahasa secara lokal dan tidak melacakmu. Analytics opsional tetap nonaktif kecuali kamu izinkan.",
+    "accept": "Terima",
+    "reject": "Tolak",
+    "learnMore": "Kebijakan privasi"
+  },
   "privacy": {
     "eyebrow": "Legal",
     "title": "Kebijakan Privasi",

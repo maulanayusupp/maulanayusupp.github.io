@@ -29,8 +29,9 @@ pages/
   about.vue           - About: bio, photo, career timeline, skills, services, stats, CTA
   contact.vue         - Contact: contact channels, location/availability card
   cv.vue              - Standalone on-brand résumé (layout:false, dark, print/Save-as-PDF):
-                        photo hero, stat highlights, timeline, skills, ALL projects grouped
-                        by category. Data from experience.json + skills.json + projects.
+                        stat highlights, timeline, skills, ALL projects grouped by category
+                        (no photo). Data from experience.json + skills.json + projects.
+  privacy.vue         - Bilingual privacy policy (static, no-tracking notice)
 
 services/
   projects.ts         - Typed Project model, categories, and helpers (getProject,
@@ -62,17 +63,20 @@ components/
   TechMarquee.vue     - Infinite-scroll tech chips
   ExperienceTimeline.vue - Vertical career timeline (entries prop)
   CommandPalette.vue  - Global ⌘K/Ctrl+K search over pages + projects (rendered once in layout)
+  CookieConsent.vue   - Client-only consent banner (gates future analytics via useConsent)
 
 composables/
   useScrollReveal.ts  - Adds .is-visible to .reveal elements on scroll
   useProjectSearch.ts - Search + category filtering over services/ (query, results, grouped, filters)
   useCommandPalette.ts- Shared open/close state for the ⌘K palette
   useLocale.ts        - i18n: t(key), tl(key) for arrays, localize(obj, field) for data
+  useConsent.ts       - Cookie/analytics consent state (localStorage); analyticsAllowed
 
 i18n/
   en.json, id.json    - UI string dictionaries (English + Indonesian)
 plugins/
   locale.client.ts    - Restores saved locale (localStorage) + syncs <html lang>
+  consent.client.ts   - Restores saved cookie-consent choice
 
 utils/
   seo.ts              - SITE_URL, personSchema, projectsSchema, usePageSeo(), useJsonLd(),

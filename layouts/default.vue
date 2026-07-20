@@ -6,6 +6,7 @@
     </main>
     <AppFooter />
     <CommandPalette />
+    <CookieConsent />
   </div>
 </template>
 
