@@ -113,7 +113,10 @@
       "English & Bahasa Indonesia",
       "Respons cepat dalam 24 jam"
     ],
-    "sendEmail": "Kirim Email"
+    "sendEmail": "Kirim Email",
+    "copy": "Salin",
+    "copied": "Tersalin!",
+    "copyEmail": "Salin alamat email"
   },
   "showcase": {
     "searchPlaceholder": "Cari proyek, tools, tag…",

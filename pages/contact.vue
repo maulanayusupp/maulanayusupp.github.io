@@ -30,6 +30,7 @@ const channels = [
     value: 'maulanayusupp@gmail.com',
     href: 'mailto:maulanayusupp@gmail.com',
     accent: 'indigo',
+    copy: true,
     path: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
     stroke: true,
   },
@@ -58,6 +59,24 @@ const channels = [
 ]
 
 const availability = computed(() => tl<string>('contact.availability'))
+
+const EMAIL = 'maulanayusupp@gmail.com'
+const copied = ref(false)
+let copyTimer: ReturnType<typeof setTimeout>
+
+function copyEmail() {
+  if (!import.meta.client || !navigator.clipboard) return
+  navigator.clipboard
+    .writeText(EMAIL)
+    .then(() => {
+      copied.value = true
+      clearTimeout(copyTimer)
+      copyTimer = setTimeout(() => (copied.value = false), 2000)
+    })
+    .catch(() => {})
+}
+
+onBeforeUnmount(() => clearTimeout(copyTimer))
 </script>
 
 <template>
@@ -74,29 +93,61 @@ const availability = computed(() => tl<string>('contact.availability'))
         </p>
 
         <div class="contact__channels">
-          <a
-            v-for="c in channels"
-            :key="c.labelKey"
-            :href="c.href"
-            :target="c.href.startsWith('http') ? '_blank' : undefined"
-            :rel="c.href.startsWith('http') ? 'noopener' : undefined"
-            class="channel"
-            :class="`channel--${c.accent}`"
-          >
-            <span class="channel__icon">
-              <svg
-                viewBox="0 0 24 24"
-                :fill="c.stroke ? 'none' : 'currentColor'"
-                :stroke="c.stroke ? 'currentColor' : undefined"
+          <template v-for="c in channels" :key="c.labelKey">
+            <!-- Email: card with a copy button -->
+            <div v-if="c.copy" class="channel" :class="`channel--${c.accent}`">
+              <a :href="c.href" class="channel__main">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path :d="c.path" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span class="channel__body">
+                  <span class="channel__label">{{ t(c.labelKey) }}</span>
+                  <span class="channel__value">{{ c.value }}</span>
+                </span>
+              </a>
+              <button
+                class="channel__copy"
+                :class="{ 'is-copied': copied }"
+                :aria-label="copied ? t('contact.copied') : t('contact.copyEmail')"
+                @click="copyEmail"
               >
-                <path :d="c.path" :stroke-width="c.stroke ? 2 : undefined" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <span class="channel__body">
-              <span class="channel__label">{{ t(c.labelKey) }}</span>
-              <span class="channel__value">{{ c.value }}</span>
-            </span>
-          </a>
+                <svg v-if="copied" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <svg v-else viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <rect x="9" y="9" width="11" height="11" rx="2" stroke-width="2" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15V5a2 2 0 012-2h10" />
+                </svg>
+                <span class="channel__copy-label">{{ copied ? t('contact.copied') : t('contact.copy') }}</span>
+              </button>
+            </div>
+
+            <!-- Other channels: plain link card -->
+            <a
+              v-else
+              :href="c.href"
+              :target="c.href.startsWith('http') ? '_blank' : undefined"
+              :rel="c.href.startsWith('http') ? 'noopener' : undefined"
+              class="channel"
+              :class="`channel--${c.accent}`"
+            >
+              <span class="channel__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  :fill="c.stroke ? 'none' : 'currentColor'"
+                  :stroke="c.stroke ? 'currentColor' : undefined"
+                >
+                  <path :d="c.path" :stroke-width="c.stroke ? 2 : undefined" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span class="channel__body">
+                <span class="channel__label">{{ t(c.labelKey) }}</span>
+                <span class="channel__value">{{ c.value }}</span>
+              </span>
+            </a>
+          </template>
         </div>
       </div>
 
@@ -213,6 +264,41 @@ const availability = computed(() => tl<string>('contact.availability'))
     border-color: color-mix(in srgb, var(--accent) 55%, transparent);
 
     .channel__value { color: $color-white; }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+    flex: 1;
+    min-width: 0;
+    color: inherit;
+  }
+
+  &__copy {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    flex-shrink: 0;
+    padding: $space-2 $space-3;
+    font-size: $fs-xs;
+    font-weight: 600;
+    color: $color-text-muted;
+    background: $color-surface-2;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    transition: color $transition, border-color $transition;
+
+    &:hover {
+      color: $color-white;
+      border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+    }
+    &.is-copied {
+      color: $color-emerald;
+      border-color: color-mix(in srgb, #{$color-emerald} 45%, transparent);
+    }
+
+    svg { width: 1rem; height: 1rem; }
   }
 
   &__icon {
