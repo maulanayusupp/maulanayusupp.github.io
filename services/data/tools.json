@@ -1,0 +1,52 @@
+[
+  {
+    "id": "neatly",
+    "title": "Neatly",
+    "description": "A fast, modern tool to beautify (unminify) and minify JavaScript, CSS, HTML, JSON, and XML — paste, drop a file, and get clean or compact code instantly.",
+    "description_id": "Tool cepat dan modern untuk beautify (unminify) dan minify JavaScript, CSS, HTML, JSON, dan XML — tempel, jatuhkan file, dan dapatkan kode rapi atau ringkas seketika.",
+    "longDescription": "Neatly is a free online developer tool to beautify (unminify) and minify JavaScript, CSS, HTML, JSON, and XML. Paste your code or drop a file, pick a mode, and get clean, readable — or compact — output in a click.",
+    "longDescription_id": "Neatly adalah developer tool online gratis untuk beautify (unminify) dan minify JavaScript, CSS, HTML, JSON, dan XML. Tempel kode atau jatuhkan file, pilih mode, dan dapatkan output yang rapi dan mudah dibaca — atau ringkas — dalam sekali klik.",
+    "highlights": [
+      "Beautify & minify in one tool",
+      "Supports JS, CSS, HTML, JSON & XML",
+      "Paste code or drop a file",
+      "Instant, client-side output"
+    ],
+    "highlights_id": [
+      "Beautify & minify dalam satu tool",
+      "Mendukung JS, CSS, HTML, JSON & XML",
+      "Tempel kode atau jatuhkan file",
+      "Output instan di sisi klien"
+    ],
+    "tags": ["Developer Tool", "Formatter", "Minifier"],
+    "url": "https://neatlyapp.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "dibiku",
+    "title": "Dibiku",
+    "description": "A fast database client with a built-in SSH terminal & SQL editor. Connect to MySQL, PostgreSQL, Redis, and SQLite from one blazing-fast app.",
+    "description_id": "Database client cepat dengan terminal SSH & editor SQL bawaan. Terhubung ke MySQL, PostgreSQL, Redis, dan SQLite dari satu aplikasi super cepat.",
+    "longDescription": "Dibiku is a fast, all-in-one database client with a built-in SSH terminal and a multi-tab SQL editor. It connects to MySQL, PostgreSQL, Redis, and SQLite from a single app, with SSH tunnels and 36+ keyboard shortcuts for a keyboard-first workflow.",
+    "longDescription_id": "Dibiku adalah database client cepat serba-satu dengan terminal SSH bawaan dan editor SQL multi-tab. Terhubung ke MySQL, PostgreSQL, Redis, dan SQLite dari satu aplikasi, dengan SSH tunnel dan 36+ shortcut keyboard untuk alur kerja berbasis keyboard.",
+    "highlights": [
+      "Connects to MySQL, PostgreSQL, Redis & SQLite",
+      "Built-in SSH terminal & tunnels",
+      "Multi-tab SQL editor",
+      "36+ keyboard shortcuts"
+    ],
+    "highlights_id": [
+      "Terhubung ke MySQL, PostgreSQL, Redis & SQLite",
+      "Terminal SSH & tunnel bawaan",
+      "Editor SQL multi-tab",
+      "36+ shortcut keyboard"
+    ],
+    "tags": ["Database Client", "SSH", "SQL Editor"],
+    "url": "https://dibiku-web.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2025"
+  }
+]

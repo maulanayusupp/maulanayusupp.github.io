@@ -80,6 +80,7 @@ const { t, localize } = useLocale()
   &--game { --accent: #{$cat-game}; }
   &--education { --accent: #{$cat-education}; }
   &--webapp { --accent: #{$cat-webapp}; }
+  &--tools { --accent: #{$cat-tools}; }
 
   &__media {
     position: relative;

@@ -20,7 +20,8 @@
     "current": "Sekarang"
   },
   "categories": {
-    "webapp": "Aplikasi Web & Tools",
+    "webapp": "Aplikasi Web",
+    "tools": "Tools",
     "game": "Games",
     "education": "Edukasi",
     "client": "Proyek Klien"

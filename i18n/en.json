@@ -20,7 +20,8 @@
     "current": "Current"
   },
   "categories": {
-    "webapp": "Web Apps & Tools",
+    "webapp": "Web Apps",
+    "tools": "Tools",
     "game": "Games",
     "education": "Educational",
     "client": "Client Work"

@@ -5,11 +5,12 @@
 // =============================================================================
 import categoriesData from './data/categories.json'
 import webappData from './data/webapp.json'
+import toolsData from './data/tools.json'
 import gameData from './data/game.json'
 import educationData from './data/education.json'
 import clientData from './data/client.json'
 
-export type CategoryId = 'client' | 'game' | 'education' | 'webapp'
+export type CategoryId = 'client' | 'game' | 'education' | 'webapp' | 'tools'
 
 export interface Category {
   id: CategoryId
@@ -59,6 +60,7 @@ function withCategory(list: RawProject[], category: CategoryId): Project[] {
 // Ordered to match the category display order (grouped, tidy "All" view).
 export const projects: Project[] = [
   ...withCategory(webappData as unknown as RawProject[], 'webapp'),
+  ...withCategory(toolsData as unknown as RawProject[], 'tools'),
   ...withCategory(gameData as unknown as RawProject[], 'game'),
   ...withCategory(educationData as unknown as RawProject[], 'education'),
   ...withCategory(clientData as unknown as RawProject[], 'client'),

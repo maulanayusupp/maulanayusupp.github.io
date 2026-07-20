@@ -10,7 +10,7 @@ const read = (p) => JSON.parse(readFileSync(resolve(root, p), 'utf8'))
 const BASE = 'https://maulanayusupp.github.io'
 const today = new Date().toISOString().slice(0, 10)
 
-const projectIds = ['webapp', 'game', 'education', 'client'].flatMap((cat) =>
+const projectIds = ['webapp', 'tools', 'game', 'education', 'client'].flatMap((cat) =>
   read(`services/data/${cat}.json`).map((p) => p.id),
 )
 

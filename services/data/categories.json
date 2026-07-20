@@ -1,9 +1,15 @@
 [
   {
     "id": "webapp",
-    "label": "Web Apps & Tools",
-    "description": "Products and developer tools built for real-world use.",
+    "label": "Web Apps",
+    "description": "Products and sites built for real-world use.",
     "accent": "#818cf8"
+  },
+  {
+    "id": "tools",
+    "label": "Tools",
+    "description": "Developer tools and utilities.",
+    "accent": "#fb923c"
   },
   {
     "id": "game",

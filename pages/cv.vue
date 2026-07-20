@@ -404,6 +404,7 @@ function printCv() {
     &--game { --accent: #{$cat-game}; }
     &--education { --accent: #{$cat-education}; }
     &--webapp { --accent: #{$cat-webapp}; }
+    &--tools { --accent: #{$cat-tools}; }
   }
 
   &__pgroup-title {

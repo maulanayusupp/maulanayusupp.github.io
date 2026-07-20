@@ -11,7 +11,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const read = (p) => JSON.parse(readFileSync(resolve(root, p), 'utf8'))
 
 const categories = read('services/data/categories.json')
-const files = ['webapp', 'game', 'education', 'client']
+const files = ['webapp', 'tools', 'game', 'education', 'client']
 const projects = files.flatMap((cat) =>
   read(`services/data/${cat}.json`).map((p) => ({ ...p, category: cat })),
 )

@@ -60,6 +60,7 @@ const emoji = computed(() =>
   &--game { --accent: #{$cat-game}; }
   &--education { --accent: #{$cat-education}; }
   &--webapp { --accent: #{$cat-webapp}; }
+  &--tools { --accent: #{$cat-tools}; }
 }
 
 .preview__image {

@@ -37,8 +37,11 @@ services/
   projects.ts         - Typed Project model, categories, and helpers (getProject,
                         projectsByCategory, countByCategory, featuredProjects).
   data/categories.json- Category metadata (id, label, description, accent) — single source
-  data/{webapp,game,education,client}.json - SINGLE SOURCE OF TRUTH for projects.
-                        Add a project here (category implied by filename).
+  data/{webapp,tools,game,education,client}.json - SINGLE SOURCE OF TRUTH for projects.
+                        Add a project here (category implied by filename). To add a new
+                        category: new data file + entry in categories.json + CategoryId +
+                        the withCategory() list + og.mjs/sitemap.mjs file lists + a --<id>
+                        accent modifier in the card/preview/showcase/detail/cv SCSS.
   data/experience.json- Career timeline + `summary` + `resumeUrl`. If `resumeUrl` is set to a
                         /public PDF, the About "Download CV" button links to it; otherwise it
                         links to the /cv page. Dates are editable seeds.
