@@ -30,7 +30,7 @@ const links = [
 
     <div class="footer__bar container">
       <span>&copy; {{ year }} Maulana Yusup Abdullah. All rights reserved.</span>
-      <span>Built with Nuxt &amp; SCSS.</span>
+      <span>Based in Bandung, Indonesia</span>
     </div>
   </footer>
 </template>
