@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { categories, projects, type CategoryId } from '~/services/projects'
+import { categories, projects } from '~/services/projects'
 import experience from '~/services/data/experience.json'
 import skills from '~/services/data/skills.json'
 
@@ -54,27 +54,23 @@ function printCv() {
     </div>
 
     <article class="cv">
-      <div class="cv__glow" />
-
       <!-- Hero -->
       <header class="cv__hero">
-        <div class="cv__id">
-          <div class="cv__avatar">
-            <img src="/img/about.jpg" alt="Maulana Yusup Abdullah" width="140" height="140" />
-          </div>
-          <div class="cv__idtext">
-            <h1 class="cv__name">Maulana Yusup Abdullah</h1>
-            <p class="cv__role">Full Stack Developer &amp; Software Engineer</p>
-            <p class="cv__loc">
-              <span class="cv__avail" /> Bandung, Indonesia · Available for work
-            </p>
-          </div>
-        </div>
+        <h1 class="cv__name">Maulana Yusup Abdullah</h1>
+        <p class="cv__role">Full Stack Developer &amp; Software Engineer</p>
+        <p class="cv__loc"><span class="cv__avail" /> Bandung, Indonesia · Available for work</p>
 
         <p class="cv__pitch">{{ experience.summary }}</p>
 
         <div class="cv__links">
-          <a v-for="c in contacts" :key="c.label" :href="c.href || undefined" :target="c.href && c.href.startsWith('http') ? '_blank' : undefined" rel="noopener" class="cv__chip">
+          <a
+            v-for="c in contacts"
+            :key="c.label"
+            :href="c.href"
+            :target="c.href.startsWith('http') ? '_blank' : undefined"
+            rel="noopener"
+            class="cv__chip"
+          >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" :d="c.icon" />
             </svg>
@@ -91,64 +87,55 @@ function printCv() {
         </div>
       </div>
 
-      <div class="cv__grid">
-        <main class="cv__main">
-          <!-- Experience -->
-          <section class="cv__section">
-            <h2 class="cv__heading">Experience</h2>
-            <ol class="cv__timeline">
-              <li v-for="e in experience.timeline" :key="e.period + e.role" class="cv__tl-item">
-                <span class="cv__tl-dot" :class="{ 'is-current': e.current }" />
-                <div class="cv__tl-head">
-                  <span class="cv__tl-role">{{ e.role }}</span>
-                  <span class="cv__tl-period">{{ e.period }}</span>
-                </div>
-                <p class="cv__tl-org">{{ e.org }}</p>
-                <p class="cv__tl-desc">{{ e.description }}</p>
-              </li>
-            </ol>
-          </section>
-
-          <!-- All projects -->
-          <section class="cv__section">
-            <h2 class="cv__heading">Projects <span class="cv__count">{{ projectCount }}</span></h2>
-            <div v-for="group in grouped" :key="group.category.id" class="cv__pgroup" :class="`cv__pgroup--${group.category.id}`">
-              <h3 class="cv__pgroup-title">
-                <span class="cv__pgroup-dot" /> {{ group.category.label }}
-                <span class="cv__pgroup-count">{{ group.items.length }}</span>
-              </h3>
-              <ul class="cv__plist">
-                <li v-for="p in group.items" :key="p.id" class="cv__pitem">
-                  <div class="cv__pitem-head">
-                    <span class="cv__pitem-title">{{ p.title }}</span>
-                    <a v-if="p.url" :href="p.url" target="_blank" rel="noopener" class="cv__pitem-link">{{ p.tags[0] }} ↗</a>
-                    <span v-else class="cv__pitem-tag">{{ p.tags[0] }}</span>
-                  </div>
-                  <p class="cv__pitem-desc">{{ p.description }}</p>
-                </li>
-              </ul>
+      <!-- Experience -->
+      <section class="cv__section">
+        <h2 class="cv__heading">Experience</h2>
+        <ol class="cv__timeline">
+          <li v-for="e in experience.timeline" :key="e.period + e.role" class="cv__tl-item">
+            <span class="cv__tl-dot" :class="{ 'is-current': e.current }" />
+            <div class="cv__tl-head">
+              <span class="cv__tl-role">{{ e.role }}</span>
+              <span class="cv__tl-period">{{ e.period }}</span>
             </div>
-          </section>
-        </main>
+            <p class="cv__tl-org">{{ e.org }}</p>
+            <p class="cv__tl-desc">{{ e.description }}</p>
+          </li>
+        </ol>
+      </section>
 
-        <aside class="cv__aside">
-          <section class="cv__section">
-            <h2 class="cv__heading">Skills</h2>
-            <div v-for="group in skills" :key="group.title" class="cv__skill">
-              <span class="cv__skill-title">{{ group.title }}</span>
-              <div class="cv__skill-tags">
-                <span v-for="item in group.items" :key="item">{{ item }}</span>
+      <!-- Skills -->
+      <section class="cv__section">
+        <h2 class="cv__heading">Skills</h2>
+        <div class="cv__skills">
+          <div v-for="group in skills" :key="group.title" class="cv__skill">
+            <span class="cv__skill-title">{{ group.title }}</span>
+            <div class="cv__skill-tags">
+              <span v-for="item in group.items" :key="item">{{ item }}</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All projects -->
+      <section class="cv__section">
+        <h2 class="cv__heading">Projects <span class="cv__count">{{ projectCount }}</span></h2>
+        <div v-for="group in grouped" :key="group.category.id" class="cv__pgroup" :class="`cv__pgroup--${group.category.id}`">
+          <h3 class="cv__pgroup-title">
+            <span class="cv__pgroup-dot" /> {{ group.category.label }}
+            <span class="cv__pgroup-count">{{ group.items.length }}</span>
+          </h3>
+          <ul class="cv__plist">
+            <li v-for="p in group.items" :key="p.id" class="cv__pitem">
+              <div class="cv__pitem-head">
+                <span class="cv__pitem-title">{{ p.title }}</span>
+                <a v-if="p.url" :href="p.url" target="_blank" rel="noopener" class="cv__pitem-link">{{ p.tags[0] }} ↗</a>
+                <span v-else class="cv__pitem-tag">{{ p.tags[0] }}</span>
               </div>
-            </div>
-          </section>
-
-          <section class="cv__section cv__cta">
-            <h2 class="cv__heading">Let's talk</h2>
-            <p>Open for full-time roles, long-term contracts, and freelance projects.</p>
-            <a href="mailto:maulanayusupp@gmail.com" class="cv__cta-btn">Get in touch</a>
-          </section>
-        </aside>
-      </div>
+              <p class="cv__pitem-desc">{{ p.description }}</p>
+            </li>
+          </ul>
+        </div>
+      </section>
     </article>
   </div>
 </template>
@@ -166,7 +153,7 @@ function printCv() {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 60rem;
+  max-width: 52rem;
   margin: 0 auto $space-6;
 
   &__back {
@@ -192,59 +179,20 @@ function printCv() {
 }
 
 .cv {
-  position: relative;
-  max-width: 60rem;
+  max-width: 52rem;
   margin: 0 auto;
   padding: $space-12;
-  overflow: hidden;
   color: $color-text;
-  background: linear-gradient(180deg, #0f172a, #0b1120);
+  background: #0e1729;
   border: 1px solid $color-border;
-  border-radius: $radius-2xl;
+  border-radius: $radius-xl;
   box-shadow: $shadow-lg;
 
-  @include respond-to('md') { padding: $space-16; }
-
-  &__glow {
-    position: absolute;
-    inset: 0 0 auto 0;
-    height: 340px;
-    background:
-      radial-gradient(60rem 22rem at 12% -10%, rgba(99, 102, 241, 0.28), transparent 60%),
-      radial-gradient(50rem 20rem at 100% -5%, rgba(217, 70, 239, 0.2), transparent 60%);
-    pointer-events: none;
-  }
-
   // ---- Hero ----------------------------------------------------------------
-  &__hero { position: relative; }
-
-  &__id {
-    display: flex;
-    align-items: center;
-    gap: $space-6;
-  }
-
-  &__avatar {
-    flex-shrink: 0;
-    padding: 3px;
-    background: $gradient-brand-vivid;
-    border-radius: $radius-xl;
-    box-shadow: $shadow-glow;
-
-    img {
-      width: 6.5rem;
-      height: 6.5rem;
-      object-fit: cover;
-      border-radius: calc(#{$radius-xl} - 3px);
-    }
-  }
-
   &__name {
     font-size: $fs-4xl;
     line-height: 1.05;
     @include gradient-text($gradient-brand);
-
-    @include respond-to('md') { font-size: $fs-5xl; }
   }
 
   &__role {
@@ -272,48 +220,41 @@ function printCv() {
   }
 
   &__pitch {
-    margin-top: $space-8;
-    max-width: 46rem;
-    font-size: $fs-lg;
+    margin-top: $space-5;
+    font-size: $fs-base;
     color: $color-text-muted;
   }
 
   &__links {
     display: flex;
     flex-wrap: wrap;
-    gap: $space-3;
-    margin-top: $space-6;
+    gap: $space-2;
+    margin-top: $space-5;
   }
 
   &__chip {
     display: inline-flex;
     align-items: center;
     gap: $space-2;
-    padding: $space-2 $space-3;
+    padding: $space-1 $space-3;
     font-size: $fs-sm;
     color: $color-text;
     background: $color-surface;
     border: 1px solid $color-border;
     border-radius: $radius-full;
-    transition: border-color $transition, color $transition;
-
-    &:hover { border-color: $color-indigo; color: $color-white; }
-    svg { width: 0.95rem; height: 0.95rem; color: $color-indigo-light; }
+    svg { width: 0.9rem; height: 0.9rem; color: $color-indigo-light; }
   }
 
   // ---- Stats ---------------------------------------------------------------
   &__stats {
-    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $space-4;
-    margin-top: $space-10;
-    padding: $space-6;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-3;
+    margin-top: $space-8;
+    padding: $space-5;
     border: 1px solid $color-border;
-    border-radius: $radius-xl;
+    border-radius: $radius-lg;
     background: $color-surface;
-
-    @include respond-to('sm') { grid-template-columns: repeat(4, 1fr); }
   }
 
   &__stat { text-align: center; }
@@ -322,7 +263,7 @@ function printCv() {
     display: block;
     font-family: $font-display;
     font-weight: 800;
-    font-size: $fs-4xl;
+    font-size: $fs-3xl;
     @include gradient-text($gradient-brand);
   }
 
@@ -331,17 +272,8 @@ function printCv() {
     color: $color-text-faint;
   }
 
-  // ---- Grid ----------------------------------------------------------------
-  &__grid {
-    position: relative;
-    display: grid;
-    gap: $space-12;
-    margin-top: $space-12;
-
-    @include respond-to('lg') { grid-template-columns: 1.7fr 1fr; }
-  }
-
-  &__section + &__section { margin-top: $space-10; }
+  // ---- Sections ------------------------------------------------------------
+  &__section { margin-top: $space-10; }
 
   &__heading {
     display: flex;
@@ -352,8 +284,8 @@ function printCv() {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: $color-indigo-light;
-    padding-bottom: $space-3;
-    margin-bottom: $space-6;
+    padding-bottom: $space-2;
+    margin-bottom: $space-5;
     border-bottom: 1px solid $color-border;
   }
 
@@ -370,7 +302,7 @@ function printCv() {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: $space-6;
+    gap: $space-5;
     padding-left: $space-6;
 
     &::before {
@@ -380,11 +312,11 @@ function printCv() {
       top: 6px;
       bottom: 6px;
       width: 2px;
-      background: linear-gradient(to bottom, $color-indigo, transparent);
+      background: $color-border-strong;
     }
   }
 
-  &__tl-item { position: relative; break-inside: avoid; }
+  &__tl-item { position: relative; }
 
   &__tl-dot {
     position: absolute;
@@ -395,7 +327,7 @@ function printCv() {
     border-radius: $radius-full;
     background: $color-bg-elevated;
     border: 2px solid $color-border-strong;
-    &.is-current { background: $color-indigo; border-color: $color-indigo; box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.25); }
+    &.is-current { background: $color-indigo; border-color: $color-indigo; }
   }
 
   &__tl-head { display: flex; justify-content: space-between; align-items: baseline; gap: $space-4; }
@@ -404,10 +336,36 @@ function printCv() {
   &__tl-org { color: $color-indigo-light; font-size: $fs-sm; font-weight: 500; }
   &__tl-desc { margin-top: $space-2; color: $color-text-muted; font-size: $fs-sm; }
 
+  // ---- Skills --------------------------------------------------------------
+  &__skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-4;
+
+    @include respond-to('sm') { grid-template-columns: repeat(2, 1fr); }
+    @include respond-to('md') { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  &__skill { break-inside: avoid; }
+  &__skill-title { display: block; font-weight: 700; color: $color-white; font-size: $fs-sm; margin-bottom: $space-2; }
+  &__skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    span {
+      padding: 2px $space-2;
+      font-size: $fs-xs;
+      color: $color-text-muted;
+      background: $color-surface-2;
+      border: 1px solid $color-border;
+      border-radius: $radius-full;
+    }
+  }
+
   // ---- Projects ------------------------------------------------------------
   &__pgroup {
     --accent: #{$color-indigo-light};
-    margin-bottom: $space-8;
+    margin-bottom: $space-6;
     break-inside: avoid;
 
     &--client { --accent: #{$cat-client}; }
@@ -420,18 +378,18 @@ function printCv() {
     display: flex;
     align-items: center;
     gap: $space-2;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: $space-4;
+    margin-bottom: $space-3;
   }
 
-  &__pgroup-dot { width: 8px; height: 8px; border-radius: $radius-full; background: var(--accent); box-shadow: 0 0 8px 0 var(--accent); }
+  &__pgroup-dot { width: 7px; height: 7px; border-radius: $radius-full; background: var(--accent); }
   &__pgroup-count { margin-left: auto; font-size: $fs-xs; color: $color-text-faint; }
 
-  &__plist { display: flex; flex-direction: column; gap: $space-4; }
+  &__plist { display: flex; flex-direction: column; gap: $space-3; }
 
   &__pitem {
     padding-left: $space-4;
@@ -444,64 +402,44 @@ function printCv() {
   &__pitem-link { font-size: $fs-xs; color: var(--accent); white-space: nowrap; }
   &__pitem-tag { font-size: $fs-xs; color: $color-text-faint; white-space: nowrap; }
   &__pitem-desc { margin-top: 2px; color: $color-text-muted; font-size: $fs-sm; }
-
-  // ---- Skills / aside ------------------------------------------------------
-  &__skill { margin-bottom: $space-5; break-inside: avoid; }
-  &__skill-title { display: block; font-weight: 700; color: $color-white; font-size: $fs-sm; margin-bottom: $space-2; }
-  &__skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $space-2;
-    span {
-      padding: 2px $space-3;
-      font-size: $fs-xs;
-      color: $color-text-muted;
-      background: $color-surface-2;
-      border: 1px solid $color-border;
-      border-radius: $radius-full;
-    }
-  }
-
-  &__cta {
-    padding: $space-6;
-    border: 1px solid $color-border;
-    border-radius: $radius-xl;
-    background: $color-surface;
-    p { color: $color-text-muted; font-size: $fs-sm; }
-  }
-
-  &__cta-btn {
-    display: inline-block;
-    margin-top: $space-4;
-    padding: $space-3 $space-5;
-    font-weight: 600;
-    font-size: $fs-sm;
-    color: #fff;
-    background: $gradient-brand-vivid;
-    border-radius: $radius-md;
-  }
 }
 
-// ---- Print -----------------------------------------------------------------
+// ---- Print: fit to A4/Letter, clean pagination -----------------------------
 @media print {
-  .cv-page { padding: 0; background: #0b1120; }
+  @page { size: A4; margin: 12mm; }
+
+  .cv-page {
+    min-height: 0;
+    padding: 0;
+    background: #0e1729;
+  }
   .cv-toolbar { display: none; }
   .cv {
     max-width: none;
+    padding: 0;
     border: none;
     border-radius: 0;
     box-shadow: none;
-    padding: 24px 28px;
+    background: #0e1729;
   }
-  .cv__grid { grid-template-columns: 1.7fr 1fr; }
-  .cv__section, .cv__pgroup, .cv__tl-item, .cv__pitem, .cv__skill { break-inside: avoid; }
+
+  // Keep blocks from splitting across pages.
+  .cv__hero,
+  .cv__stats,
+  .cv__heading,
+  .cv__tl-item,
+  .cv__skill,
+  .cv__pgroup,
+  .cv__pitem { break-inside: avoid; }
+  .cv__heading { break-after: avoid; }
+
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
 
 <style>
 @media print {
-  html, body { background: #0b1120 !important; }
+  html, body { background: #0e1729 !important; }
   body::before { display: none !important; }
 }
 </style>
