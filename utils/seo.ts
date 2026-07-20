@@ -49,7 +49,8 @@ export const projectsSchema = {
     position: i + 1,
     name: p.title,
     description: p.description,
-    ...(p.url ? { url: p.url } : {}),
+    image: `${SITE_URL}/og/${p.id}.png`,
+    url: p.url ?? `${SITE_URL}/projects/${p.id}`,
   })),
 }
 
@@ -63,16 +64,23 @@ export function useJsonLd(blocks: Record<string, unknown>[]) {
   })
 }
 
-/** Build a BreadcrumbList for a subpage. */
-export function breadcrumbSchema(name: string, path: string) {
+/** Build a BreadcrumbList from a trail of crumbs (Home is prepended). */
+export function breadcrumbTrail(crumbs: { name: string; path: string }[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-      { '@type': 'ListItem', position: 2, name, item: `${SITE_URL}${path}` },
-    ],
+    itemListElement: [{ name: 'Home', path: '/' }, ...crumbs].map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: `${SITE_URL}${c.path}`,
+    })),
   }
+}
+
+/** Build a BreadcrumbList for a single subpage (Home > name). */
+export function breadcrumbSchema(name: string, path: string) {
+  return breadcrumbTrail([{ name, path }])
 }
 
 /** Apply title + meta description + OG/Twitter + canonical in one call. */
@@ -84,9 +92,12 @@ export function usePageSeo(opts: {
   ogType?: string
   /** Absolute or root-relative OG image; defaults to the generated site card. */
   ogImage?: string
+  /** Alt text for the OG/Twitter image. */
+  ogImageAlt?: string
 }) {
   const url = `${SITE_URL}${opts.path}`
   const image = opts.ogImage ?? DEFAULT_OG
+  const imageAlt = opts.ogImageAlt ?? opts.title
   useHead({
     title: opts.title,
     meta: [
@@ -105,11 +116,15 @@ export function usePageSeo(opts: {
     ogImage: image,
     ogImageWidth: 1200,
     ogImageHeight: 630,
+    ogImageAlt: imageAlt,
+    ogImageType: 'image/png',
     ogSiteName: 'Maulana Yusup Abdullah',
     ogLocale: 'en_US',
+    ogLocaleAlternate: ['id_ID'],
     twitterCard: 'summary_large_image',
     twitterTitle: opts.title,
     twitterDescription: opts.description,
     twitterImage: image,
+    twitterImageAlt: imageAlt,
   })
 }

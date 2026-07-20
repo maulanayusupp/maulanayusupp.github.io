@@ -42,7 +42,10 @@ usePageSeo({
 })
 
 useJsonLd([
-  breadcrumbSchema(p.title, `/projects/${p.id}`),
+  breadcrumbTrail([
+    { name: 'Portfolio', path: '/projects' },
+    { name: p.title, path: `/projects/${p.id}` },
+  ]),
   {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
