@@ -37,3 +37,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Global command palette (⌘K / Ctrl+K) search over pages + projects
 - [x] Dynamic Open Graph image per project (generated at build with satori + resvg)
 - [x] Career timeline on About + Download-CV hook (`experience.json`)
+- [x] Print-friendly `/cv` résumé page (Save as PDF) from single-source data

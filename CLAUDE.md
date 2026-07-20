@@ -26,8 +26,10 @@ pages/
   projects/index.vue  - Portfolio: full filterable ProjectShowcase + hero + CTA
   projects/[id].vue   - Project detail: title, long description, highlights, live embed / image,
                         related projects. Prerendered per project via crawlLinks.
-  about.vue           - About: bio, photo, skills, services, stats, CTA
+  about.vue           - About: bio, photo, career timeline, skills, services, stats, CTA
   contact.vue         - Contact: contact channels, location/availability card
+  cv.vue              - Standalone print-friendly résumé (layout:false, light theme,
+                        "Print / Save as PDF"); data from experience.json + skills.json + projects
 
 services/
   projects.ts         - Typed Project model, categories, and helpers (getProject,
@@ -35,8 +37,10 @@ services/
   data/categories.json- Category metadata (id, label, description, accent) — single source
   data/{webapp,game,education,client}.json - SINGLE SOURCE OF TRUTH for projects.
                         Add a project here (category implied by filename).
-  data/experience.json- About-page career timeline + `resumeUrl` (set to a /public PDF
-                        path to reveal the "Download CV" button; dates are editable seeds).
+  data/experience.json- Career timeline + `summary` + `resumeUrl`. If `resumeUrl` is set to a
+                        /public PDF, the About "Download CV" button links to it; otherwise it
+                        links to the /cv page. Dates are editable seeds.
+  data/skills.json    - Skill groups, shared by the About page and /cv (single source).
 
 scripts/
   og.mjs              - Build-time Open Graph image generator (satori + resvg). Reads the
@@ -73,7 +77,7 @@ public/               - Served at root: favicon.svg, site.webmanifest, img/, ico
 .github/workflows/deploy.yml - CI: pnpm install + generate + deploy to GitHub Pages
 ```
 
-Routes are clean URLs: `/`, `/projects`, `/projects/:id`, `/about`, `/contact`. Nav (header +
+Routes are clean URLs: `/`, `/projects`, `/projects/:id`, `/about`, `/contact`, `/cv`. Nav (header +
 footer) links Home · Portfolio · About · Contact; "Portfolio" stays active on `/projects/:id`.
 
 ### SCSS design system (`assets/scss/`)

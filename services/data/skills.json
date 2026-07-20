@@ -1,0 +1,8 @@
+[
+  { "title": "Frontend", "items": ["Vue.js", "Nuxt", "Vuex/Pinia", "Vuetify", "TypeScript", "SCSS"] },
+  { "title": "Backend", "items": ["Laravel", "Lumen", "Node.js", "AdonisJs", "PHP", "REST API"] },
+  { "title": "Databases", "items": ["MySQL", "MongoDB", "Redis"] },
+  { "title": "Real-time & APIs", "items": ["Socket.io", "PeerJS", "WebRTC", "WhatsApp API"] },
+  { "title": "Architecture & Practices", "items": ["SPA / SSR", "Component Design", "Clean Code", "Testing", "CI/CD"] },
+  { "title": "DevOps & Server", "items": ["Nginx", "Apache", "Digital Ocean", "SSH", "Git"] }
+]

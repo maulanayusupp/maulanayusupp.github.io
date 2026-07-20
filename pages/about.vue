@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import experience from '~/services/data/experience.json'
+import skills from '~/services/data/skills.json'
+
+const cvHref = experience.resumeUrl || '/cv'
 
 usePageSeo({
   title: 'About Maulana Yusup Abdullah — Skills, Experience & Services',
@@ -23,15 +26,6 @@ const traits = [
   'Highly responsible — available ASAP when you need me',
   'Git-based workflow & task management for organized collaboration',
   'Clean, maintainable, component-based architecture',
-]
-
-const skills = [
-  { title: 'Frontend', items: ['Vue.js', 'Nuxt', 'Vuex/Pinia', 'Vuetify', 'TypeScript', 'SCSS'] },
-  { title: 'Backend', items: ['Laravel', 'Lumen', 'Node.js', 'AdonisJs', 'PHP', 'REST API'] },
-  { title: 'Databases', items: ['MySQL', 'MongoDB', 'Redis'] },
-  { title: 'Real-time & APIs', items: ['Socket.io', 'PeerJS', 'WebRTC', 'WhatsApp API'] },
-  { title: 'Architecture & Practices', items: ['SPA / SSR', 'Component Design', 'Clean Code', 'Testing', 'CI/CD'] },
-  { title: 'DevOps & Server', items: ['Nginx', 'Apache', 'Digital Ocean', 'SSH', 'Git'] },
 ]
 
 const services = [
@@ -74,7 +68,12 @@ const stats = [
           </ul>
 
           <div class="about-hero__actions">
-            <BaseButton v-if="experience.resumeUrl" :href="experience.resumeUrl" variant="primary" size="lg">
+            <BaseButton
+              :to="experience.resumeUrl ? undefined : '/cv'"
+              :href="experience.resumeUrl || undefined"
+              variant="primary"
+              size="lg"
+            >
               Download CV
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" />

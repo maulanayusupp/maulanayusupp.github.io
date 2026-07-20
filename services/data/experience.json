@@ -1,6 +1,7 @@
 {
   "_comment": "EDIT ME — periods below are placeholders based on the site's existing facts. Replace with your real history. Set resumeUrl to a PDF path in /public (e.g. \"/Maulana-Yusup-Abdullah-CV.pdf\") to show the Download CV button.",
   "resumeUrl": null,
+  "summary": "Full Stack Developer & Software Engineer with 10+ years of experience building web apps, developer tools, and interactive experiences. Specialized in Vue.js, Nuxt, Laravel, and Node.js — from enterprise client platforms to independent products.",
   "timeline": [
     {
       "period": "2024 — Present",
