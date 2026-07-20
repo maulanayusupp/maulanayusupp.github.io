@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+const { open: openSearch } = useCommandPalette()
 const scrolled = ref(false)
 const mobileOpen = ref(false)
 
@@ -46,8 +47,23 @@ watch(() => route.path, () => (mobileOpen.value = false))
       </nav>
 
       <div class="header__actions">
+        <button class="header__search" aria-label="Search (Command+K)" @click="openSearch">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" stroke-width="2" />
+            <path stroke-linecap="round" stroke-width="2" d="M21 21l-4.3-4.3" />
+          </svg>
+          <span>Search</span>
+          <kbd>⌘K</kbd>
+        </button>
         <BaseButton to="/contact" size="md">Get in touch</BaseButton>
       </div>
+
+      <button class="header__search-icon" aria-label="Search" @click="openSearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke-width="2" />
+          <path stroke-linecap="round" stroke-width="2" d="M21 21l-4.3-4.3" />
+        </svg>
+      </button>
 
       <button
         class="header__burger"
@@ -167,7 +183,52 @@ watch(() => route.path, () => (mobileOpen.value = false))
     display: none;
 
     @include respond-to('md') {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: $space-4;
+    }
+  }
+
+  &__search {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-2 $space-3;
+    font-size: $fs-sm;
+    color: $color-text-muted;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    transition: color $transition, border-color $transition;
+
+    &:hover {
+      color: $color-text;
+      border-color: $color-border-strong;
+    }
+
+    svg { width: 1rem; height: 1rem; }
+
+    kbd {
+      padding: 1px 5px;
+      font-size: $fs-xs;
+      color: $color-text-faint;
+      border: 1px solid $color-border;
+      border-radius: $radius-sm;
+    }
+  }
+
+  &__search-icon {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    color: $color-text-muted;
+    transition: color $transition;
+    &:hover { color: $color-white; }
+    svg { width: 1.35rem; height: 1.35rem; }
+
+    @include respond-to('md') {
+      display: none;
     }
   }
 

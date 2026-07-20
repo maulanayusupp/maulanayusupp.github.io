@@ -34,3 +34,4 @@ Keep changes incremental — one logical change per commit/push.
 - [x] Dedicated `/projects` Portfolio page + nav menu
 - [x] Branded card previews
 - [x] Project search + compact index (Grid/List toggle) on the Portfolio page
+- [x] Global command palette (⌘K / Ctrl+K) search over pages + projects

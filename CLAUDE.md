@@ -46,10 +46,12 @@ components/
   CtaSection.vue      - "Let's build" CTA (text prop)
   SocialLinks.vue     - GitHub/LinkedIn/Email/Phone icon row
   TechMarquee.vue     - Infinite-scroll tech chips
+  CommandPalette.vue  - Global ⌘K/Ctrl+K search over pages + projects (rendered once in layout)
 
 composables/
   useScrollReveal.ts  - Adds .is-visible to .reveal elements on scroll
   useProjectSearch.ts - Search + category filtering over services/ (query, results, grouped, filters)
+  useCommandPalette.ts- Shared open/close state for the ⌘K palette
 
 utils/
   seo.ts              - SITE_URL, personSchema, projectsSchema, usePageSeo(), useJsonLd(),
