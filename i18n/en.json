@@ -119,7 +119,11 @@
     "searchPlaceholder": "Search projects, tools, tags…",
     "all": "All",
     "empty": "No projects match “{q}”.",
-    "clear": "Clear filters"
+    "clear": "Clear filters",
+    "sortLabel": "Sort",
+    "sortFeatured": "Featured",
+    "sortNewest": "Newest",
+    "sortAz": "A–Z"
   },
   "portfolio": {
     "eyebrow": "Portfolio",

@@ -6,14 +6,25 @@ import {
 } from '~/services/projects'
 
 export type Filter = CategoryId | 'all'
+export type SortMode = 'featured' | 'newest' | 'az'
+export const SORT_MODES: SortMode[] = ['featured', 'newest', 'az']
 
 // Search + category filtering over the single project source of truth.
 // Nothing here is hardcoded — categories and projects come from services/.
 export function useProjectSearch() {
   const query = ref('')
   const activeCategory = ref<Filter>('all')
+  const sort = ref<SortMode>('featured')
 
   const normalized = computed(() => query.value.trim().toLowerCase())
+
+  function applySort(list: Project[]): Project[] {
+    const arr = [...list]
+    if (sort.value === 'newest') return arr.sort((a, b) => (b.year ?? '').localeCompare(a.year ?? ''))
+    if (sort.value === 'az') return arr.sort((a, b) => a.title.localeCompare(b.title))
+    // featured first (stable for equals)
+    return arr.sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)))
+  }
 
   function matchesQuery(p: Project): boolean {
     if (!normalized.value) return true
@@ -33,8 +44,10 @@ export function useProjectSearch() {
   const queryMatches = computed(() => projects.filter(matchesQuery))
 
   const results = computed(() =>
-    queryMatches.value.filter(
-      (p) => activeCategory.value === 'all' || p.category === activeCategory.value,
+    applySort(
+      queryMatches.value.filter(
+        (p) => activeCategory.value === 'all' || p.category === activeCategory.value,
+      ),
     ),
   )
 
@@ -62,5 +75,5 @@ export function useProjectSearch() {
     activeCategory.value = 'all'
   }
 
-  return { query, activeCategory, results, grouped, filters, reset, total: projects.length }
+  return { query, activeCategory, sort, results, grouped, filters, reset, total: projects.length }
 }

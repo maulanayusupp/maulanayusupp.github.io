@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { query, activeCategory, results, grouped, filters, reset } = useProjectSearch()
+const { query, activeCategory, sort, results, grouped, filters, reset } = useProjectSearch()
 const { t, localize } = useLocale()
 
 type View = 'grid' | 'list'
@@ -28,6 +28,18 @@ const view = ref<View>('grid')
             <path stroke-linecap="round" stroke-width="2" d="M6 6l12 12M18 6L6 18" />
           </svg>
         </button>
+      </label>
+
+      <label class="sortby">
+        <span class="visually-hidden">{{ t('showcase.sortLabel') }}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-width="2" d="M3 6h13M3 12h9M3 18h5M17 8v10m0 0l3-3m-3 3l-3-3" />
+        </svg>
+        <select v-model="sort" class="sortby__select">
+          <option value="featured">{{ t('showcase.sortFeatured') }}</option>
+          <option value="newest">{{ t('showcase.sortNewest') }}</option>
+          <option value="az">{{ t('showcase.sortAz') }}</option>
+        </select>
       </label>
 
       <div class="viewtoggle" role="group" aria-label="View mode">
@@ -247,6 +259,33 @@ const view = ref<View>('grid')
     border-radius: $radius-full;
     &:hover { color: $color-white; background: $color-surface-2; }
     svg { width: 1rem; height: 1rem; }
+  }
+}
+
+// ---- Sort ------------------------------------------------------------------
+.sortby {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: 0 $space-3;
+  color: $color-text-faint;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  svg { width: 1rem; height: 1rem; flex-shrink: 0; }
+
+  &__select {
+    padding: $space-2 $space-2 $space-2 0;
+    font-size: $fs-sm;
+    font-weight: 600;
+    color: $color-text;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:focus { outline: none; }
+    option { background: $color-bg-elevated; color: $color-text; }
   }
 }
 

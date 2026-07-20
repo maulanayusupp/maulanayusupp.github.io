@@ -119,7 +119,11 @@
     "searchPlaceholder": "Cari proyek, tools, tag…",
     "all": "Semua",
     "empty": "Tidak ada proyek yang cocok dengan “{q}”.",
-    "clear": "Hapus filter"
+    "clear": "Hapus filter",
+    "sortLabel": "Urutkan",
+    "sortFeatured": "Unggulan",
+    "sortNewest": "Terbaru",
+    "sortAz": "A–Z"
   },
   "portfolio": {
     "eyebrow": "Portofolio",
