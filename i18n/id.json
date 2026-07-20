@@ -177,7 +177,7 @@
       },
       {
         "heading": "Penyimpanan lokal di perangkatmu",
-        "body": "Situs menyimpan preferensi kecil di local storage browser — pilihan bahasa dan pilihan cookie-consent-mu. Ini tetap di perangkatmu, tidak pernah dikirim ke server, dan bisa kamu hapus kapan saja lewat browser."
+        "body": "Situs menyimpan preferensi kecil di local storage browser — pilihan bahasa, tema (terang/gelap), dan pilihan cookie-consent-mu. Ini tetap di perangkatmu, tidak pernah dikirim ke server, dan bisa kamu hapus kapan saja lewat browser."
       },
       {
         "heading": "Cookie",
@@ -185,7 +185,7 @@
       },
       {
         "heading": "Layanan pihak ketiga",
-        "body": "Situs di-host di GitHub Pages, yang mungkin mencatat data permintaan seperti alamat IP sebagai bagian dari hosting biasa. Font dimuat dari Google Fonts, jadi IP-mu mungkin diproses Google untuk mengirimkannya. Beberapa halaman proyek menampilkan preview langsung situs eksternal (mis. aplikasi Vercel); situs tersebut punya kebijakan privasinya sendiri."
+        "body": "Situs di-host di GitHub Pages, yang mungkin mencatat data permintaan seperti alamat IP sebagai bagian dari hosting biasa. Font di-host sendiri — tidak ada permintaan font ke pihak luar. Beberapa halaman proyek menampilkan preview langsung situs eksternal (mis. aplikasi Vercel); situs tersebut punya kebijakan privasinya sendiri."
       },
       {
         "heading": "Analytics",

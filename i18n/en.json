@@ -177,7 +177,7 @@
       },
       {
         "heading": "Local storage on your device",
-        "body": "The site saves small preferences in your browser's local storage — your chosen language and your cookie-consent choice. These stay on your device, are never sent to a server, and you can clear them anytime via your browser."
+        "body": "The site saves small preferences in your browser's local storage — your chosen language, your theme (light/dark), and your cookie-consent choice. These stay on your device, are never sent to a server, and you can clear them anytime via your browser."
       },
       {
         "heading": "Cookies",
@@ -185,7 +185,7 @@
       },
       {
         "heading": "Third-party services",
-        "body": "The site is hosted on GitHub Pages, which may log request data such as IP addresses as part of normal hosting. Fonts are loaded from Google Fonts, so your IP may be processed by Google to deliver them. Some project pages embed live previews of external sites (e.g. Vercel apps); those sites have their own privacy policies."
+        "body": "The site is hosted on GitHub Pages, which may log request data such as IP addresses as part of normal hosting. Fonts are self-hosted — there are no external font requests. Some project pages embed live previews of external sites (e.g. Vercel apps); those sites have their own privacy policies."
       },
       {
         "heading": "Analytics",
