@@ -1,5 +1,30 @@
 [
   {
+    "id": "belajar-yuk",
+    "title": "Belajar Yuk!",
+    "description": "A learning app for kids aged 6+ — English, Math, Science, Reading, and Coding, structured by age level.",
+    "description_id": "Aplikasi belajar untuk anak usia 6+ — Bahasa Inggris, Matematika, Sains, Membaca, dan Coding, terstruktur per jenjang usia.",
+    "longDescription": "One learning app for children aged 6+: English, Math, Science, Reading, and Coding. Content is organised into age tiers (Tunas, Penjelajah, Juara) with a structured, proven method to build a strong foundation and confidence early.",
+    "longDescription_id": "Satu aplikasi belajar untuk anak usia 6+: Bahasa Inggris, Matematika, Sains, Membaca, hingga Coding. Materi terstruktur per kategori usia (Tunas, Penjelajah, Juara) dengan metode terbukti untuk membangun fondasi kuat dan rasa percaya diri sejak dini.",
+    "highlights": [
+      "5 subjects: English, Math, Science, Reading, Coding",
+      "Age tiers: Tunas, Penjelajah, Juara",
+      "Structured, proven learning method",
+      "Built for kids aged 6+"
+    ],
+    "highlights_id": [
+      "5 mata pelajaran: Inggris, Matematika, Sains, Membaca, Coding",
+      "Jenjang usia: Tunas, Penjelajah, Juara",
+      "Materi terstruktur, metode terbukti",
+      "Untuk anak usia 6+"
+    ],
+    "tags": ["Kids Education", "STEM", "Coding"],
+    "url": "https://belajar-yuk-kappa.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "temanisikecil",
     "title": "Temanisikecil",
     "description": "Educational worksheets for children aged 2–5 and coding worksheets for 5+. Learn while playing — motor skills, creativity, and logic.",
