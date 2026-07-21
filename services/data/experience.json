@@ -1,36 +1,44 @@
 {
-  "_comment": "EDIT ME — periods are placeholders. Add `_id` fields for Indonesian (e.g. summary_id, role_id, org_id, description_id); the site falls back to English when an `_id` field is missing. Set resumeUrl to a PDF path in /public to show the Download-CV-as-file link.",
+  "_comment": "Career timeline (most recent first). Add `_id` fields for Indonesian; the site falls back to English when an `_id` is missing. Years of experience are computed from CAREER_START_YEAR (utils/experience.ts), not from here. Set resumeUrl to a PDF path in /public to link a CV file.",
   "resumeUrl": null,
-  "summary": "Full Stack Developer & Software Engineer with {years}+ years of experience building web apps, developer tools, and interactive experiences. Specialized in Vue.js, Nuxt, Laravel, and Node.js — from enterprise client platforms to independent products.",
-  "summary_id": "Full Stack Developer & Software Engineer dengan {years}+ tahun pengalaman membangun aplikasi web, developer tools, dan pengalaman interaktif. Spesialis Vue.js, Nuxt, Laravel, dan Node.js — dari platform klien enterprise sampai produk independen.",
+  "summary": "Full Stack Developer & Software Engineer with {years}+ years of experience building web apps, developer tools, and interactive experiences. Specialized in Vue.js, Nuxt, Laravel, and Node.js — from client platforms to independent products.",
+  "summary_id": "Full Stack Developer & Software Engineer dengan {years}+ tahun pengalaman membangun aplikasi web, developer tools, dan pengalaman interaktif. Spesialis Vue.js, Nuxt, Laravel, dan Node.js — dari platform klien sampai produk independen.",
   "timeline": [
     {
-      "period": "2024 — Present",
-      "role": "Independent Product & Tools Developer",
-      "role_id": "Pengembang Produk & Tools Independen",
-      "org": "Self-initiated",
-      "org_id": "Inisiatif sendiri",
-      "description": "Designing and shipping my own products, developer tools, and interactive web apps — including Dibiku (database client), Neatly (code formatter), and a range of educational and browser experiences.",
-      "description_id": "Merancang dan merilis produk, developer tools, dan aplikasi web interaktif sendiri — termasuk Dibiku (database client), Neatly (code formatter), serta beragam pengalaman edukatif dan browser.",
-      "current": true
+      "period": "2019 — 2023",
+      "role": "Software Engineer",
+      "org": "Upwork · Self-employed (Remote)",
+      "description": "Web and microservices development for international clients — REST APIs, Vue.js/Nuxt SPAs, and application architecture with Laravel, PHP, and AdonisJs.",
+      "description_id": "Pengembangan web dan microservices untuk klien internasional — REST API, SPA Vue.js/Nuxt, dan arsitektur aplikasi dengan Laravel, PHP, dan AdonisJs."
     },
     {
-      "period": "2018 — Present",
-      "role": "Full Stack Web Developer",
-      "role_id": "Full Stack Web Developer",
-      "org": "Freelance & Contract",
-      "org_id": "Freelance & Kontrak",
-      "description": "Delivered enterprise and client platforms with Vue.js, Laravel, and Node.js — including Honda Indonesia, BPOM, real-time systems (MyMeet), and e-learning (Dapur Ilmu). API integration, real-time features, and VPS deployment.",
-      "description_id": "Mengerjakan platform enterprise dan klien dengan Vue.js, Laravel, dan Node.js — termasuk Honda Indonesia, BPOM, sistem real-time (MyMeet), dan e-learning (Dapur Ilmu). Integrasi API, fitur real-time, dan deployment VPS."
+      "period": "2017",
+      "role": "Full Stack Developer",
+      "org": "Pixel House Studio",
+      "description": "Built a Facebook-integration optimization rule, a packaging module, a user-management system, and a dashboard & statistics module; integrated third-party platforms like GetResponse.",
+      "description_id": "Membangun optimization rule untuk integrasi Facebook, modul packaging, sistem manajemen user, serta modul dashboard & statistik; integrasi platform pihak ketiga seperti GetResponse."
     },
     {
-      "period": "2015 — 2018",
+      "period": "2016 — 2017",
       "role": "Web Developer",
-      "role_id": "Web Developer",
-      "org": "Freelance",
-      "org_id": "Freelance",
-      "description": "Early full-stack work: UI-to-HTML slicing, SPA development, third-party API integration, and server setup on Digital Ocean with Nginx and Redis.",
-      "description_id": "Pekerjaan full-stack awal: slicing UI-ke-HTML, pengembangan SPA, integrasi API pihak ketiga, dan setup server di Digital Ocean dengan Nginx dan Redis."
+      "org": "Kazee Indonesia",
+      "description": "Developed a content-management system and a sales system for a media-analytics company.",
+      "description_id": "Mengembangkan content-management system dan sistem penjualan untuk perusahaan media analytics."
+    },
+    {
+      "period": "2016 — 2017",
+      "role": "Web Developer",
+      "org": "PT. Vertikal Digital Indonesia",
+      "description": "Built a savings & loan system, a CMS, and an order-management system; designed an award-winning Scoresheets System (Best CS Award 2016) and integrated social-media monitoring with big data.",
+      "description_id": "Membangun sistem simpan-pinjam, CMS, dan order-management system; merancang Scoresheets System yang meraih Best CS Award 2016 dan integrasi social-media monitoring dengan big data."
+    },
+    {
+      "period": "2012",
+      "role": "Technician",
+      "role_id": "Teknisi",
+      "org": "Telekomunikasi Indonesia (TELKOM)",
+      "description": "Networking and technical support for Line Telephone and Internet Speedy services — diagnosing and resolving connectivity issues.",
+      "description_id": "Jaringan dan dukungan teknis untuk layanan Telepon Rumah dan Internet Speedy — mendiagnosis dan menyelesaikan masalah konektivitas."
     }
   ]
 }
