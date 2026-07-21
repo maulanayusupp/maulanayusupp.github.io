@@ -1,16 +1,24 @@
 <script setup lang="ts">
 import archive from '~/services/data/archive.json'
 
-const { t, localize } = useLocale()
+const { t, localize, locale } = useLocale()
 
-const FLAGS: Record<string, string> = {
-  Norway: '🇳🇴',
-  Brazil: '🇧🇷',
-  Singapore: '🇸🇬',
-  Australia: '🇦🇺',
-  'United States': '🇺🇸',
-  Indonesia: '🇮🇩',
+// Single place that maps a client country → flag + Indonesian name.
+const COUNTRIES: Record<string, { flag: string; id: string }> = {
+  Norway: { flag: '🇳🇴', id: 'Norwegia' },
+  Brazil: { flag: '🇧🇷', id: 'Brasil' },
+  Singapore: { flag: '🇸🇬', id: 'Singapura' },
+  Australia: { flag: '🇦🇺', id: 'Australia' },
+  'United States': { flag: '🇺🇸', id: 'AS' },
+  Indonesia: { flag: '🇮🇩', id: 'Indonesia' },
 }
+const flag = (c: string) => COUNTRIES[c]?.flag ?? ''
+const countryName = (c: string) => (locale.value === 'id' ? COUNTRIES[c]?.id ?? c : c)
+
+// Country list in the subtitle is derived from the data (never hardcoded).
+const countryList = computed(() =>
+  [...new Set(archive.map((a) => a.client))].map(countryName).join(', '),
+)
 </script>
 
 <template>
@@ -19,7 +27,7 @@ const FLAGS: Record<string, string> = {
       <SectionHeading
         :eyebrow="t('pastwork.eyebrow')"
         :title="t('pastwork.title')"
-        :subtitle="t('pastwork.subtitle')"
+        :subtitle="t('pastwork.subtitle', { countries: countryList })"
         class="reveal"
       />
 
@@ -28,7 +36,7 @@ const FLAGS: Record<string, string> = {
           <div class="pastwork__head">
             <h3 class="pastwork__title">{{ item.title }}</h3>
             <span class="pastwork__client">
-              <span aria-hidden="true">{{ FLAGS[item.client] }}</span> {{ item.client }}
+              <span aria-hidden="true">{{ flag(item.client) }}</span> {{ countryName(item.client) }}
             </span>
           </div>
           <p class="pastwork__summary">{{ localize(item, 'summary') }}</p>

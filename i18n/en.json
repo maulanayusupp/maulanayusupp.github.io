@@ -137,7 +137,7 @@
   "pastwork": {
     "eyebrow": "Archive",
     "title": "Past & client work",
-    "subtitle": "Earlier projects delivered for clients across Norway, Brazil, Singapore, Australia, the US, and Indonesia — no live demo, but here's the scope and stack."
+    "subtitle": "Earlier projects delivered for clients across {countries} — no live demo, but here's the scope and stack."
   },
   "detail": {
     "back": "Back to work",

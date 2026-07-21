@@ -137,7 +137,7 @@
   "pastwork": {
     "eyebrow": "Arsip",
     "title": "Karya & proyek klien terdahulu",
-    "subtitle": "Proyek-proyek terdahulu untuk klien dari Norwegia, Brasil, Singapura, Australia, AS, dan Indonesia — tanpa demo langsung, tapi ini cakupan & teknologinya."
+    "subtitle": "Proyek-proyek terdahulu untuk klien dari {countries} — tanpa demo langsung, tapi ini cakupan & teknologinya."
   },
   "detail": {
     "back": "Kembali ke karya",
