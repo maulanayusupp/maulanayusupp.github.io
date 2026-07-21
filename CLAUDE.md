@@ -159,7 +159,11 @@ on the next build. Then add the URL to `public/sitemap.xml`.
 Per-page SEO is set in each page's `<script setup>` via `useHead` / `useSeoMeta`, and JSON-LD via the `useJsonLd()` helper:
 - Unique title tags and meta descriptions per page
 - Open Graph and Twitter Card meta tags
-- JSON-LD structured data (Person, WebSite, ItemList, BreadcrumbList, ContactPage, CreativeWork per project)
+- JSON-LD structured data: Person, WebSite, ItemList, BreadcrumbList (3-level on detail),
+  ContactPage, ProfilePage (About), and a category-specific type per project
+  (SoftwareApplication / WebApplication / VideoGame / LearningResource / CreativeWork,
+  with a free `offers` for hosted apps/games)
+- Image sitemap: each URL in `sitemap.xml` carries its OG/screenshot image (`scripts/sitemap.mjs`)
 - Canonical URLs pointing to `https://maulanayusupp.github.io/...`
 - Per-project Open Graph images generated at build (`scripts/og.mjs` → `/og/<id>.png`);
   other pages use `/og/default.png`. `usePageSeo({ ogImage })` overrides it.

@@ -41,6 +41,18 @@ usePageSeo({
   ogImage: `${SITE_URL}/og/${p.id}.png`,
 })
 
+// Map each category to a more specific schema.org type for richer indexing.
+const SCHEMA_BY_CATEGORY: Record<string, Record<string, unknown>> = {
+  tools: { '@type': 'SoftwareApplication', applicationCategory: 'DeveloperApplication', operatingSystem: 'Web' },
+  webapp: { '@type': 'WebApplication', applicationCategory: 'BusinessApplication', operatingSystem: 'Web' },
+  game: { '@type': 'VideoGame', applicationCategory: 'Game', operatingSystem: 'Web' },
+  education: { '@type': 'LearningResource' },
+  client: { '@type': 'CreativeWork' },
+}
+const schemaBase = SCHEMA_BY_CATEGORY[p.category] ?? { '@type': 'CreativeWork' }
+// Hosted apps/games are free to use in the browser — factual, no rating claims.
+const isFreeApp = ['tools', 'webapp', 'game'].includes(p.category) && Boolean(p.url)
+
 useJsonLd([
   breadcrumbTrail([
     { name: 'Portfolio', path: '/projects' },
@@ -48,13 +60,17 @@ useJsonLd([
   ]),
   {
     '@context': 'https://schema.org',
-    '@type': 'CreativeWork',
+    ...schemaBase,
     name: p.title,
     description: p.longDescription ?? p.description,
+    image: `${SITE_URL}/og/${p.id}.png`,
     ...(p.url ? { url: p.url } : {}),
     keywords: p.tags.join(', '),
     author: { '@id': `${SITE_URL}/#person` },
     ...(p.year ? { dateCreated: p.year } : {}),
+    ...(isFreeApp
+      ? { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } }
+      : {}),
   },
 ])
 </script>

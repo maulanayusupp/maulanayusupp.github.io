@@ -19,6 +19,12 @@ usePageSeo({
 
 useJsonLd([
   breadcrumbSchema('About', '/about'),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    name: 'About Maulana Yusup Abdullah',
+    mainEntity: { '@id': `${SITE_URL}/#person` },
+  },
   personSchema,
 ])
 
