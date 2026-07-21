@@ -1,5 +1,30 @@
 [
   {
+    "id": "wrapster",
+    "title": "Wrapster Lab",
+    "description": "A premium motorcycle & car wrapping brand site — full-print wraps, custom concepts, and precision color changes, shipped nationwide.",
+    "description_id": "Situs brand wrapping motor & mobil premium — full-print wrap, konsep kustom, dan ganti warna presisi, dikirim ke seluruh negeri.",
+    "longDescription": "Marketing site for Wrapster Lab, a premium vehicle-wrapping studio. Showcases full-print wraps, custom concepts, and precision color changes with a bold, conversion-focused landing experience.",
+    "longDescription_id": "Situs marketing untuk Wrapster Lab, studio wrapping kendaraan premium. Menampilkan full-print wrap, konsep kustom, dan ganti warna presisi dengan landing page yang berani dan fokus konversi.",
+    "highlights": [
+      "Full-print & custom wrap showcase",
+      "Precision color changes",
+      "Bold, conversion-focused landing",
+      "Nationwide shipping"
+    ],
+    "highlights_id": [
+      "Showcase full-print & wrap kustom",
+      "Ganti warna presisi",
+      "Landing page berani & fokus konversi",
+      "Pengiriman nasional"
+    ],
+    "tags": ["Landing Page", "Branding", "Business"],
+    "url": "https://wrapster-lab.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "pride",
     "title": "PRIDE Community",
     "description": "Official site for PRIDE — a motorcycle riders community in Cimahi built around brotherhood, safety, and respect. \"More Than A Ride.\"",
