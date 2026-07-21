@@ -1,5 +1,30 @@
 [
   {
+    "id": "bikinbadjoe",
+    "title": "BikinBadjoe",
+    "description": "A custom t-shirt & screen-printing brand site — single-unit orders with no minimum, free design service, and 150+ shirt colors.",
+    "description_id": "Situs brand custom kaos & sablon satuan — pesan satuan tanpa minimum order, gratis jasa desain, dan 150+ warna kaos.",
+    "longDescription": "Marketing & ordering site for BikinBadjoe, a Bandung-based custom apparel brand — screen printing with no minimum order, a free design service, 150+ shirt colors, and an in-house convection since 2019.",
+    "longDescription_id": "Situs marketing & pemesanan untuk BikinBadjoe, brand apparel custom asal Bandung — sablon tanpa minimum order, gratis jasa desain, 150+ warna kaos, dan konveksi sendiri sejak 2019.",
+    "highlights": [
+      "Single-unit orders, no minimum",
+      "Free design service",
+      "150+ shirt colors",
+      "In-house convection since 2019"
+    ],
+    "highlights_id": [
+      "Pesan satuan, tanpa minimum order",
+      "Gratis jasa desain",
+      "150+ warna kaos",
+      "Konveksi sendiri sejak 2019"
+    ],
+    "tags": ["Landing Page", "E-commerce", "Branding"],
+    "url": "https://bikinbadjoe.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "wrapster",
     "title": "Wrapster Lab",
     "description": "A premium motorcycle & car wrapping brand site — full-print wraps, custom concepts, and precision color changes, shipped nationwide.",
