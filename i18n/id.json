@@ -134,6 +134,11 @@
     "titleHighlight": "bangun & rilis",
     "lead": "{count} proyek meliputi aplikasi web, developer tools, games, pengalaman interaktif, dan proyek klien enterprise. Filter per kategori, lalu buka proyek mana pun untuk cerita lengkap dan preview langsung."
   },
+  "pastwork": {
+    "eyebrow": "Arsip",
+    "title": "Karya & proyek klien terdahulu",
+    "subtitle": "Proyek-proyek terdahulu untuk klien dari Norwegia, Brasil, Singapura, Australia, AS, dan Indonesia — tanpa demo langsung, tapi ini cakupan & teknologinya."
+  },
   "detail": {
     "back": "Kembali ke karya",
     "visitLive": "Kunjungi situs live",

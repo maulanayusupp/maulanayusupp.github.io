@@ -1,0 +1,182 @@
+[
+  {
+    "id": "myproject",
+    "title": "MyProject",
+    "summary": "Project-management tracker with video annotations.",
+    "summary_id": "Tracker manajemen proyek dengan anotasi video.",
+    "role": "Full Stack",
+    "stack": ["AdonisJs", "Node.js", "Socket", "MySQL", "Redis", "Vue"],
+    "client": "Norway"
+  },
+  {
+    "id": "mylms",
+    "title": "MyLMS",
+    "summary": "Learning management system.",
+    "summary_id": "Learning management system.",
+    "role": "Full Stack",
+    "stack": ["NestJs", "Node.js", "Socket", "MySQL", "Redis", "Vue"],
+    "client": "Norway"
+  },
+  {
+    "id": "kobla",
+    "title": "Kobla",
+    "summary": "Event-management and interactive system.",
+    "summary_id": "Sistem manajemen acara dan interaktif.",
+    "role": "Full Stack",
+    "stack": ["AdonisJs", "Node.js", "Socket", "MySQL", "Redis", "Vue"],
+    "client": "Norway"
+  },
+  {
+    "id": "mobistar",
+    "title": "Mobistar",
+    "summary": "APIs for mobile game apps.",
+    "summary_id": "API untuk aplikasi game mobile.",
+    "role": "Backend",
+    "stack": ["Laravel", "PHP", "Node.js", "Socket", "MySQL", "Redis"],
+    "client": "Brazil"
+  },
+  {
+    "id": "onlive",
+    "title": "Onlive",
+    "summary": "Event-management platform.",
+    "summary_id": "Platform manajemen acara.",
+    "role": "Frontend",
+    "stack": ["Vue", "Socket", "Mux"],
+    "client": "Singapore"
+  },
+  {
+    "id": "propto",
+    "title": "Propto",
+    "summary": "Property listing-management platform.",
+    "summary_id": "Platform manajemen listing properti.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "Node.js", "Laravel Echo", "MySQL", "Vue"],
+    "client": "Australia"
+  },
+  {
+    "id": "address-guard",
+    "title": "Address Guard",
+    "summary": "Address validation system.",
+    "summary_id": "Sistem validasi alamat.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL", "Vue"],
+    "client": "United States"
+  },
+  {
+    "id": "wisdomkb",
+    "title": "WisdomKB",
+    "summary": "Knowledge-base system.",
+    "summary_id": "Sistem knowledge base.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL", "Vue"],
+    "client": "United States"
+  },
+  {
+    "id": "giveforgood",
+    "title": "GiveForGood",
+    "summary": "Charity / donation platform.",
+    "summary_id": "Platform amal / donasi.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL", "Vue"],
+    "client": "United States"
+  },
+  {
+    "id": "media-center",
+    "title": "Media Center",
+    "summary": "Instagram-style content & story platform.",
+    "summary_id": "Platform konten & story ala Instagram.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL", "Vue", "jQuery"],
+    "client": "Norway"
+  },
+  {
+    "id": "eis",
+    "title": "Executive Information System",
+    "summary": "Statistics & analytics using custom algorithms.",
+    "summary_id": "Statistik & analitik dengan algoritma khusus.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "pis",
+    "title": "Personnel Information System",
+    "summary": "Personnel statistics & analytics using algorithms.",
+    "summary_id": "Statistik & analitik kepegawaian dengan algoritma.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL", "Vue"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "warisan-budaya",
+    "title": "Warisan Budaya Indonesia",
+    "summary": "Cultural-heritage content management system.",
+    "summary_id": "Content management system warisan budaya.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL", "Vue"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "hubly",
+    "title": "Hubly",
+    "summary": "Event-management and interactive system.",
+    "summary_id": "Sistem manajemen acara dan interaktif.",
+    "role": "Full Stack",
+    "stack": ["AdonisJs", "Node.js", "Socket", "MySQL", "Redis", "Vue"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "event-registration",
+    "title": "Event Registration System",
+    "summary": "Event registration & management system.",
+    "summary_id": "Sistem registrasi & manajemen acara.",
+    "role": "Full Stack",
+    "stack": ["AdonisJs", "Node.js", "Socket", "MySQL", "Redis", "Vue"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "oms",
+    "title": "Order Management System",
+    "summary": "Order-management system.",
+    "summary_id": "Sistem manajemen pesanan.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "simpan-pinjam",
+    "title": "Sistem Informasi Simpan Pinjam",
+    "summary": "Savings & loan management system.",
+    "summary_id": "Sistem informasi simpan pinjam.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "kazee-sales",
+    "title": "Big Data Analytics Sales (Kazee)",
+    "summary": "SaaS platform for selling products.",
+    "summary_id": "Platform SaaS untuk penjualan produk.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "zatadura",
+    "title": "Social Media Monitoring (Zatadura)",
+    "summary": "Social-media statistics & analytics with big data.",
+    "summary_id": "Statistik & analitik media sosial dengan big data.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MySQL"],
+    "client": "Indonesia"
+  },
+  {
+    "id": "managix",
+    "title": "Facebook Ads Optimization (Managix)",
+    "summary": "Ad-optimization rules integrated with the Facebook API.",
+    "summary_id": "Optimization rule iklan terintegrasi dengan Facebook API.",
+    "role": "Full Stack",
+    "stack": ["Laravel", "PHP", "MongoDB", "Redis"],
+    "client": "Indonesia"
+  }
+]

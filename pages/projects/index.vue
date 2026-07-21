@@ -39,6 +39,8 @@ const projectCount = projects.length
       </div>
     </section>
 
+    <PastWork />
+
     <CtaSection />
   </div>
 </template>

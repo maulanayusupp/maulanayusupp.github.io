@@ -42,6 +42,9 @@ services/
                         category: new data file + entry in categories.json + CategoryId +
                         the withCategory() list + og.mjs/sitemap.mjs file lists + a --<id>
                         accent modifier in the card/preview/showcase/detail/cv SCSS.
+  data/archive.json    - "Past & client work" — older projects with no live demo/image
+                        (title, summary, role, stack, client country). Rendered as a compact
+                        list on /projects via PastWork.vue; NOT cards, no detail routes.
   data/experience.json- Career timeline + `summary` + `resumeUrl`. If `resumeUrl` is set to a
                         /public PDF, the About "Download CV" button links to it; otherwise it
                         links to the /cv page. Dates are editable seeds.

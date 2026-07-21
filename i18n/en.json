@@ -134,6 +134,11 @@
     "titleHighlight": "built & shipped",
     "lead": "{count} projects across web apps, developer tools, games, interactive experiences, and enterprise client work. Filter by category, then open any project for the full story and a live preview."
   },
+  "pastwork": {
+    "eyebrow": "Archive",
+    "title": "Past & client work",
+    "subtitle": "Earlier projects delivered for clients across Norway, Brazil, Singapore, Australia, the US, and Indonesia — no live demo, but here's the scope and stack."
+  },
   "detail": {
     "back": "Back to work",
     "visitLive": "Visit live site",
