@@ -2,25 +2,25 @@
   {
     "id": "neatly",
     "title": "Neatly",
-    "description": "A fast, modern tool to beautify (unminify) and minify JavaScript, CSS, HTML, JSON, and XML — paste, drop a file, and get clean or compact code instantly.",
-    "description_id": "Tool cepat dan modern untuk beautify (unminify) dan minify JavaScript, CSS, HTML, JSON, dan XML — tempel, jatuhkan file, dan dapatkan kode rapi atau ringkas seketika.",
-    "longDescription": "Neatly is a free online developer tool to beautify (unminify) and minify JavaScript, CSS, HTML, JSON, and XML. Paste your code or drop a file, pick a mode, and get clean, readable — or compact — output in a click.",
-    "longDescription_id": "Neatly adalah developer tool online gratis untuk beautify (unminify) dan minify JavaScript, CSS, HTML, JSON, dan XML. Tempel kode atau jatuhkan file, pilih mode, dan dapatkan output yang rapi dan mudah dibaca — atau ringkas — dalam sekali klik.",
+    "description": "A fast developer tool to beautify, minify, format, and convert code — JavaScript, CSS, HTML, JSON, XML and more, right in the browser.",
+    "description_id": "Developer tool cepat untuk beautify, minify, format, dan convert kode — JavaScript, CSS, HTML, JSON, XML, dan lainnya, langsung di browser.",
+    "longDescription": "Neatly is a free online developer toolkit to beautify (unminify), minify, format, and convert code across JavaScript, CSS, HTML, JSON, XML, and more. Paste your code or drop a file, pick a mode, and get clean, readable — or compact — output in a click.",
+    "longDescription_id": "Neatly adalah toolkit developer online gratis untuk beautify (unminify), minify, format, dan convert kode di JavaScript, CSS, HTML, JSON, XML, dan lainnya. Tempel kode atau jatuhkan file, pilih mode, dan dapatkan output rapi dan mudah dibaca — atau ringkas — dalam sekali klik.",
     "highlights": [
-      "Beautify & minify in one tool",
-      "Supports JS, CSS, HTML, JSON & XML",
+      "Beautify, minify, format & convert",
+      "Supports JS, CSS, HTML, JSON, XML & more",
       "Paste code or drop a file",
       "Instant, client-side output"
     ],
     "highlights_id": [
-      "Beautify & minify dalam satu tool",
-      "Mendukung JS, CSS, HTML, JSON & XML",
+      "Beautify, minify, format & convert",
+      "Mendukung JS, CSS, HTML, JSON, XML & lainnya",
       "Tempel kode atau jatuhkan file",
       "Output instan di sisi klien"
     ],
     "tags": ["Developer Tool", "Formatter", "Minifier"],
-    "url": "https://neatlyapp.vercel.app/",
-    "preview": { "kind": "live" },
+    "url": "https://www.withneatly.com",
+    "preview": { "kind": "placeholder", "emoji": "🧹" },
     "featured": true,
     "year": "2026"
   },
