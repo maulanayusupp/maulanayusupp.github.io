@@ -1,5 +1,30 @@
 [
   {
+    "id": "orchidea",
+    "title": "Orchidea Dessert",
+    "description": "A handmade cake, pastry & bread brand site — fresh-baked, made-to-order treats by Chef R. Gilang Wardhana in Bandung.",
+    "description_id": "Situs brand kue, pastry & roti buatan tangan — dipanggang segar sistem pre-order oleh Chef R. Gilang Wardhana di Bandung.",
+    "longDescription": "Marketing & ordering site for Orchidea Dessert, a Bandung home bakery by Chef R. Gilang Wardhana. Showcases handmade cakes, pastries, and breads baked fresh to order (one day ahead), with a warm, appetite-forward design.",
+    "longDescription_id": "Situs marketing & pemesanan untuk Orchidea Dessert, home bakery Bandung oleh Chef R. Gilang Wardhana. Menampilkan kue, pastry, dan roti buatan tangan yang dipanggang segar sesuai pesanan (H-1), dengan desain yang hangat dan menggugah selera.",
+    "highlights": [
+      "Handmade cakes, pastries & breads",
+      "Baked fresh, made to order (H-1)",
+      "By Chef R. Gilang Wardhana",
+      "Warm, appetite-forward design"
+    ],
+    "highlights_id": [
+      "Kue, pastry & roti buatan tangan",
+      "Dipanggang segar sesuai pesanan (H-1)",
+      "Oleh Chef R. Gilang Wardhana",
+      "Desain hangat & menggugah selera"
+    ],
+    "tags": ["Landing Page", "F&B", "Branding"],
+    "url": "https://orchidea-dessert.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "bikinbadjoe",
     "title": "BikinBadjoe",
     "description": "A custom t-shirt & screen-printing brand site — single-unit orders with no minimum, free design service, and 150+ shirt colors.",
