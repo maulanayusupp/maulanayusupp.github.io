@@ -1,5 +1,30 @@
 [
   {
+    "id": "brand-drive",
+    "title": "Brand Drive",
+    "description": "A digital agency site — helping business owners across property, automotive, retail, F&B, and education grow with websites, apps, and digital products.",
+    "description_id": "Situs agency digital — membantu pemilik bisnis di properti, otomotif, retail, F&B, dan edukasi tumbuh lewat website, aplikasi, dan produk digital.",
+    "longDescription": "Marketing site for Brand Drive, a digital agency that helps business owners grow — from property and automotive to retail, F&B, and education — through custom websites, apps, and digital products, with a bold, conversion-focused narrative.",
+    "longDescription_id": "Situs marketing untuk Brand Drive, agency digital yang membantu pemilik bisnis tumbuh — dari properti dan otomotif hingga retail, F&B, dan edukasi — lewat website, aplikasi, dan produk digital custom, dengan narasi yang berani dan fokus konversi.",
+    "highlights": [
+      "Digital agency for business growth",
+      "Websites, apps & digital products",
+      "Serves property, automotive, retail, F&B & education",
+      "Bold, conversion-focused narrative"
+    ],
+    "highlights_id": [
+      "Agency digital untuk pertumbuhan bisnis",
+      "Website, aplikasi & produk digital",
+      "Melayani properti, otomotif, retail, F&B & edukasi",
+      "Narasi berani & fokus konversi"
+    ],
+    "tags": ["Agency", "Landing Page", "Branding"],
+    "url": "https://brand-drive.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "orchidea",
     "title": "Orchidea Dessert",
     "description": "A handmade cake, pastry & bread brand site — fresh-baked, made-to-order treats by Chef R. Gilang Wardhana in Bandung.",
