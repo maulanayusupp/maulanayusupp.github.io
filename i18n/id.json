@@ -156,7 +156,9 @@
     "link": "Tautan",
     "more": "{category} lainnya",
     "placeholderNote": "Proyek ini tidak bisa ditampilkan di sini — buka situs live-nya untuk mencoba.",
-    "openLive": "Buka situs live"
+    "openLive": "Buka situs live",
+    "prev": "Sebelumnya",
+    "next": "Berikutnya"
   },
   "cv": {
     "back": "← Kembali ke situs",

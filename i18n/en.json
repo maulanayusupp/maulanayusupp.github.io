@@ -156,7 +156,9 @@
     "link": "Link",
     "more": "More {category}",
     "placeholderNote": "This project can't be embedded here — open the live site to try it.",
-    "openLive": "Open live site"
+    "openLive": "Open live site",
+    "prev": "Previous",
+    "next": "Next"
   },
   "cv": {
     "back": "← Back to site",

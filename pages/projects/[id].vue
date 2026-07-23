@@ -20,6 +20,12 @@ const related = projects
   .filter((x) => x.category === p.category && x.id !== p.id)
   .slice(0, 3)
 
+// Prev/next across all projects (wraps around so it never dead-ends).
+const flatIndex = projects.findIndex((x) => x.id === p.id)
+const total = projects.length
+const prev = total > 1 ? projects[(flatIndex - 1 + total) % total] : null
+const next = total > 1 ? projects[(flatIndex + 1) % total] : null
+
 const displayDesc = computed(
   () => localize<string>(p, 'longDescription') || localize<string>(p, 'description'),
 )
@@ -179,6 +185,17 @@ useJsonLd([
           <ProjectCard v-for="rp in related" :key="rp.id" :project="rp" />
         </div>
       </section>
+
+      <nav v-if="prev && next" class="detail__nav" aria-label="Project navigation">
+        <NuxtLink :to="`/projects/${prev.id}`" class="detail__navlink detail__navlink--prev">
+          <span class="detail__navdir">← {{ t('detail.prev') }}</span>
+          <span class="detail__navtitle">{{ prev.title }}</span>
+        </NuxtLink>
+        <NuxtLink :to="`/projects/${next.id}`" class="detail__navlink detail__navlink--next">
+          <span class="detail__navdir">{{ t('detail.next') }} →</span>
+          <span class="detail__navtitle">{{ next.title }}</span>
+        </NuxtLink>
+      </nav>
     </div>
   </article>
 </template>
@@ -382,6 +399,37 @@ useJsonLd([
     @include respond-to('md') { grid-template-columns: repeat(2, 1fr); }
     @include respond-to('lg') { grid-template-columns: repeat(3, 1fr); }
   }
+
+  // ---- Prev / next ---------------------------------------------------------
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-4;
+    margin-top: $space-16;
+    padding-top: $space-8;
+    border-top: 1px solid $color-border;
+
+    @include respond-to('sm') { grid-template-columns: 1fr 1fr; }
+  }
+
+  &__navlink {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    padding: $space-4 $space-5;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    transition: border-color $transition, transform $transition;
+
+    &:hover {
+      border-color: $color-border-strong;
+      transform: translateY(-2px);
+    }
+    &--next { text-align: right; }
+  }
+
+  &__navdir { font-size: $fs-xs; color: $color-text-faint; }
+  &__navtitle { font-weight: 600; color: $color-white; @include line-clamp(1); }
 }
 
 // ---- Live embed ------------------------------------------------------------
