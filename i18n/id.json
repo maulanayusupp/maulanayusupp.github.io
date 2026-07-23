@@ -19,6 +19,12 @@
   "common": {
     "current": "Sekarang"
   },
+  "error": {
+    "title": "Halaman tidak ditemukan",
+    "message": "Halaman yang kamu cari tidak ada atau sudah dipindahkan.",
+    "home": "Kembali ke beranda",
+    "portfolio": "Lihat portofolio"
+  },
   "categories": {
     "webapp": "Aplikasi Web",
     "tools": "Tools",
