@@ -14,10 +14,20 @@
   --c-text-muted: #94a3b8;
   --c-text-faint: #64748b;
   --c-strong: #f8fafc;
+  --cat-client: #22d3ee;
+  --cat-game: #f472b6;
+  --cat-education: #34d399;
+  --cat-webapp: #818cf8;
+  --cat-tools: #fb923c;
 }
 
 :root[data-theme='light'] {
   color-scheme: light;
+  --cat-client: #0891b2;
+  --cat-game: #db2777;
+  --cat-education: #059669;
+  --cat-webapp: #4f46e5;
+  --cat-tools: #ea580c;
   --c-bg: #f6f8fc;
   --c-bg-elevated: #ffffff;
   --c-surface: rgba(15, 23, 42, 0.035);

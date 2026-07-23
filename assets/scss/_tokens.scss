@@ -35,11 +35,13 @@ $gradient-brand: linear-gradient(135deg, #818cf8 0%, #6366f1 45%, #a855f7 100%);
 $gradient-brand-vivid: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
 
 // ---- Category accent colors ------------------------------------------------
-$cat-client:    #22d3ee;   // cyan
-$cat-game:      #f472b6;   // pink
-$cat-education: #34d399;   // emerald
-$cat-webapp:    #818cf8;   // indigo
-$cat-tools:     #fb923c;   // orange
+// Category accents — theme-aware (bright in dark, darker/saturated in light for
+// contrast). Values defined in _base.scss :root / [data-theme='light'].
+$cat-client:    var(--cat-client);
+$cat-game:      var(--cat-game);
+$cat-education: var(--cat-education);
+$cat-webapp:    var(--cat-webapp);
+$cat-tools:     var(--cat-tools);
 
 // ---- Typography ------------------------------------------------------------
 $font-display: 'Sora', 'Inter', system-ui, sans-serif;

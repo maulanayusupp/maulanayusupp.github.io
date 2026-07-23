@@ -17,7 +17,8 @@
     "emailMe": "Email me"
   },
   "common": {
-    "current": "Current"
+    "current": "Current",
+    "skip": "Skip to content"
   },
   "error": {
     "title": "Page not found",

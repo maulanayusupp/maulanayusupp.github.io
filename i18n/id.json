@@ -17,7 +17,8 @@
     "emailMe": "Email saya"
   },
   "common": {
-    "current": "Sekarang"
+    "current": "Sekarang",
+    "skip": "Lewati ke konten"
   },
   "error": {
     "title": "Halaman tidak ditemukan",

@@ -162,6 +162,11 @@ function printCv() {
   --c-text-muted: #94a3b8;
   --c-text-faint: #64748b;
   --c-strong: #f8fafc;
+  --cat-client: #22d3ee;
+  --cat-game: #f472b6;
+  --cat-education: #34d399;
+  --cat-webapp: #818cf8;
+  --cat-tools: #fb923c;
 
   min-height: 100vh;
   padding: $space-6 $space-4 $space-16;
