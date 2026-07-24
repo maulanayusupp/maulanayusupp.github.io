@@ -1,5 +1,30 @@
 [
   {
+    "id": "aurea-living",
+    "title": "Aurea Living",
+    "description": "A luxury real-estate showcase — a curated collection of villas, residences, penthouses, and estates with premium architecture.",
+    "description_id": "Showcase properti mewah — koleksi villa, residence, penthouse, dan estate pilihan dengan arsitektur premium.",
+    "longDescription": "Marketing site for Aurea Living, a luxury real-estate brand presenting a curated collection of villas, residences, penthouses, and estates — thoughtful architecture, premium materials, and a calm, elevated browsing experience.",
+    "longDescription_id": "Situs marketing untuk Aurea Living, brand properti mewah yang menampilkan koleksi villa, residence, penthouse, dan estate pilihan — arsitektur penuh perhatian, material premium, dan pengalaman jelajah yang tenang dan elegan.",
+    "highlights": [
+      "Villas, residences, penthouses & estates",
+      "Curated luxury property collection",
+      "Premium architecture & materials",
+      "Calm, elevated browsing experience"
+    ],
+    "highlights_id": [
+      "Villa, residence, penthouse & estate",
+      "Koleksi properti mewah kurasi",
+      "Arsitektur & material premium",
+      "Pengalaman jelajah tenang & elegan"
+    ],
+    "tags": ["Real Estate", "Landing Page", "Luxury"],
+    "url": "https://aurea-living.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "aurum",
     "title": "AURUM Motors",
     "description": "A curated luxury-car showroom site — hand-picked new & used cars, inspected and listed transparently, with WhatsApp consultation.",
