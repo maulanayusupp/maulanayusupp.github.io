@@ -1,5 +1,30 @@
 [
   {
+    "id": "aurum",
+    "title": "AURUM Motors",
+    "description": "A curated luxury-car showroom site — hand-picked new & used cars, inspected and listed transparently, with WhatsApp consultation.",
+    "description_id": "Situs showroom mobil mewah kurasi — mobil baru & bekas pilihan, diperiksa dan dipajang transparan, dengan konsultasi via WhatsApp.",
+    "longDescription": "Marketing & listing site for AURUM, a curated luxury-car showroom for new and used vehicles. Each unit is hand-picked, inspected, and presented transparently, with direct WhatsApp consultation — wrapped in an elegant, premium showroom experience.",
+    "longDescription_id": "Situs marketing & listing untuk AURUM, showroom kurasi mobil mewah baru dan bekas. Setiap unit dipilih cermat, diperiksa, dan dipajang secara transparan, dengan konsultasi langsung via WhatsApp — dikemas dalam pengalaman showroom yang elegan dan premium.",
+    "highlights": [
+      "Curated luxury cars (new & used)",
+      "Inspected & transparent listings",
+      "Direct WhatsApp consultation",
+      "Elegant, premium showroom design"
+    ],
+    "highlights_id": [
+      "Mobil mewah kurasi (baru & bekas)",
+      "Listing diperiksa & transparan",
+      "Konsultasi langsung via WhatsApp",
+      "Desain showroom elegan & premium"
+    ],
+    "tags": ["Showroom", "Landing Page", "Automotive"],
+    "url": "https://aurum-motors-ten.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "brand-drive",
     "title": "Brand Drive",
     "description": "A digital agency site — helping business owners across property, automotive, retail, F&B, and education grow with websites, apps, and digital products.",
