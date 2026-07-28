@@ -1,5 +1,30 @@
 [
   {
+    "id": "laju",
+    "title": "Laju",
+    "description": "An internet speed test — measure download, upload, latency, and jitter right in the browser, with your IPv4 & IPv6 addresses.",
+    "description_id": "Tes kecepatan internet — ukur unduh, unggah, latensi, dan jitter langsung di browser, lengkap dengan alamat IPv4 & IPv6-mu.",
+    "longDescription": "Laju is a browser-based internet speed test. Measure download and upload speed, latency, and jitter, see your IPv4 and IPv6 addresses, and understand how each number is calculated — no install needed.",
+    "longDescription_id": "Laju adalah tes kecepatan internet berbasis browser. Ukur kecepatan unduh dan unggah, latensi, dan jitter, lihat alamat IPv4 dan IPv6-mu, serta pahami cara tiap angka dihitung — tanpa instal.",
+    "highlights": [
+      "Download, upload, latency & jitter",
+      "Shows your IPv4 & IPv6 address",
+      "Explains how the numbers are measured",
+      "Runs in the browser, no install"
+    ],
+    "highlights_id": [
+      "Unduh, unggah, latensi & jitter",
+      "Menampilkan alamat IPv4 & IPv6-mu",
+      "Menjelaskan cara angka diukur",
+      "Jalan di browser, tanpa instal"
+    ],
+    "tags": ["Developer Tool", "Networking", "Speed Test"],
+    "url": "https://laju-speedtest.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "neatly",
     "title": "Neatly",
     "description": "A fast developer tool to beautify, minify, format, and convert code — JavaScript, CSS, HTML, JSON, XML and more, right in the browser.",
