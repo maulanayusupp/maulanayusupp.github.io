@@ -1,5 +1,30 @@
 [
   {
+    "id": "oktan",
+    "title": "OKTAN",
+    "description": "A sport-motorcycle gallery — new & used bikes with full telemetry, an installment simulator, and WhatsApp consultation.",
+    "description_id": "Galeri motor sport — motor baru & bekas dengan telemetri lengkap, simulasi cicilan, dan konsultasi via WhatsApp.",
+    "longDescription": "Marketing & listing site for OKTAN, a sport-motorcycle gallery in South Jakarta for new and used bikes. Each unit is inspected and openly presented with full telemetry, plus a built-in installment simulator and direct WhatsApp consultation.",
+    "longDescription_id": "Situs marketing & listing untuk OKTAN, galeri motor sport di Jakarta Selatan untuk motor baru dan bekas. Setiap unit diperiksa dan dipajang terbuka dengan telemetri lengkap, plus simulasi cicilan bawaan dan konsultasi langsung via WhatsApp.",
+    "highlights": [
+      "New & used sport motorcycles",
+      "Full telemetry per unit",
+      "Built-in installment simulator",
+      "Direct WhatsApp consultation"
+    ],
+    "highlights_id": [
+      "Motor sport baru & bekas",
+      "Telemetri lengkap per unit",
+      "Simulasi cicilan bawaan",
+      "Konsultasi langsung via WhatsApp"
+    ],
+    "tags": ["Showroom", "Landing Page", "Automotive"],
+    "url": "https://oktan-moto.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "aurea-living",
     "title": "Aurea Living",
     "description": "A luxury real-estate showcase — a curated collection of villas, residences, penthouses, and estates with premium architecture.",
