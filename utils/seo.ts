@@ -24,7 +24,6 @@ export const personSchema = {
     addressCountry: 'ID',
   },
   email: 'maulanayusupp@gmail.com',
-  telephone: '+62-878-2276-6333',
   knowsAbout: [
     'Vue.js', 'Nuxt', 'Laravel', 'Node.js', 'AdonisJs', 'PHP', 'JavaScript',
     'TypeScript', 'MySQL', 'MongoDB', 'Redis', 'Socket.io', 'REST API',

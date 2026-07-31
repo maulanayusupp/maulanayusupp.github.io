@@ -179,7 +179,6 @@ Per-page SEO is set in each page's `<script setup>` via `useHead` / `useSeoMeta`
 - Clients: 13+
 - Location: Bandung, Indonesia
 - Email: maulanayusupp@gmail.com
-- Phone: +62 878-2276-6333
 - GitHub: https://github.com/maulanayusupp
 - LinkedIn: https://www.linkedin.com/in/maulana-yusup-abdullah-750aa47a/
 - Core tech: Vue.js, Laravel, Node.js/AdonisJs, MySQL, MongoDB, Redis
