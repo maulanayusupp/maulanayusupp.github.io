@@ -68,9 +68,9 @@ components/
   CtaSection.vue      - "Let's build" CTA (text prop)
   SocialLinks.vue     - GitHub/LinkedIn/Email/Phone icon row
   TechMarquee.vue     - Infinite-scroll tech chips
-  AnimatedGradient.vue - Home hero: WebGL animated mesh-gradient background (OGL, ~40KB
-                        chunk, lazy client-only, theme-aware, static on reduced-motion,
-                        CSS orbs as no-WebGL fallback)
+  HeroGame.vue        - Home hero: a small playable Canvas-2D catch game (catch orbs,
+                        dodge red; score + localStorage best; mouse/touch/keyboard).
+                        No external lib, client-only, theme-aware, pauses when hidden.
   ExperienceTimeline.vue - Vertical career timeline (entries prop)
   CommandPalette.vue  - Global ⌘K/Ctrl+K search over pages + projects (rendered once in layout)
   CookieConsent.vue   - Client-only consent banner (gates future analytics via useConsent)

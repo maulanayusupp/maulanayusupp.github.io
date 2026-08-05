@@ -41,27 +41,32 @@ const stats = [
     <section class="hero">
       <div class="hero__orb hero__orb--1" />
       <div class="hero__orb hero__orb--2" />
-      <ClientOnly><AnimatedGradient /></ClientOnly>
-      <div class="container hero__inner">
-        <h1 class="hero__title reveal">
-          {{ t('hero.titlePre') }} <span class="gradient-text">{{ t('hero.titleHighlight') }}</span>
-          {{ t('hero.titlePost') }}
-        </h1>
-        <p class="hero__lead reveal reveal-delay-2">
-          {{ t('hero.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('hero.leadPost', { years }) }}
-        </p>
-        <div class="hero__actions reveal reveal-delay-3">
-          <BaseButton href="#work" variant="primary" size="lg">{{ t('actions.viewWork') }}</BaseButton>
-          <BaseButton to="/contact" variant="secondary" size="lg">{{ t('actions.letsWork') }}</BaseButton>
-          <BaseButton to="/cv" variant="ghost" size="lg">{{ t('actions.downloadCv') }}</BaseButton>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title reveal">
+            {{ t('hero.titlePre') }} <span class="gradient-text">{{ t('hero.titleHighlight') }}</span>
+            {{ t('hero.titlePost') }}
+          </h1>
+          <p class="hero__lead reveal reveal-delay-2">
+            {{ t('hero.leadPre') }} <strong>Maulana Yusup Abdullah</strong> {{ t('hero.leadPost', { years }) }}
+          </p>
+          <div class="hero__actions reveal reveal-delay-3">
+            <BaseButton href="#work" variant="primary" size="lg">{{ t('actions.viewWork') }}</BaseButton>
+            <BaseButton to="/contact" variant="secondary" size="lg">{{ t('actions.letsWork') }}</BaseButton>
+            <BaseButton to="/cv" variant="ghost" size="lg">{{ t('actions.downloadCv') }}</BaseButton>
+          </div>
+
+          <dl class="hero__stats reveal reveal-delay-4">
+            <div v-for="stat in stats" :key="stat.key" class="hero__stat">
+              <dt class="hero__stat-value"><StatNumber :value="stat.n" :suffix="stat.suffix" /></dt>
+              <dd class="hero__stat-label">{{ t(stat.key) }}</dd>
+            </div>
+          </dl>
         </div>
 
-        <dl class="hero__stats reveal reveal-delay-4">
-          <div v-for="stat in stats" :key="stat.key" class="hero__stat">
-            <dt class="hero__stat-value"><StatNumber :value="stat.n" :suffix="stat.suffix" /></dt>
-            <dd class="hero__stat-label">{{ t(stat.key) }}</dd>
-          </div>
-        </dl>
+        <div class="hero__visual reveal reveal-delay-2">
+          <ClientOnly><HeroGame /></ClientOnly>
+        </div>
       </div>
     </section>
 
@@ -143,10 +148,26 @@ const stats = [
     }
   }
 
-  &__inner {
+  &__grid {
     position: relative;
     z-index: 1;
-    max-width: 52rem;
+    display: grid;
+    gap: $space-12;
+    align-items: center;
+
+    @include respond-to('lg') {
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: $space-16;
+    }
+  }
+
+  &__content {
+    max-width: 44rem;
+  }
+
+  &__visual {
+    display: flex;
+    justify-content: center;
   }
 
   &__title {

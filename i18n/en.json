@@ -20,6 +20,16 @@
     "current": "Current",
     "skip": "Skip to content"
   },
+  "game": {
+    "title": "Quick game?",
+    "tagline": "Catch the orbs, dodge the red.",
+    "play": "Play",
+    "again": "Play again",
+    "score": "Score",
+    "best": "Best",
+    "over": "Game Over",
+    "hint": "Move with your mouse, touch, or ← →"
+  },
   "error": {
     "title": "Page not found",
     "message": "The page you're looking for doesn't exist or has moved.",

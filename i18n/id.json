@@ -20,6 +20,16 @@
     "current": "Sekarang",
     "skip": "Lewati ke konten"
   },
+  "game": {
+    "title": "Main sebentar?",
+    "tagline": "Tangkap orb, hindari yang merah.",
+    "play": "Main",
+    "again": "Main lagi",
+    "score": "Skor",
+    "best": "Terbaik",
+    "over": "Game Over",
+    "hint": "Gerak pakai mouse, sentuh, atau ← →"
+  },
   "error": {
     "title": "Halaman tidak ditemukan",
     "message": "Halaman yang kamu cari tidak ada atau sudah dipindahkan.",
