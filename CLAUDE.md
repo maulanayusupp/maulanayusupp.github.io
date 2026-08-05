@@ -68,9 +68,9 @@ components/
   CtaSection.vue      - "Let's build" CTA (text prop)
   SocialLinks.vue     - GitHub/LinkedIn/Email/Phone icon row
   TechMarquee.vue     - Infinite-scroll tech chips
-  SkillSphere.vue     - Home hero: interactive 3D WebGL sphere of the skills.json tech
-                        (Three.js, lazy-loaded client-only, drag/auto-rotate, theme-aware,
-                        chips fallback for no-WebGL / reduced-motion)
+  AnimatedGradient.vue - Home hero: WebGL animated mesh-gradient background (OGL, ~40KB
+                        chunk, lazy client-only, theme-aware, static on reduced-motion,
+                        CSS orbs as no-WebGL fallback)
   ExperienceTimeline.vue - Vertical career timeline (entries prop)
   CommandPalette.vue  - Global ⌘K/Ctrl+K search over pages + projects (rendered once in layout)
   CookieConsent.vue   - Client-only consent banner (gates future analytics via useConsent)
