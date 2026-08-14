@@ -175,6 +175,31 @@
     "year": "2026"
   },
   {
+    "id": "skincareku",
+    "title": "Skincareku",
+    "description": "An Indonesian-inspired skincare brand site — Nusantara ingredients, fully transparent labels, and a six-step ritual for tropical skin.",
+    "description_id": "Situs brand skincare khas Indonesia — bahan Nusantara, label transparan sepenuhnya, dan ritual enam langkah untuk kulit tropis.",
+    "longDescription": "Marketing & ordering site for Skincareku, a skincare brand built on traditional Nusantara ingredients — honey, rice, turmeric, coconut, and butterfly pea. Twelve formulas with complete, plain-language ingredient labels, a six-step ritual framework, and honest benefit descriptions (no \"instant\" or \"permanent\" claims), formulated for tropical climates.",
+    "longDescription_id": "Situs marketing & pemesanan untuk Skincareku, brand skincare berbasis bahan tradisional Nusantara — madu, beras, kunyit, kelapa, dan bunga telang. Dua belas formula dengan label bahan yang lengkap dan mudah dibaca, kerangka ritual enam langkah, dan deskripsi manfaat yang jujur (tanpa klaim \"instan\" atau \"permanen\"), diformulasikan untuk iklim tropis.",
+    "highlights": [
+      "Traditional Nusantara ingredients",
+      "12 formulas with transparent labels",
+      "Six-step skincare ritual",
+      "Honest claims, made for tropical skin"
+    ],
+    "highlights_id": [
+      "Bahan tradisional Nusantara",
+      "12 formula dengan label transparan",
+      "Ritual skincare enam langkah",
+      "Klaim jujur, untuk kulit tropis"
+    ],
+    "tags": ["E-commerce", "Skincare", "Branding"],
+    "url": "https://skincareku-rho.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "laundryku",
     "title": "LaundryKu",
     "description": "A pickup-and-delivery laundry service — signature wash packages, choose-your-fragrance care, and transparent upfront pricing per fabric type.",
