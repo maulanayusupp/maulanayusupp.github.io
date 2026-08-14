@@ -1,5 +1,30 @@
 [
   {
+    "id": "layangin",
+    "title": "Layangin",
+    "description": "An Indonesian kite-fighting game — duel in the air with real aerodynamics and line physics, cut your rival's string across 50 kites and 8 AI foes.",
+    "description_id": "Game adu layangan khas Indonesia — duel di udara dengan aerodinamika dan fisika benang nyata, putuskan benang lawan lewat 50 layangan dan 8 lawan AI.",
+    "longDescription": "A browser kite-fighting game rooted in Indonesian tradition. Duel in the air with realistic aerodynamics — lift, drag, stalling — and line physics with sag, tension, and breaking; win by crossing and abrading your rival's string to cut it. Fly 50 kite airframes, earn coins to upgrade line strength, reel speed, and control, and take on 8 AI opponents including 3 bosses, with wind that shifts by altitude.",
+    "longDescription_id": "Game adu layangan di browser berakar pada tradisi Indonesia. Duel di udara dengan aerodinamika realistis — lift, drag, stall — dan fisika benang dengan kendur, tegangan, dan putus; menang dengan menyilangkan dan menggesek benang lawan sampai putus. Terbangkan 50 airframe layangan, kumpulkan koin untuk upgrade kekuatan benang, kecepatan reel, dan kendali, lalu hadapi 8 lawan AI termasuk 3 bos, dengan angin yang berubah menurut ketinggian.",
+    "highlights": [
+      "Realistic aerodynamics & line physics",
+      "Cut your rival's string to win",
+      "50 kites, 8 AI opponents + 3 bosses",
+      "Free & instant in the browser"
+    ],
+    "highlights_id": [
+      "Aerodinamika & fisika benang realistis",
+      "Putuskan benang lawan untuk menang",
+      "50 layangan, 8 lawan AI + 3 bos",
+      "Gratis & instan di browser"
+    ],
+    "tags": ["Simulation", "Browser Game", "Arcade"],
+    "url": "https://layangin.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "iron-vanguard",
     "title": "Iron Vanguard",
     "description": "An endless tower-defense game: command 16 turrets and 18 heroes, unleash skills, and hold the line against 35 monster types across 2000 levels.",
