@@ -175,6 +175,81 @@
     "year": "2026"
   },
   {
+    "id": "laundryku",
+    "title": "LaundryKu",
+    "description": "A pickup-and-delivery laundry service — signature wash packages, choose-your-fragrance care, and transparent upfront pricing per fabric type.",
+    "description_id": "Layanan laundry antar-jemput — paket cuci pilihan, perawatan pilih-aroma-sendiri, dan harga transparan di depan sesuai jenis kain.",
+    "longDescription": "Marketing & ordering site for LaundryKu, a pickup-and-delivery laundry with specialized garment care. Twelve signature wash packages and seven fragrance options, separate processing per customer, and pricing calculated upfront — from daily kilogram washing to dry cleaning for traditional fabrics and bridal wear.",
+    "longDescription_id": "Situs marketing & pemesanan untuk LaundryKu, laundry antar-jemput dengan perawatan pakaian khusus. Dua belas paket cuci pilihan dan tujuh opsi aroma, pemrosesan terpisah per pelanggan, dan harga dihitung di depan — dari cuci kiloan harian sampai dry cleaning untuk kain tradisional dan busana pengantin.",
+    "highlights": [
+      "12 signature wash packages",
+      "7 fragrance options (incl. unscented)",
+      "Separate processing per customer",
+      "Transparent upfront pricing"
+    ],
+    "highlights_id": [
+      "12 paket cuci pilihan",
+      "7 opsi aroma (termasuk tanpa aroma)",
+      "Pemrosesan terpisah per pelanggan",
+      "Harga transparan di depan"
+    ],
+    "tags": ["Landing Page", "Service", "F&B"],
+    "url": "https://laundryku-ten.vercel.app/",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "kainku",
+    "title": "Kainku",
+    "description": "An Indonesian textile shop selling batik, tenun, songket & jumputan by the meter — detailed fabric specs, samples, and nationwide delivery.",
+    "description_id": "Toko kain Indonesia yang menjual batik, tenun, songket & jumputan per meter — spesifikasi kain detail, sampel, dan pengiriman nasional.",
+    "longDescription": "E-commerce site for Kainku, selling traditional Indonesian fabrics by the meter — batik, tenun, songket, and jumputan from regions across the country. Detailed specs per fabric (width, gsm, fiber, origin), 0.5-meter cutting increments, sample requests, and three visual perspectives per product.",
+    "longDescription_id": "Situs e-commerce untuk Kainku, menjual kain tradisional Indonesia per meter — batik, tenun, songket, dan jumputan dari berbagai daerah. Spesifikasi detail per kain (lebar, gsm, serat, asal), potong per 0,5 meter, permintaan sampel, dan tiga perspektif visual per produk.",
+    "highlights": [
+      "Traditional fabrics by the meter",
+      "Batik, tenun, songket & jumputan",
+      "Detailed specs (width, gsm, fiber, origin)",
+      "Sample requests & nationwide delivery"
+    ],
+    "highlights_id": [
+      "Kain tradisional per meter",
+      "Batik, tenun, songket & jumputan",
+      "Spesifikasi detail (lebar, gsm, serat, asal)",
+      "Permintaan sampel & pengiriman nasional"
+    ],
+    "tags": ["E-commerce", "Textile", "Branding"],
+    "url": "https://kainku.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
+    "id": "pudingku",
+    "title": "Pudingku",
+    "description": "A handmade pudding & cake brand site — small-batch treats made fresh daily, no artificial flavors, cold-packed and made to order.",
+    "description_id": "Situs brand puding & kue buatan tangan — camilan small-batch dibuat segar harian, tanpa perisa buatan, cold-pack dan sistem pre-order.",
+    "longDescription": "Marketing & ordering site for Pudingku, a small-batch pudding and cake brand. Ten pudding varieties and six whole cakes made fresh daily with ingredients bought that day, no artificial flavors in fruit variants, cold-packed with production timestamps, and a made-to-order model with a replacement guarantee.",
+    "longDescription_id": "Situs marketing & pemesanan untuk Pudingku, brand puding dan kue small-batch. Sepuluh varian puding dan enam kue utuh dibuat segar harian dengan bahan yang dibeli hari itu, tanpa perisa buatan pada varian buah, cold-pack dengan waktu produksi, dan sistem pre-order dengan garansi penggantian.",
+    "highlights": [
+      "Small-batch, made fresh daily",
+      "10 pudding varieties & 6 whole cakes",
+      "No artificial flavors, cold-packed",
+      "Made to order with replacement guarantee"
+    ],
+    "highlights_id": [
+      "Small-batch, dibuat segar harian",
+      "10 varian puding & 6 kue utuh",
+      "Tanpa perisa buatan, cold-pack",
+      "Sistem pre-order dengan garansi penggantian"
+    ],
+    "tags": ["Landing Page", "F&B", "Branding"],
+    "url": "https://pudingku-hazel.vercel.app",
+    "preview": { "kind": "live" },
+    "featured": true,
+    "year": "2026"
+  },
+  {
     "id": "pride",
     "title": "PRIDE Community",
     "description": "Official site for PRIDE — a motorcycle riders community in Cimahi built around brotherhood, safety, and respect. \"More Than A Ride.\"",
